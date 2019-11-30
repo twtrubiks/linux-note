@@ -1,5 +1,7 @@
 ## 安装 ZSH
 
+[Youtube Tutorial - Ubuntu 如何安裝 Oh My ZSH](https://youtu.be/lzUGQN-gQE0)
+
 安装 ZSH Shell
 
 ```cmd
@@ -104,6 +106,8 @@ plugins=(git zsh-autosuggestions)
 
 ## 安裝 tmux
 
+[Youtube Tutorial - Ubuntu 如何安裝 tmux](https://youtu.be/sKKUgMEOOh0)
+
 tmux 是個 terminal multiplexer，
 
 安裝 tmux，
@@ -147,7 +151,7 @@ set -g mouse on
 
 之後請將 tmux 加入 Oh My ZSH 的 plugins 中，
 
-[oh-my-zsh/plugins/tmux](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/tmux)
+可參考[oh-my-zsh/plugins/tmux](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/tmux)。
 
 編輯 `.zshrc`
 
@@ -186,23 +190,3 @@ log 列表不會保留在畫面上，這時候就又要打一次指令。
 ```cmd
 git config --global --replace-all core.pager "less -F -X"
 ```
-
-## Donation
-
-文章都是我自己研究內化後原創，如果有幫助到您，也想鼓勵我的話，歡迎請我喝一杯咖啡:laughing:
-
-綠界科技ECPAY ( 不需註冊會員 )
-
-![alt tag](https://payment.ecpay.com.tw/Upload/QRCode/201906/QRCode_672351b8-5ab3-42dd-9c7c-c24c3e6a10a0.png)
-
-[贊助者付款](http://bit.ly/2F7Jrha)
-
-歐付寶 ( 需註冊會員 )
-
-![alt tag](https://i.imgur.com/LRct9xa.png)
-
-[贊助者付款](https://payment.opay.tw/Broadcaster/Donate/9E47FDEF85ABE383A0F5FC6A218606F8)
-
-## 贊助名單
-
-[贊助名單](https://github.com/twtrubiks/Thank-you-for-donate)

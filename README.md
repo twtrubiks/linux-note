@@ -410,7 +410,17 @@ sudo find / -name "*.conf"
 find . -name README.md
 ```
 
+## where
 
+尋找路徑，
+
+舉例，尋找 python3 路徑
+
+```cmd
+where python3
+which python3
+whereis python3
+```
 
 ## tail
 
@@ -562,6 +572,22 @@ grep MemFree /proc/meminfo
 ```cmd
 free -m
 ```
+
+查看電腦目前資訊，CPU RAM 等等
+
+```cmd
+top
+```
+
+## 更多文章
+
+[zsh-tmux-tutorual](https://github.com/twtrubiks/linux-note/tree/master/zsh-tmux-tutorual) - 超好用 zsh 以及 tmux。
+
+[imwheel-tutorual](https://github.com/twtrubiks/linux-note/tree/master/imwheel-tutorual) - 改善 linux 滑鼠滾動問題。
+
+[systemctl-tutorial](https://github.com/twtrubiks/linux-note/tree/master/systemctl-tutorual)
+
+[crontab-tutorual](https://github.com/twtrubiks/linux-note/tree/master/crontab-tutorual)
 
 ## Reference
 
