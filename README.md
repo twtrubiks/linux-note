@@ -430,6 +430,22 @@ whereis python3
 tail README.md
 ```
 
+一次顯示多個檔案
+
+```cmd
+tail README_1.md README_2.md
+```
+
+指定顯示檔案最後 N 行內容
+
+```cmd
+tail -n 5 README.md
+```
+
+```cmd
+tail README.md -n 5
+```
+
 持續顯示更新內容，通常使用在 server 或看 log
 
 ```cmd
@@ -450,6 +466,36 @@ file README.md
 
 ```cmd
 cat README.md
+```
+
+## grep
+
+```cmd
+# 格式
+grep match_pattern file_name
+```
+
+```cmd
+# 格式
+grep "search name" README.md
+```
+
+也可以一次搜尋多個檔案
+
+```cmd
+grep "name" README_1.md README_2.md
+```
+
+也可以使用 萬用字元 `*`
+
+```cmd
+grep "print" *.py
+```
+
+搜尋當下目錄資料夾內容
+
+```cmd
+grep -r "search name" .
 ```
 
 ## mkdir
