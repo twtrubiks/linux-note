@@ -128,6 +128,26 @@ tmux 的所有快捷鍵前面都需要加一個 prefix key，預設是 `<Ctrl+b>
 
 更多的快捷鍵功能可參考 [tmux-cheatsheet](https://gist.github.com/MohamedAlaa/2961058)。
 
+一些指令說明
+
+start new
+>> tmux
+
+start new with session name:
+>> tmux new -s myname
+
+attach (重新開啟 session )
+>> tmux a  #  (or at, or attach)
+
+attach to named (重新開啟 session )
+>> tmux a -t myname
+
+list sessions:
+>> tmux ls
+
+kill session:
+>> tmux kill-session -t myname
+
 更改其他 tmux 的設定，
 
 ```cmd
