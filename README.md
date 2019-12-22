@@ -631,6 +631,8 @@ top
 
 [imwheel-tutorual](https://github.com/twtrubiks/linux-note/tree/master/imwheel-tutorual) - 改善 linux 滑鼠滾動問題。
 
+[shutter-tutorual](https://github.com/twtrubiks/linux-note/tree/master/shutter-tutorual) - Shutter is an excellent image capture tool.
+
 [systemctl-tutorial](https://github.com/twtrubiks/linux-note/tree/master/systemctl-tutorual)
 
 [crontab-tutorual](https://github.com/twtrubiks/linux-note/tree/master/crontab-tutorual)
