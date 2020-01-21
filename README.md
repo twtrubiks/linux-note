@@ -20,6 +20,38 @@ cd ~
 cd /
 ```
 
+回到上層目錄
+
+```cmd
+cd ..
+```
+
+## man
+
+線上說明手冊 ( man page )
+
+```cmd
+man ls
+```
+
+![alt tag](https://i.imgur.com/3DDi208.png)
+
+也可以使用
+
+```cmd
+ls --help
+```
+
+![alt tag](https://i.imgur.com/ZSZjuVC.png)
+
+## pwd
+
+查看目前的路徑
+
+```cmd
+pwd
+```
+
 ## ls
 
 列出檔案
@@ -124,6 +156,82 @@ ls *.py
 ls -l -h
 ```
 
+顯示全部的檔案 (包含隱藏檔)
+
+```cmd
+ls -a
+```
+
+sort
+
+```cmd
+ls -S
+```
+
+將輸出結果寫到檔案裡
+
+```cmd
+ls -lS > file.txt
+```
+
+## su
+
+切換不同的 user
+
+```cmd
+su <username>
+```
+
+## sudo
+
+增加新的 user
+
+```cmd
+sudo useradd <username>
+```
+
+設定 user 的 password
+
+```cmd
+sudo passwd <username>
+```
+
+刪除 user
+
+```cmd
+sudo userdel <username>
+```
+
+增加新的 group
+
+```cmd
+sudo groupadd <groupname>
+```
+
+刪除 group
+
+```cmd
+sudo groupdel <groupname>
+```
+
+增加 user 到 group 中
+
+```cmd
+sudo usermod -g <groupname> <username>
+```
+
+查看所有 user
+
+```cmd
+cat /etc/passwd
+```
+
+查看所有 group
+
+```cmd
+cat /etc/group
+```
+
 ## chmod
 
 改變檔案權限
@@ -175,11 +283,56 @@ sudo chmod -R 777 xxx
 
 還有一種方法是使用 符號 來改變權限，
 
+在介紹之前，先看下方的表格 :wink:
+
+|       | u = user  |          |             |              |
+|-------|-----------|----------|-------------|--------------|
+|       | g = group | + (增加) | r = read    |              |
+| chmod |           | - (移除) | w = write   | 檔案或資料夾 |
+|       | o = other | = (設定) | x = execute |              |
+|       | a = all   |          |             |              |
+
+舉個例子，將 hello 權限設為 rw-rw-r--，
+
+|  擁有者(u)  	| 所屬群組(g) 	|   其他使用者(o)   	|
+|:------:	|:----:	|:--------:	|
+|  rw- 	|  rw- 	| r-- 	|
+
 ```cmd
-chmod ug+x README.md
+chmod ug=rw,o=r hello
 ```
 
-更詳細的部分我以後再來說:wink:
+![alt tag](https://i.imgur.com/QgNuNel.png)
+
+再舉個例子，將 hello 權限設為 rwxr-xr–-，
+
+```cmd
+chmod u=rwx,g=rx,o=r hello
+```
+
+![alt tag](https://i.imgur.com/WlX8wPL.png)
+
+接著假設我希望把 可執行的權限(x) 加上去 (全部人及群組都加上)
+
+```cmd
+chmod a+x hello
+```
+
+![alt tag](https://i.imgur.com/KLiwPXX.png)
+
+移除所有人 可執行的權限(x)
+
+```cmd
+chmod a-x hello
+```
+
+你會發現大家的 可執行的權限(x) 都消失了
+
+![alt tag](https://i.imgur.com/O8gh3Is.png)
+
+相信經過這一連串的練習，大家肯定了解了，
+
+如果不懂，多看幾遍:satisfied:
 
 ## chown
 
@@ -207,6 +360,38 @@ chown :twtrubiksgroup README.md
 chown twtrubiks:twtrubiksgroup README.md
 ```
 
+## ln
+
+有兩種, 分別為 hard link 和 Symbolic link ( soft link ),
+
+先介紹 hard link，注意，hard link not allowed for directory。
+
+```cmd
+ln /home/twtrubiks/Downloads/odoo-git/README.md
+```
+
+![alt tag](https://i.imgur.com/ioJXBRw.png)
+
+hard link 特性為不管刪除哪一個檔案，檔案都會被保留。除非你把最後一個檔案也刪除，
+
+換個方式說，一個檔案的 hard link 和本來的檔案其實沒有任何實質上的區別。
+
+hard link 不允許資料夾，只允許檔案。
+
+symbolic link，也稱 soft link，基本上它類似於 Windows 中的捷徑:smile:
+
+```cmd
+ln -s /home/twtrubiks/Downloads/odoo-git/ dir-link
+```
+
+![alt tag](https://i.imgur.com/JGhlQZd.png)
+
+當某個檔案的的本體被刪除後，它的 symbolic link 就無法讀取到這個檔案了，
+
+一個檔案的 symbolic link 和檔案的本體是不同的兩個東西。
+
+symbolic link 允許檔案和資料夾。
+
 ## zip unzip
 
 ```cmd
@@ -231,6 +416,44 @@ unzip file.zip -d zip_extract
 
 ```cmd
 unzip file.zip -d .
+```
+
+## tar
+
+壓縮 `.tar` format
+
+```cmd
+tar cvf filename.tar source-folder
+```
+
+解壓縮 `.tar` format
+
+```cmd
+tar xvf filename.tar
+```
+
+## unrar
+
+```cmd
+sudo apt-get install unrar
+```
+
+將 filename.rar 解壓縮到目錄底下
+
+```cmd
+unrar e filename.rar
+```
+
+列出 filename.rar 的資料
+
+```cmd
+unrar l filename.rar
+```
+
+測試 filename.rar 是否完整且正確
+
+```cmd
+unrar t filename.rar
 ```
 
 ## wget
@@ -325,10 +548,22 @@ mv README.md README_MV.md
 mv README.md /examples
 ```
 
-移動檔案
-
 ```cmd
 mv file.md example/
+```
+
+其他的參數說明(參數可以多個一起使用)，
+
+互動模式 , CLI 會詢問你是否 overwriting files
+
+```cmd
+mv -i source_file path_to_destination/
+```
+
+只更新來源資料夾和目的地不同的檔案
+
+```cmd
+mv -u source_file path_to_destination/
 ```
 
 ## rm
@@ -349,7 +584,15 @@ rm -rf mydir
 
 `-f` 代表強制刪除 ( 不會跳出警告 )。
 
-刪除特定的副檔名
+或是使用 rmdir 指令，
+
+```cmd
+rmdir mydir_name
+```
+
+不過要注意，被移除的資料夾裡面必須是空的，否則回無法移除。
+
+刪除特定的副檔名，
 
 ```cmd
 rm -f *.zip
@@ -391,6 +634,32 @@ cp -r --preserve=all path_to_source/ path_to_destination/
 ```
 
 `-p` `--preserve` 代表一同複製當下的權限以及擁有者之類的。
+
+其他的參數說明(參數可以多個一起使用)，
+
+互動模式 , CLI 會詢問你是否 overwriting files
+
+```cmd
+cp -i source_file path_to_destination/
+```
+
+不詢問 , 直接 overwriting files
+
+```cmd
+cp -n source_file path_to_destination/
+```
+
+只更新來源資料夾和目的地不同的檔案
+
+```cmd
+cp -u source_file path_to_destination/
+```
+
+印出資訊
+
+```cmd
+cp -v source_file path_to_destination/
+```
 
 ## find
 
@@ -468,6 +737,30 @@ file README.md
 cat README.md
 ```
 
+顯示行數
+
+```cmd
+cat -n README.md
+```
+
+cat 也可以寫入檔案
+
+```cmd
+cat <<EOT >> hello_4.txt
+line 1
+line 2
+line 3
+EOT
+```
+
+## clear
+
+clear the terminal screen ， 快捷鍵為 Ctrl+L
+
+```cmd
+clear
+```
+
 ## grep
 
 ```cmd
@@ -498,6 +791,18 @@ grep "print" *.py
 grep -r "search name" .
 ```
 
+case insensitive case (不區分大小寫)
+
+```cmd
+grep -i "name" README_1.md
+```
+
+顯示行數
+
+```cmd
+grep -n "name" README_1.md
+```
+
 ## mkdir
 
 建立資料夾
@@ -507,6 +812,60 @@ mkdir -p dir1/dir2
 ```
 
 `-p` `--parents`  代表自動建立上層目錄，如果目錄已存在則不會發生錯誤。
+
+## history
+
+歷史輸入的指令
+
+```cmd
+history
+```
+
+```cmd
+history | less
+```
+
+![alt tag](https://i.imgur.com/0YKqS3Y.png)
+
+假設今天我不想打指令, 可以直接輸入 `!`+ 數字, 會自動執行該指令.
+
+```cmd
+!1848
+```
+
+## echo
+
+在 shell 中印出 shell 的值，
+
+查看目前的 shell，
+
+```cmd
+echo $SHELL
+```
+
+echo 也可以寫入檔案，
+
+方法一
+
+```cmd
+echo "line 1" >> hello_1.txt
+```
+
+方法二 ( 寫入多行 )
+
+```cmd
+echo "line 1
+line 2" >> hello_2.txt
+```
+
+方法三 ( 寫入多行 )
+
+```cmd
+{
+    echo 'line1;'
+    echo 'line2;'
+} >> hello_3.txt
+```
 
 ## 不用密碼遠端登入 Linux
 
@@ -595,6 +954,12 @@ sudo vim /etc/ssh/sshd_config
 
 ## 其他資訊
 
+系統訊息
+
+```cmd
+uname -a
+```
+
 查看 cpu
 
 ```cmd
@@ -619,10 +984,116 @@ grep MemFree /proc/meminfo
 free -m
 ```
 
+查看硬碟空間 ( disk free space, Human Readable )
+
+```cmd
+df -h
+```
+
+所有硬碟的訊息 ( List Drives and Mounts )
+
+```cmd
+lsblk
+```
+
+查看所有 pci，
+
+```cmd
+lspci
+```
+
+查看所有 usb，
+
+```cmd
+lsusb
+```
+
+也可以搭配 grep 搜尋，只搜尋包含 VirtualBox 的內容，
+
+```cmd
+lsusb | grep VirtualBox
+```
+
+查看 ip，
+
+```cmd
+ip a
+```
+
+external ip Address ( 對外的 ip )，`ifconfig.me` 是一個網站，
+
+```cmd
+curl ifconfig.me
+```
+
 查看電腦目前資訊，CPU RAM 等等
 
 ```cmd
 top
+```
+
+推薦 `htop` ( 資訊更清楚 )
+
+```cmd
+sudo apt-get install htop
+```
+
+```cmd
+htop
+```
+
+![alt tag](https://i.imgur.com/2uy1IQ9.png)
+
+透過 xrandr 修改螢幕的亮度，
+
+先查看螢幕的 name，
+
+```cmd
+xrandr | grep " connected" | cut -f1 -d " "
+```
+
+設定亮度 ( 0 - 1 )，
+
+```cmd
+xrandr --output DP-1 --brightness 0.7
+```
+
+## install packages
+
+install
+
+```cmd
+sudo apt-get install xxx
+```
+
+update list ( 更新 packages 的最新資訊及列表 )
+
+```cmd
+sudo apt-get update
+```
+
+upgrade ( 更新軟體到最新的版本 )
+
+```cmd
+sudo apt-get upgrade
+```
+
+remove
+
+```cmd
+sudo apt-get --purge autoremove xxxx
+```
+
+清理不需要的 packages ( `.deb` )
+
+```cmd
+sudo apt autoclean
+```
+
+清除不需要的依賴
+
+```cmd
+sudo apt autoremove
 ```
 
 ## 更多文章
@@ -664,4 +1135,3 @@ top
 ## License
 
 MIT license
-
