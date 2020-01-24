@@ -1108,6 +1108,10 @@ sudo apt autoremove
 
 [crontab-tutorual](https://github.com/twtrubiks/linux-note/tree/master/crontab-tutorual)
 
+## 狀況排除
+
+[fix_could_not_get_lock_dpkg_ubuntu](https://github.com/twtrubiks/linux-note/tree/master/fix_could_not_get_lock_dpkg_ubuntu) - 修正 `E: Could not get lock /var/lib/dpkg/lock` Error
+
 ## Reference
 
 * [Linux Command 命令列指令與基本操作入門教學](https://blog.techbridge.cc/2017/12/23/linux-commnd-line-tutorial/)
