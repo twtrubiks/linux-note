@@ -14,4 +14,4 @@
 | foobar2000 |        DeaDBeeF       |  音樂播放器  |                                                                                                                     |
 |  potplayer |     VLC + smplayer    |  影片播放器  |                                                                                                                     |
 | BitTorrent |      Transmission     |    bt 軟體   |                                                                                                                     |
-|            |         rclone        | 超強同步軟體 |                                                                                                                     |
+| raidrive   |         rclone        | 超強同步軟體 |  [rclone-tutorial](https://github.com/twtrubiks/linux-note/tree/master/rclone-tutorial)                                                                                                |

@@ -837,6 +837,18 @@ history | less
 
 在 shell 中印出 shell 的值，
 
+設定 EDITOR
+
+```cmd
+export EDITOR=vim
+```
+
+查看目前的 EDITOR，
+
+```cmd
+echo $EDITOR
+```
+
 查看目前的 shell，
 
 ```cmd
@@ -1066,6 +1078,12 @@ install
 sudo apt-get install xxx
 ```
 
+如果只有 `.deb` 檔案, 可以使用以下的方式
+
+```cmd
+sudo apt install ./xxx.deb
+```
+
 update list ( 更新 packages 的最新資訊及列表 )
 
 ```cmd
@@ -1112,7 +1130,7 @@ sudo apt autoremove
 
 [chinese-input-methods-on-ubuntu](https://github.com/twtrubiks/linux-note/tree/master/chinese-input-methods-on-ubuntu) - ubuntu 如何安裝中文輸入法
 
-[gnome-tweaks](https://github.com/twtrubiks/linux-note/tree/master/gnome-tweaks)
+[gnome-tweaks](https://github.com/twtrubiks/linux-note/tree/master/gnome-tweaks) - Ubuntu 安裝 GNOME Tweak tool
 
 ## 狀況排除
 
@@ -1125,6 +1143,8 @@ sudo apt autoremove
 [透過 VirtualBox 安裝 Ubuntu 19.10 （以及一些個人想法）](https://youtu.be/lI1EMwhW6lE)
 
 [alternative-software](https://github.com/twtrubiks/linux-note/tree/master/alternative-software) - windows -> Linux 替代軟體
+
+[rclone-tutorial](https://github.com/twtrubiks/linux-note/tree/master/rclone-tutorial) - rclone 是一套很棒的文件同步管理工具
 
 ## Reference
 

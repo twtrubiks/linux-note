@@ -1,6 +1,6 @@
 #  GNOME Tweak tool
 
-[Youtube Tutorial - Ubuntu 安裝 GNOME Tweak tool]()
+[Youtube Tutorial - Ubuntu 安裝 GNOME Tweak tool](https://youtu.be/lb_WCmuozcI)
 
 很好用的工具, 更高的自訂化以及設定.
 

@@ -1,5 +1,7 @@
 # ubuntu 18 04 on Lenovo X1 Carbon 6
 
+[Youtube Tutorial - Lenovo X1 Carbon 6 (從 win10 到 ubuntu18.04 ) 心得&注意事項](https://youtu.be/okyAzo-urcw)
+
 x1c6 從 windows 重灌成 linux.
 
 原因,
