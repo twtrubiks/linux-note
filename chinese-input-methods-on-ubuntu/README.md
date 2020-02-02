@@ -1,5 +1,7 @@
 # 如何在 ubuntu 安裝中文輸入法
 
+[Youtube Tutorial - 如何在 ubuntu 安裝中文輸入法-新酷音輸入法](https://youtu.be/0i8woP0DPls)
+
 將大家如何在 ubuntu 上安裝 新酷音輸入法 ,
 
 請先執行
@@ -26,8 +28,8 @@ sudo apt install ibus-chewing
 
 右上角可以切換輸入法, 也可以按 Super + Space 快捷鍵切換輸入法.
 
+![alt tag](https://i.imgur.com/KXciHwX.png)
+
 (Super 就等於 windows 上的開始按)
 
 ![alt tag](https://i.imgur.com/wCfupes.png)
-
-![alt tag](https://i.imgur.com/KXciHwX.png)

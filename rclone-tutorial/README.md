@@ -3,7 +3,9 @@
 [Youtube Tutorial - Rclone tutorial 超棒雲端同步工具]()
 
 rclone 是一套很棒的文件同步管理工具, 可以和非常多的雲同步, 像是 Dropbox,
-Google Drive...... 考直接參考官網的說明 [rclone](https://rclone.org/).
+Google Drive......
+
+請直接參考官網的說明 [rclone](https://rclone.org/).
 
 ## 教學
 

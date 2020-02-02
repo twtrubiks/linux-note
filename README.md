@@ -2,7 +2,7 @@
 
 主要是紀錄一些 linux 的指令📝
 
-本篇文章會一直更新，用來告訴自己 Linux 有多爛 :scream:
+( 本篇文章會持續更新:smile: )
 
 * [籌備中](xxx)
 
@@ -61,6 +61,12 @@ ls -l
 ```
 
 `-l` 顯示詳細的資訊 ( 檔案權限 )。
+
+也等於直接輸入 (L 的小寫)
+
+```cmd
+ll
+```
 
 在 Linux 中，檔案都擁有四種權限
 
@@ -161,6 +167,22 @@ ls -l -h
 ```cmd
 ls -a
 ```
+
+也可以使用
+
+```cmd
+ls -al
+```
+
+可以直接列出資料夾內的內容
+
+```cmd
+ls Downloads
+```
+
+像是在 home 底下, 直接列出 Downloads 內容
+
+![alt tag](https://i.imgur.com/Dal7aSn.png)
 
 sort
 
@@ -362,6 +384,8 @@ chown twtrubiks:twtrubiksgroup README.md
 
 ## ln
 
+[Youtube Tutorial - Linux 指令教學-ln (Symbolic Link)](https://youtu.be/jdZsO2GAf2I)
+
 有兩種, 分別為 hard link 和 Symbolic link ( soft link ),
 
 先介紹 hard link，注意，hard link not allowed for directory。
@@ -394,6 +418,8 @@ symbolic link 允許檔案和資料夾。
 
 ## zip unzip
 
+zip **不會**保存檔案的 permissions and ownership.
+
 ```cmd
 sudo apt-get install zip unzip
 ```
@@ -419,6 +445,8 @@ unzip file.zip -d .
 ```
 
 ## tar
+
+tar **會**保存檔案的 permissions and ownership.
 
 壓縮 `.tar` format
 
@@ -478,6 +506,8 @@ wget -O wget.tar.gz http://ftp.gnu.org/gnu/wget/wget-1.20.3.tar.gz
 
 ## scp
 
+全名為 Securely Copy,
+
 這個方法適用於 Linux 和 Linux 之間互傳檔案，也適用於  Linux 和 Windows 之間互傳檔案，
 
 假設，Linux ip 為 192.168.56.101，查看 ip 指令如下，
@@ -508,6 +538,10 @@ sudo apt-get install openssh-server
 scp -rp 檔案 linux的使用者@ip:目標路徑
 ```
 
+`-r` 代表 recursive.
+
+`-p` 代表 保存原始檔案的內容 (Preserves modification).
+
 ```cmd
 scp -rp file twtrubiks@192.168.56.101:/home/twtrubiks
 ```
@@ -519,6 +553,8 @@ scp -rp file twtrubiks@192.168.56.101:/home/twtrubiks
 ```cmd
 scp -P 22 linux的使用者@ip:目標路徑 存放的目標位置
 ```
+
+`-P` 代表明確指定連接的 port (remote host).
 
 ```cmd
 scp -P 22 twtrubiks@192.168.56.101:/home/twtrubiks/linux_file.md .
@@ -881,6 +917,8 @@ line 2" >> hello_2.txt
 
 ## 不用密碼遠端登入 Linux
 
+### 方法一
+
 先確認 Linux 上有 `.ssh` 資料夾，如果沒有，
 
 請使用以下指令建立 ( 以及權限 )，
@@ -922,7 +960,25 @@ cat id_rsa.pub >> ~/.ssh/authorized_keys
 
 不用輸入密碼就可以登入了:thumbsup:
 
+### 方法二
+
+也可以透過 `ssh-copy-id` 來完成,
+
+```cmd
+ssh-copy-id -i ~/.ssh/id_rsa.pub twtrubiks@192.168.56.101
+```
+
+![alt tag](https://i.imgur.com/eR5TIJ3.png)
+
+其實不管是方法一還是方法二, 都只是把 key 加入 `/home/<user>/.ssh`
+
+裡的 `authorized_keys` 而已:smile:
+
+![alt tag](https://i.imgur.com/j4BRI1J.png)
+
 ## root 使用者登入遠端 Linux
+
+注意, 通常不會這樣做:exclamation:
 
 雖然這個方法可以比較危險，但我還是說明一下:joy:
 
@@ -957,12 +1013,55 @@ sudo vim /etc/ssh/sshd_config
 
 ![alt tag](https://i.imgur.com/xpyfpwW.png)
 
-注意，Linux 一定要重新啟動，否則無法生效。
+最後記得一定要重新啟動 sshd 讓它生效 (或是重開機)
+
+```cmd
+systemctl restart sshd
+```
 
 成功使用 root 登入了:satisfied:
 
 ![alt tag](https://i.imgur.com/Au4wt32.png)
 
+## 正確保護 server
+
+比較安全的作法通常是關閉 `PermitRootLogin` 以及 `PasswordAuthentication`,
+
+然後只啟用 `PubkeyAuthentication` 的方式, 但這邊要注意, 一定要把你的 key 放到
+
+server 上, 否則如果設定完不小心退出, 就很麻煩:expressionless:
+
+( 因為不能用密碼登入, 又忘記將 key 放到 server 中 )
+
+修改
+
+```cmd
+sudo vim /etc/ssh/sshd_config
+```
+
+禁止 root 登入, 將 `PermitRootLogin` 設為 `no`,
+
+![alt tag](https://i.imgur.com/W6KBiXS.png)
+
+禁止使用 password 登入, 將 `PasswordAuthentication` 設為 `no`,
+
+![alt tag](https://i.imgur.com/L9WPRq5.png)
+
+允許 `PubkeyAuthentication`, 設為 `yes`
+
+![alt tag](https://i.imgur.com/iYyaAQ8.png)
+
+補充, 還有一種是使用 PAM Authentication `UsePAM` ( AWS 就是使用這種方式 )
+
+![alt tag](https://i.imgur.com/g3MdnKC.png)
+
+如同說明, 如果希望只使用 PAM Authentication, 也可以把  `ChallengeResponseAuthentication` 設為 `no`.
+
+最後記得重新啟動 sshd 讓它生效 (或是重開機)
+
+```cmd
+systemctl restart sshd
+```
 
 ## 其他資訊
 
@@ -1132,6 +1231,8 @@ sudo apt autoremove
 
 [gnome-tweaks](https://github.com/twtrubiks/linux-note/tree/master/gnome-tweaks) - Ubuntu 安裝 GNOME Tweak tool
 
+[how-to-change-login-lock-background-ubuntu](https://github.com/twtrubiks/linux-note/tree/master/how-to-change-login-lock-background-ubuntu) - 修改Ubuntu 登入/鎖屏時的背景
+
 ## 狀況排除
 
 [fix_could_not_get_lock_dpkg_ubuntu](https://github.com/twtrubiks/linux-note/tree/master/fix_could_not_get_lock_dpkg_ubuntu) - 修正 `E: Could not get lock /var/lib/dpkg/lock` Error
@@ -1141,6 +1242,8 @@ sudo apt autoremove
 [ubuntu-18-04-on-Lenovo-X1-Carbon-6](https://github.com/twtrubiks/linux-note/tree/master/ubuntu-18-04-on-Lenovo-X1-Carbon-6)
 
 [透過 VirtualBox 安裝 Ubuntu 19.10 （以及一些個人想法）](https://youtu.be/lI1EMwhW6lE)
+
+[VirtualBox 6.1 Linux 安裝 Guest Addition - 全屏教學](https://youtu.be/PMw6FPtbbaU)
 
 [alternative-software](https://github.com/twtrubiks/linux-note/tree/master/alternative-software) - windows -> Linux 替代軟體
 

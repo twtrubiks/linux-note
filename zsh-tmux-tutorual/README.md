@@ -67,7 +67,35 @@ sudo vim ~/.zshrc
 
 關閉重開即可生效。
 
-接著來安裝其他的 plugins，
+接著來安裝其他的 plugins
+
+## ZSH 主題出現亂碼
+
+有時候安裝主題會出現亂碼, 像是更改主題為 ZSH_THEME="agnoster"
+
+正常應該要顯示
+
+![alt tag](https://i.imgur.com/Wqr3Lbl.png)
+
+可是卻出現了亂碼
+
+![alt tag](https://i.imgur.com/wddi5tk.png)
+
+會出現這個狀況是因為字體沒安裝, 也就是缺少字體,
+
+安裝 Powerline 字體, 請執行以下的指令.
+
+```cmd
+sudo apt-get install fonts-powerline
+```
+
+更新字體
+
+```cmd
+fc-cache -f -v
+```
+
+重開 terminal 即可.
 
 ### 安装 zsh-autosuggestion
 

@@ -51,5 +51,12 @@ Restart Shutter, and you should see the applet indicator on the top panel
 
 ![alt tag](https://i.imgur.com/aZPScXK.png)
 
+## Set keyboard shortcuts
 
+use commmand
 
+```cmd
+shutter -s
+```
+
+![alt tag](https://i.imgur.com/IDKq9xQ.png)

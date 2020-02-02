@@ -1,5 +1,7 @@
 # Ubuntu Linux 修正 `E: Could not get lock /var/lib/dpkg/lock` Error
 
+[Youtube Tutorial - 修正 `E: Could not get lock /var/lib/dpkg/lock` Error](https://youtu.be/b6ZbhvnI_Kw)
+
 在使用 Ubuntu Linux 時, 看到類似以下錯誤訊息該怎麼修正
 
 ```cmd
