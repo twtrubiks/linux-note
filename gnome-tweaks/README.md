@@ -1,4 +1,4 @@
-#  GNOME Tweak tool
+# GNOME Tweak tool
 
 [Youtube Tutorial - Ubuntu 安裝 GNOME Tweak tool](https://youtu.be/lb_WCmuozcI)
 
