@@ -6,11 +6,9 @@ Neofetch is a command-line system information tool written in bash 3.2+. Neofetc
 
 ## 教學
 
-[neofetch](https://github.com/dylanaraps/neofetch)
+github:[neofetch](https://github.com/dylanaraps/neofetch),
 
-在 ubuntu 18.04 下安裝使用以下指令即可
-
-[ubuntu-1704-and-up](https://github.com/dylanaraps/neofetch/wiki/Installation#ubuntu-1704-and-up)
+在 ubuntu 18.04 下安裝使用以下指令即可, [ubuntu-1704-and-up](https://github.com/dylanaraps/neofetch/wiki/Installation#ubuntu-1704-and-up)
 
 ```cmd
 sudo apt update
@@ -75,5 +73,4 @@ source ~/show-neofetch
 
 ![alt tag](https://i.imgur.com/9snBh5s.png)
 
-這樣每次打開 terminal 時就會自動執行 `neofetch` 了
-
+這樣每次打開 terminal 時就會自動執行 `neofetch` 了:smile:

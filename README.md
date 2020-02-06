@@ -1143,17 +1143,7 @@ curl ifconfig.me
 top
 ```
 
-推薦 `htop` ( 資訊更清楚 )
-
-```cmd
-sudo apt-get install htop
-```
-
-```cmd
-htop
-```
-
-![alt tag](https://i.imgur.com/2uy1IQ9.png)
+推薦 `htop` ( 資訊更清楚 ), 建議參考 [htop-tutorial](https://github.com/twtrubiks/linux-note/tree/master/htop-tutorial) - htop tutorial:thumbsup:
 
 透過 xrandr 修改螢幕的亮度，
 
@@ -1234,6 +1224,8 @@ sudo apt autoremove
 [chinese-input-methods-on-ubuntu](https://github.com/twtrubiks/linux-note/tree/master/chinese-input-methods-on-ubuntu) - ubuntu 如何安裝中文輸入法
 
 [gnome-tweaks](https://github.com/twtrubiks/linux-note/tree/master/gnome-tweaks) - Ubuntu 安裝 GNOME Tweak tool
+
+[htop-tutorial](https://github.com/twtrubiks/linux-note/tree/master/htop-tutorial) - htop tutorial:thumbsup:
 
 [neofetch-tutorial](https://github.com/twtrubiks/linux-note/tree/master/neofetch-tutorial) - command-line system information tool:thumbsup:
 
