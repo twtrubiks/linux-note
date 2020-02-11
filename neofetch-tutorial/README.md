@@ -1,6 +1,6 @@
 # NeoFetch
 
-[Youtube Tutorial - Linux 指令教學-NeoFetch]()
+[Youtube Tutorial - Linux 指令教學-NeoFetch](https://youtu.be/nuobFAxCaw8)
 
 Neofetch is a command-line system information tool written in bash 3.2+. Neofetch displays information about your operating system, software and hardware in an aesthetic and visually pleasing way.
 

@@ -715,6 +715,61 @@ sudo find / -name "*.conf"
 find . -name README.md
 ```
 
+## source
+
+source 指令通常用於剛修改的初始化文件, 讓它立刻生效, 不必重開機(或登出再登入),
+
+以下例子,
+
+```cmd
+source demo.sh
+```
+
+在當下的 shell 內去讀取, 執行 demo.sh, 而 demo.sh **需要**有執行權限
+
+(執行權限代表 `chmod +x demo.sh`)
+
+source 指令也可以簡寫為 `.`
+
+```cmd
+. demo.sh
+```
+
+## sh or bash
+
+使用 `sh` or `bash`執行時, **不需要**有執行權限.
+
+(執行權限代表 `chmod +x demo.sh`)
+
+```cmd
+sh demo.sh
+bash demo.sh
+```
+
+## ./
+
+直接使用 `./` 執行, **需要**有執行權限.
+
+(執行權限代表 `chmod +x demo.sh`)
+
+當你執行
+
+```cmd
+./demo.sh
+
+chmod +x demo.sh
+./demo.sh
+```
+
+你會發現跳出類似訊息 `bash: ./demo.sh: Permission denied`,
+
+修正方法如下,
+
+```cmd
+chmod +x demo.sh
+./demo.sh
+```
+
 ## where
 
 尋找路徑，
@@ -1203,6 +1258,20 @@ sudo apt autoclean
 sudo apt autoremove
 ```
 
+## remove snap
+
+在 ubuntu 中, 預設會幫你安裝 snap, 但有些人不太喜歡,
+
+因為他是私人公司為維護的:smile:
+
+以下附上移除 snap 指令,
+
+```cmd
+sudo rm -rf /var/cache/snapd/
+sudo apt autoremove --purge snapd gnome-software-plugin-snap
+rm -rf ~/snap
+```
+
 ## Linux 檔案系統(結構)
 
 [Linux-File-System/Structure](https://github.com/twtrubiks/linux-note/tree/master/linux-file-system-structure)
@@ -1246,6 +1315,8 @@ sudo apt autoremove
 [alternative-software](https://github.com/twtrubiks/linux-note/tree/master/alternative-software) - windows -> Linux 替代軟體
 
 [rclone-tutorial](https://github.com/twtrubiks/linux-note/tree/master/rclone-tutorial) - rclone 是一套很棒的文件同步管理工具
+
+[Linux 桌面環境 Desktop Environment](https://github.com/twtrubiks/linux-note/tree/master/linux-de)
 
 ## Reference
 

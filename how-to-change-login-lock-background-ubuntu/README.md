@@ -1,6 +1,6 @@
 ## 如何修改 Ubuntu 18.04 登入/鎖屏時的背景
 
-[Youtube Tutorial-如何修改 Ubuntu 登入/鎖屏時的背景]()
+[Youtube Tutorial-如何修改 Ubuntu 登入/鎖屏時的背景](https://youtu.be/k2Lzqz53-L0)
 
 預設登入/鎖屏時的背景真的不太好看:sweat_smile:
 
