@@ -1318,6 +1318,8 @@ rm -rf ~/snap
 
 [Linux 桌面環境 Desktop Environment](https://github.com/twtrubiks/linux-note/tree/master/linux-de)
 
+[認識 Linux 發行版 distribution](https://github.com/twtrubiks/linux-note/tree/master/linux-distro)
+
 ## Reference
 
 * [Linux Command 命令列指令與基本操作入門教學](https://blog.techbridge.cc/2017/12/23/linux-commnd-line-tutorial/)
