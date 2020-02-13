@@ -6,6 +6,12 @@
 
 今天就帶大家來認識 Linux distribution
 
+先來看簡單的大方向:smile:
+
+![alt tag](https://i.imgur.com/vRpTRhJ.png)
+
+以下將分別說明,
+
 Debian
 
 堅守 Unix 和自由軟體的精神
