@@ -3,8 +3,8 @@
 |   windows  |         Linux         |     功能     | 文章教學                                                                                                            |
 |:----------:|:---------------------:|:------------:|---------------------------------------------------------------------------------------------------------------------|
 |    PCMan   |         pcmanx        |      ptt     |                                                                                                                     |
-|    CLCL    |         copyq         |    剪貼簿    |                                                                                                                     |
-|    Q-Dir   |        krusader       |   檔案總管   |                                                                                                                     |
+|    CLCL    |         CopyQ         |    剪貼簿    | [copyq-tutorial](https://github.com/twtrubiks/linux-note/tree/master/copyq-tutorial)                      |
+|    Q-Dir   |        krusader       |   檔案總管   | [krusader-tutorial](https://github.com/twtrubiks/linux-note/tree/master/krusader-tutorial)                   |
 |   PicPick  |        shutter        |   截圖編輯   | [shutter-tutorual](https://github.com/twtrubiks/linux-note/tree/master/shutter-tutorual)                            |
 |   VS Code  |        VS Code        |      IDE     | [vscode_python_note](https://github.com/twtrubiks/vscode_python_note)                                               |
 |    cmder   |        zsh,tmux       |   terminal   | [zsh-tmux-tutorual](https://github.com/twtrubiks/linux-note/tree/master/zsh-tmux-tutorual)                          |
