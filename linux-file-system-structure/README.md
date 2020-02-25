@@ -16,11 +16,13 @@ bin 是 binary 的縮寫, 裡面通常是可執行的檔案, 像是 `cp` `ls` `l
 
 `/dev`
 
-device 的縮寫, 系統設備裝置檔案都在此目錄中, 像是 usb, cpu, disk, ide, ram.
+device 的縮寫, 系統設備裝置檔案都在此目錄中, 像是 usb, cpu, disk, sda, ide, ram.
 
 `/etc`
 
-此目錄存放系統以及軟體的設定檔 `.conf`.
+此目錄存放系統以及軟體的設定檔 `.conf`, `sources.list.d` 這類儲存 repo 的資訊也都在這裡面,
+
+修改目錄底下的內容時請記得加上 `sudo`.
 
 `/etc/passwd`
 
@@ -68,7 +70,9 @@ device 的縮寫, 系統設備裝置檔案都在此目錄中, 像是 usb, cpu, d
 
 `/sbin`
 
-大多是系統管理指令, 像是 `shutdown` `reboot` `ip` `mount` `fdisk` 都在這裡面.
+system binary 的縮寫, 通常是系統管理員才能訪問, 因為這裡面多數都是系統管理指令,
+
+像是 `shutdown` `reboot` `ip` `mount` `fdisk`.
 
 `/tmp`
 

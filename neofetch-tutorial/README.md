@@ -49,28 +49,14 @@ neofetch --help
 
 ## 打開 terminal 時自動執行
 
-先建立一個檔案
-
-```cmd
-vim ~/show-neofetch
-```
-
-在裡面輸入 neofetch
-
-![alt tag](https://i.imgur.com/uOC4uWI.png)
-
-然後依照自己的 terminal 設定 ( 這邊使用 `zsh` 示範 )
+依照自己的 terminal 設定 ( 這邊使用 `zsh` 示範 )
 
 ```cmd
 vim ~/.zshrc
 ```
 
-在裡面加入
+在裡面加入 neofetch (最前面或最後面都可以)
 
-```cmd
-source ~/show-neofetch
-```
-
-![alt tag](https://i.imgur.com/9snBh5s.png)
+![alt tag](https://i.imgur.com/7pbqz1P.png)
 
 這樣每次打開 terminal 時就會自動執行 `neofetch` 了:smile:

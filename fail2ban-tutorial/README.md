@@ -1,6 +1,6 @@
 # fail2ban tutorial
 
-[Youtube Tutorial - fail2ban tutorial]()
+[Youtube Tutorial - fail2ban tutorial](https://youtu.be/5tzPamIzo4o)
 
 透過 fail2ban 讓 server 更安全:smile:
 

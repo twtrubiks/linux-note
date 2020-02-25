@@ -238,3 +238,29 @@ log 列表不會保留在畫面上，這時候就又要打一次指令。
 ```cmd
 git config --global --replace-all core.pager "less -F -X"
 ```
+
+## 善用 alias
+
+一般的 terminal 都可以設定 alias, 如果你是 bash 就是編輯你的 `.bashrc`,
+
+在這邊是 zsh, 就編輯你的 `.zshrc`
+
+```cmd
+vim ~/.zshrc
+```
+
+![alt tag](https://i.imgur.com/QYQloGy.png)
+
+拉到檔案最後面, 你會發現其實裡面已經有範例了
+
+舉個例子, `alias lla="ls -l -a"` (設定為後請重開 terminal:exclamation:),
+
+直接輸入 `lla` 就等於是 `ls -l -a`
+
+![alt tag](https://i.imgur.com/9W4GRsB.png)
+
+這邊補充一個小技巧, 如果你常常要用 terminal ssh 到某台機器,
+
+你可以把它設定成 alias, `alias mypc="ssh twtrubiks@192.168.56.101"`,
+
+這樣直接在 terminal 上輸入 `mypc` 就可以了, 非常方便:thumbsup:

@@ -1,8 +1,10 @@
 # CopyQ 教學
 
-[Youtube Tutorial - CopyQ tutorial]()
+[Youtube Tutorial - Linux - CopyQ 教學 - 剪貼簿工具](https://youtu.be/vRaS5roI8AY)
 
 Linux 上好用的剪貼簿:thumbsup:
+
+(假如你是使用 KDE 的桌面環境, 預設就會幫你裝 klipper, 它也不錯用)
 
 CopyQ 官方文件 [copyq](https://copyq.readthedocs.io/en/latest/installation.html)
 
@@ -53,7 +55,7 @@ tray menu 就是這個
 
 設定快捷鍵,
 
-像這邊我設定 `Shirft+C` 會跑出 tray menu，請記得要按 Apply 才會生效
+像這邊我設定 `Shift+C` 會跑出 tray menu，請記得要按 Apply 才會生效
 
 (但我這樣有個小缺點, 因為輸入法的關係, 有時候要輸入大寫的 C 會衝突 )
 
