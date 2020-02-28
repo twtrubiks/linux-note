@@ -1,6 +1,6 @@
 # stacer tutorial
 
-[Youtube Tutorial - stacer tutorial]()
+[Youtube Tutorial - stacer tutorial](https://youtu.be/JNBLfQ9KcTw)
 
 ubuntu 安裝指令,
 
