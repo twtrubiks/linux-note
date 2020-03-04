@@ -1,5 +1,7 @@
 # Linux 檔案系統(結構)
 
+[Youtube Tutorial - Linux 教學 - 檔案系統(結構)](https://youtu.be/C-1ebRFBiAI)
+
 這篇紀錄 Linux 檔案系統(結構), 只會說一些比較重要的:smile:
 
 Linux目錄結構
