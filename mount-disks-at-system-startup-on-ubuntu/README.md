@@ -1,6 +1,6 @@
 # Mount Disk at System Startup On Ubuntu
 
-[Youtube Tutorial - How Mount Disk at System Startup On Ubuntu]()
+[Youtube Tutorial - How Mount Disk at System Startup On Ubuntu](https://youtu.be/tYA8HO4jpM4)
 
 When you use Ubuntu(Linux), if you have multiple hard disks,
 

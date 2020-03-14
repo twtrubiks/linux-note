@@ -72,6 +72,34 @@ package manager `apt`
 
 ![alt tag](https://i.imgur.com/0lh0IHt.png)
 
+MX Linux
+
+基於 Debian 穩定開發版的 Linux distro, 中量級 distro, 很多 distro 的
+
+好用的工具這裡面都有(MX Tools中，很多工具都是專為 MX Linux 開發的), MX
+
+社群的目標是, 優雅而高效的桌面與簡單的配置, 高穩定性、可靠性, 而且 MX Linux
+
+預設的 DE 是 Xfce (操作也很流暢). 使用 antiX 安裝程序, 讓安裝頁面變得很簡單.
+
+package manager `apt`
+
+![alt tag](https://i.imgur.com/FjKCONa.png)
+
+Zorin OS
+
+基於 Ubuntu 的 Linux distro,目標是盡可能類似 windows 操作模式，內建 Wine,
+
+方便安裝 windows 軟體, 同時, Zorin 有自己特有的 Zorin appearance，可以透過
+
+他來方便的切換桌面的外觀，像是切換成 Win7 或 Mac 外觀, 雖然 Zorin 使用 GNOME,
+
+但有獨特的介面.
+
+package manager `apt`
+
+![alt tag](https://i.imgur.com/VVBylk2.png)
+
 Arch Linux
 
 小而美的 distro,

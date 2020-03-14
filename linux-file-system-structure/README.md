@@ -30,6 +30,22 @@ device 的縮寫, 系統設備裝置檔案都在此目錄中, 像是 usb, cpu, d
 
 紀錄系統中每一個 user 的行為, 包含 User ID, Group ID.
 
+`/etc/shadow`
+
+保存 Linux 真實密碼相關資訊, 每行都會對應到 `/etc/passwd`.
+
+`/etc/fstab`
+
+設定檔案(硬碟)掛載 mount
+
+`/etc/hosts`
+
+設定 ip 以及 網域名稱 domain
+
+`/etc/os-release`
+
+查詢 Linux distro
+
 `/home`
 
 每個 user 的個人文件, 每個 user 的主目錄都是以自己的名稱命名, 像是 `/home/twtrubiks` (username 就是 twtrubiks)
