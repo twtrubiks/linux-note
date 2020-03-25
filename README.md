@@ -4,8 +4,6 @@
 
 ( 本篇文章會持續更新:smile: )
 
-* [籌備中](xxx)
-
 ## cd
 
 切換到家目錄 `~`
@@ -99,7 +97,7 @@ ll
 
 由 10 個字元組成，
 
-第一個字元代表檔案型態 (`-`為檔案，`d`為目錄，`1` 為連結檔案 )。
+第一個字元代表檔案型態 (`-` 為檔案，`d` 為目錄，`l` 為連結檔案 )。
 
 第二、三、四個字元 表示檔案擁有者的存取權限。
 
@@ -109,7 +107,7 @@ ll
 
 來看一個例子，drwxr-xr-x，
 
-代表它是一個檔案，
+代表它是一個目錄，
 
 擁有者具備讀、寫、執行權限，
 
@@ -122,7 +120,7 @@ ll
 |                |        擁有者        |      所屬群組      |     其他使用者     |
 |----------------|:--------------------:|:------------------:|:------------------:|
 |        d       |          rwx         |         r-x        |         r-x        |
-| 代表是一個檔案 | 具備讀、寫、執行權限 | 只擁有讀、執行權限 | 只擁有讀、執行權限 |
+| 代表是一個目錄 | 具備讀、寫、執行權限 | 只擁有讀、執行權限 | 只擁有讀、執行權限 |
 
 它的權限分數是 755
 
@@ -256,6 +254,10 @@ cat /etc/group
 
 ## chmod
 
+[Youtube Tutorial - Linux 教學 - chmod](https://youtu.be/qwk4Pzgtf2I)
+
+chmod 為 change mode 的縮寫.
+
 改變檔案權限
 
 ```cmd
@@ -268,7 +270,7 @@ chmod XXX filename
 |:------:	|:----:	|:--------:	|
 |  owner 	|  rw- 	| 4+2+0 =6 	|
 |  group 	|  rw- 	| 4+2+0 =6 	|
-| others 	|  r-- 	| 4+0+1 =4 	|
+| others 	|  r-- 	| 4+0+0 =4 	|
 
 ```cmd
 chmod 664 README.md
@@ -1284,13 +1286,15 @@ rm -rf ~/snap
 
 [shutter-tutorual](https://github.com/twtrubiks/linux-note/tree/master/shutter-tutorual) - Shutter is an excellent image capture tool.
 
-[systemctl-tutorial](https://github.com/twtrubiks/linux-note/tree/master/systemctl-tutorual)
+[systemctl-tutorial](https://github.com/twtrubiks/linux-note/tree/master/systemctl-tutorial) - systemctl 命令是系統服務管理指令
 
-[crontab-tutorual](https://github.com/twtrubiks/linux-note/tree/master/crontab-tutorual)
+[crontab-tutorual](https://github.com/twtrubiks/linux-note/tree/master/crontab-tutorual) - Linux Crontab
 
 [mount-disks-at-system-startup-on-ubuntu](https://github.com/twtrubiks/linux-note/tree/master/mount-disks-at-system-startup-on-ubuntu)
 
 [chinese-input-methods-on-ubuntu](https://github.com/twtrubiks/linux-note/tree/master/chinese-input-methods-on-ubuntu) - ubuntu 如何安裝中文輸入法
+
+[hime-tutorial](https://github.com/twtrubiks/linux-note/tree/master/hime-tutorial) - Linux 中更像微軟更好用的中文輸入法 hime
 
 [gnome-tweaks](https://github.com/twtrubiks/linux-note/tree/master/gnome-tweaks) - Ubuntu 安裝 GNOME Tweak tool
 

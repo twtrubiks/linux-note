@@ -2,6 +2,8 @@
 
 [Youtube Tutorial - Linux 發行版 distribution(distro)介紹](https://youtu.be/eCFfpJcd9c4)
 
+[Youtube Tutorial - Linux distro 發行版介紹 MX Linux, Zorin OS](https://youtu.be/nxoMgT8akdQ)
+
 相信大家如果剛開始接觸 Linux, 一定會看到 distribution ( distro ) 或發行版,
 
 今天就帶大家來認識 Linux distribution
