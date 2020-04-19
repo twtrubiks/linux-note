@@ -2,7 +2,7 @@
 
 TLP - Linux Advanced Power Management
 
-[Youtube Tutorial - tlp tutorial]()
+[Youtube Tutorial - tlp tutorial](https://youtu.be/rQmbnXheSVw)
 
 TLP 是一款進階電源管理的工具, 如果沒特別需求, 你甚至可以在安裝完它之後,
 

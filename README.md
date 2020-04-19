@@ -52,6 +52,8 @@ pwd
 
 ## ls
 
+[Youtube Tutorial - Linux 指令教學 - ls](https://youtu.be/3Zy1AWuDUHE)
+
 列出檔案
 
 ```cmd
@@ -386,7 +388,7 @@ chown twtrubiks:twtrubiksgroup README.md
 
 ## ln
 
-[Youtube Tutorial - Linux 指令教學-ln (Symbolic Link)](https://youtu.be/jdZsO2GAf2I)
+[Youtube Tutorial - Linux 指令教學 - ln (Symbolic Link)](https://youtu.be/jdZsO2GAf2I)
 
 有兩種, 分別為 hard link 和 Symbolic link ( soft link ),
 
@@ -420,7 +422,7 @@ symbolic link 允許檔案和資料夾。
 
 ## zip unzip
 
-zip **不會**保存檔案的 permissions and ownership.
+zip 3.0 已經會保存檔案的 permissions and ownership.
 
 ```cmd
 sudo apt-get install zip unzip
@@ -570,6 +572,8 @@ Linux 之間的傳送也是相同的道理:smile:
 
 
 ## mv
+
+[Youtube Tutorial - Linux 指令教學 - mv](https://youtu.be/VhyzaEaGnL8)
 
 move ( rename ) files，**移動檔案**或是**重新命名檔案**。
 
@@ -1315,6 +1319,8 @@ rm -rf ~/snap
 [fix_could_not_get_lock_dpkg_ubuntu](https://github.com/twtrubiks/linux-note/tree/master/fix_could_not_get_lock_dpkg_ubuntu) - 修正 `E: Could not get lock /var/lib/dpkg/lock` Error
 
 ## 其他
+
+[Windows -> Linux 優缺點](https://github.com/twtrubiks/linux-note/tree/master/linux-is-better-than-windows) - Windows -> Linux 優缺點
 
 [ubuntu-18-04-on-Lenovo-X1-Carbon-6](https://github.com/twtrubiks/linux-note/tree/master/ubuntu-18-04-on-Lenovo-X1-Carbon-6)
 
