@@ -610,6 +610,8 @@ mv -u source_file path_to_destination/
 
 ## rm
 
+[Youtube Tutorial - Linux 指令教學 - rm](https://youtu.be/JqKjBZMXn_I)
+
 刪除檔案
 
 ```cmd
@@ -647,6 +649,8 @@ rm -f *demo.zip
 ```
 
 ## cp
+
+[Youtube Tutorial - Linux 指令教學 - cp](https://youtu.be/ORl0YUGY728)
 
 複製資料夾
 
@@ -974,6 +978,158 @@ line 2" >> hello_2.txt
     echo 'line1;'
     echo 'line2;'
 } >> hello_3.txt
+```
+
+## du
+
+[Youtube Tutorial - Linux 指令教學 - du(Disk Usage)](https://youtu.be/JZZoJnasnHE)
+
+du 這個指令是 Disk Usage 的縮寫,
+
+在開始介紹 du 之前, 先來看一個例子,
+
+使用 `ls -l -h` 觀察 debian 資料夾
+
+![alt tag](https://i.imgur.com/lXgxQop.png)
+
+但是如果你進到資料夾裡面, 你會發現它明明有 17GB,
+
+可是為什麼在資料夾外層看的時候卻只有 4KB:question:
+
+![alt tag](https://i.imgur.com/eOTKWJj.png)
+
+原因是 `ls -l -h` 不會顯示資料夾實際的大小, 只會顯示所謂的 meta information,
+
+所以, 如果你要看實際的大小, 比較好的方法是使用接下來要介紹的 `du` 指令:smile:
+
+查看 du 指令說明
+
+```cmd
+du --help
+```
+
+![alt tag](https://i.imgur.com/IQLpqnC.png)
+
+```cmd
+-s, --summarize       display only a total for each argument
+                      (Equivalent to -d 0)
+
+-h, --human-readable  print sizes in human readable format (e.g., 1K 234M 2G)
+    --inodes          list inode usage information instead of block usage
+
+-c, --total           produce a grand total
+
+-d, --max-depth=N     print the total for a directory (or file, with --all)
+                      only if it is N or fewer levels below the command
+                      line argument;  --max-depth=0 is the same as --summarize
+
+
+-a, --all             write counts for all files, not just directories
+    --apparent-size   print apparent sizes, rather than disk usage; although
+                      the apparent size is usually smaller, it may be
+                      larger due to holes in ('sparse') files, internal
+                      fragmentation, indirect blocks, and the like
+```
+
+以下兩個指令功能是相同的
+
+```cmd
+du -sh *
+du --summarize --human-readable *
+```
+
+使用剛剛的那個例子, 在資料夾的外層就能看到實際的資料夾大小
+
+![alt tag](https://i.imgur.com/hHjxXDx.png)
+
+也可以搭配 `-d` 使用, 資料夾的層數, 看下面的例子你就會懂了
+
+```cmd
+du -d 2 -h
+```
+
+![alt tag](https://i.imgur.com/NdbqvSz.png)
+
+## truncate
+
+[Youtube Tutorial - Linux 指令教學 - truncate](https://youtu.be/w2pwD1AOhPI)
+
+Shrink or extend the size of each FILE to the specified size.
+
+truncate 指令可以將一個檔案縮小或是增加大小.
+
+開始介紹這個指令前, 先來看看適用的情境:smile:
+
+有時候我們可能會希望把一個檔案的大小歸 0, 也就是將檔案的內容全部刪除,
+
+但是要保留檔案, 這時候就很適合使用這個指令:smirk:
+
+那你可能會問我, 為什麼不直接刪除檔案再建立一個一模一樣的就好:question:
+
+原因很簡單, 在 linux 的世界中, 檔案是有權限的, 所以你還要去注意新建立
+
+出來的檔案, 權限是否和之前的一模一樣( 否而可能會導致錯誤 ), 所以比較簡單
+
+的方法會是使用 truncate 這個指令, 它將只會清除內容 ( 檔案大小為 0 ),
+
+其餘的都保持原來的狀態。
+
+查看 truncate 指令說明,
+
+```cmd
+truncate --help
+```
+
+![alt tag](https://i.imgur.com/rOXR79N.png)
+
+```cmd
+Mandatory arguments to long options are mandatory for short options too.
+-c, --no-create        do not create any files
+-o, --io-blocks        treat SIZE as number of IO blocks instead of bytes
+-r, --reference=RFILE  base size on RFILE
+-s, --size=SIZE        set or adjust the file size by SIZE bytes
+    --help     display this help and exit
+    --version  output version information and exit
+
+SIZE may also be prefixed by one of the following modifying characters:
+'+' extend by, '-' reduce by, '<' at most, '>' at least,
+'/' round down to multiple of, '%' round up to multiple of.
+```
+
+使用以下的範例來說明,
+
+假設現在有一個 `demo.txt` 的檔案 (如下)
+
+![alt tag](https://i.imgur.com/nWoxmhn.png)
+
+使用 truncate 將 `demo.txt` 放大到 1M,
+
+```cmd
+truncate -s 1M demo.txt
+```
+
+![alt tag](https://i.imgur.com/jeZ6Rkp.png)
+
+注意 `du -ah` 是顯示 apparent sizes (不是 disk usage ), 所以大小不會改變.
+
+如果你去打開 `demo.txt`, 你會發現被塞了很多東西, 因為大小要變成 1M:smile:
+
+![alt tag](https://i.imgur.com/mgQNkNn.png)
+
+相反的, 現在使用 truncate 將 `demo.txt` 縮小到 0,
+
+![alt tag](https://i.imgur.com/9czKNL5.png)
+
+如果你去打開 `demo.txt`, 你會發現裡面的資料都消失了.
+
+![alt tag](https://i.imgur.com/vmLwz96.png)
+
+truncate 這個指令就非常適合去清除 log, 將 log 大小歸 0, 其餘保持原樣.
+
+清空所有日誌文件
+
+```cmd
+sudo truncate -s 0 /var/log/**/*.log
 ```
 
 ## 不用密碼遠端登入 Linux
