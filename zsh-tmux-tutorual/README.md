@@ -132,6 +132,37 @@ plugins=(git zsh-autosuggestions)
 
 ![alt tag](https://i.imgur.com/VHAvlC1.png)
 
+### 安装 zsh-syntax-highlighting
+
+plugins 的路徑可放在兩個地方 ( 則一即可 )，
+
+```text
+Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+```
+
+先 clone zsh-syntax-highlighting
+
+```cmd
+git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins/
+```
+
+編輯 `.zshrc`，
+
+```cmd
+vim ~/.zshrc
+````
+
+加入 zsh-syntax-highlighting，
+
+```.zshrc
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+```
+
+關掉 Terminal 重開即可， 效果如下
+
+![alt tag](https://i.imgur.com/3yu19BT.png)
+
 ## 安裝 tmux
 
 [Youtube Tutorial - Ubuntu 如何安裝 tmux](https://youtu.be/sKKUgMEOOh0)
