@@ -36,6 +36,8 @@ device 的縮寫, 系統設備裝置檔案都在此目錄中, 像是 usb, cpu, d
 
 `/etc/fstab`
 
+![alt tag](https://i.imgur.com/79WxI5w.png)
+
 設定檔案(硬碟)掛載 mount
 
 `/etc/hosts`

@@ -914,6 +914,30 @@ mkdir -p dir1/dir2
 
 `-p` `--parents`  代表自動建立上層目錄，如果目錄已存在則不會發生錯誤。
 
+## kill
+
+強制停止程式執行.
+
+需要先查到程式的 PID, 使用方法如下,
+
+```cmd
+kill -9 PID
+```
+
+`-9` 立刻強制停止程式執行
+
+## killall
+
+killall 和 kill 的一個差別是可以使用程式名稱,
+
+不需要先找到程式的 PID,
+
+例如想要強制停止 vlc
+
+```cmd
+killall vlc
+```
+
 ## history
 
 歷史輸入的指令
@@ -932,6 +956,12 @@ history | less
 
 ```cmd
 !1848
+```
+
+再顯示一次最後輸入的指令 (建議加上 sudo)
+
+```cmd
+!!
 ```
 
 ## echo
@@ -1324,6 +1354,14 @@ df -h
 lsblk
 ```
 
+目前硬碟 mount 狀態 (開機自動掛載)
+
+```cmd
+cat /etc/fstab
+```
+
+![alt tag](https://i.imgur.com/79WxI5w.png)
+
 查看所有 pci，
 
 ```cmd
@@ -1469,6 +1507,8 @@ rm -rf ~/snap
 [fail2ban-tutorial](https://github.com/twtrubiks/linux-note/tree/master/fail2ban-tutorial) - 讓 server 更安全:smile:
 
 [how-to-change-login-lock-background-ubuntu](https://github.com/twtrubiks/linux-note/tree/master/how-to-change-login-lock-background-ubuntu) - 修改Ubuntu 登入/鎖屏時的背景
+
+[grub-customizer-tutorial](https://github.com/twtrubiks/linux-note/tree/master/grub-customizer-tutorial) - 安裝 grub-customizer
 
 ## 狀況排除
 
