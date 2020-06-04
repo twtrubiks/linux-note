@@ -1538,6 +1538,8 @@ rm -rf ~/snap
 
 [speedtest-cli-tutorial](https://github.com/twtrubiks/linux-note/tree/master/speedtest-cli-tutorial) - Linux speedtest-cli tutorial
 
+[openvpn-tutorial-tutorial](https://github.com/twtrubiks/linux-note/tree/master/openvpn-tutorial) - Linux openvpn tutorial
+
 [linux-virtualbox-ssh-tutorial](https://github.com/twtrubiks/linux-note/tree/master/linux-virtualbox-ssh-tutorial) - 在 Linux 中設定 VirtualBox 把玩 ssh
 
 [Linux 桌面環境 Desktop Environment](https://github.com/twtrubiks/linux-note/tree/master/linux-de)
