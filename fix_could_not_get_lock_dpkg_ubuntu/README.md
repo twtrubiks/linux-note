@@ -46,7 +46,7 @@ sudo kill -9 <process_id>
 ```cmd
 sudo rm /var/lib/apt/lists/lock
 sudo rm /var/cache/apt/archives/lock
-sudo rm /var/lib/dpkg/lock
+sudo rm /var/lib/dpkg/lock*
 ```
 
 移除完之後, 重新設定 packages
@@ -57,3 +57,4 @@ sudo dpkg --configure -a
 
 接著再去執行你原先想要執行的指令 ( 就可以正常 work 了 ):smile:
 
+也可以執行執行 `sudo apt-get update`

@@ -1,4 +1,6 @@
-# scrcpy
+# Linux Ubuntu 教學 - scrcpy 使用電腦控制(投影)手機
+
+[Youtube Tutorial - Linux Ubuntu 教學 - scrcpy 使用電腦控制(投影)手機](https://youtu.be/4mwrO3p1xHk)
 
 使用電腦控制手機 [scrcpy](https://github.com/Genymobile/scrcpy)
 

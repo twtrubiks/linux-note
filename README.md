@@ -570,7 +570,6 @@ scp -P 22 twtrubiks@192.168.56.101:/home/twtrubiks/linux_file.md .
 
 Linux 之間的傳送也是相同的道理:smile:
 
-
 ## mv
 
 [Youtube Tutorial - Linux 指令教學 - mv](https://youtu.be/VhyzaEaGnL8)
@@ -1354,6 +1353,14 @@ df -h
 lsblk
 ```
 
+顯示所有裝置設備的資訊 ,UUID
+
+```cmd
+blkid
+```
+
+![alt tag](https://i.imgur.com/8a6V7fq.png)
+
 目前硬碟 mount 狀態 (開機自動掛載)
 
 ```cmd
@@ -1440,6 +1447,14 @@ upgrade ( 更新軟體到最新的版本 )
 sudo apt-get upgrade
 ```
 
+只更新特定的軟體, 舉例 vivaldi,
+
+先更新再安裝就是更新軟體的意思,
+
+```cmd
+sudo apt update && sudo apt install vivaldi-stable
+```
+
 remove
 
 ```cmd
@@ -1510,6 +1525,8 @@ rm -rf ~/snap
 
 [grub-customizer-tutorial](https://github.com/twtrubiks/linux-note/tree/master/grub-customizer-tutorial) - 安裝 grub-customizer
 
+[enable-ubuntu-remote-tutorial](https://github.com/twtrubiks/linux-note/tree/master/enable-ubuntu-remote-tutorial) - 如何在 ubuntu 啟用遠端桌面
+
 ## 狀況排除
 
 [fix_could_not_get_lock_dpkg_ubuntu](https://github.com/twtrubiks/linux-note/tree/master/fix_could_not_get_lock_dpkg_ubuntu) - 修正 `E: Could not get lock /var/lib/dpkg/lock` Error
@@ -1549,6 +1566,8 @@ rm -rf ~/snap
 [Linux 桌面環境 Desktop Environment](https://github.com/twtrubiks/linux-note/tree/master/linux-de)
 
 [認識 Linux 發行版 distribution](https://github.com/twtrubiks/linux-note/tree/master/linux-distro)
+
+[KDE setting](https://github.com/twtrubiks/linux-note/tree/master/kde-settings)
 
 ## Reference
 
