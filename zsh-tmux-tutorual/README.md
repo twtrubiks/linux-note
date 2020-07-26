@@ -286,7 +286,7 @@ vim ~/.zshrc
 
 拉到檔案最後面, 你會發現其實裡面已經有範例了
 
-舉個例子, `alias lla="ls -l -a"` (設定為後請重開 terminal:exclamation:),
+舉個例子, `alias lla="ls -l -a"` (設定完後請重開 terminal:exclamation:),
 
 直接輸入 `lla` 就等於是 `ls -l -a`
 
@@ -297,3 +297,47 @@ vim ~/.zshrc
 你可以把它設定成 alias, `alias mypc="ssh twtrubiks@192.168.56.101"`,
 
 這樣直接在 terminal 上輸入 `mypc` 就可以了, 非常方便:thumbsup:
+
+`~/.zshrc`
+
+```conf
+# 設定快速啟動特定路徑的 docker-compose
+alias db="docker-compose -f /home/twtrubiks/work/test/docker-compose.yml up -d"
+
+## ssh
+alias mypc="ssh twtrubiks@192.168.56.101"
+
+## open vpn
+alias vpn="sudo openvpn client.ovpn"
+
+## 使用 vscode 快速打開特定資料夾
+alias stock="code /home/twtrubiks/stock"
+
+## 甚至是自動化 git add, commit, push 流程
+gitpush() {
+    git add .
+    git commit -m "$*"
+    git push
+}
+alias gp=gitpush
+
+## 建立資料夾後, 切換到資料夾底下
+mcd () {
+    mkdir -p $*
+    cd $*
+}
+```
+
+只要輸入 `gp test123`, 就相當於是執行了以下的指令
+
+```cmd
+git add .
+git commit -m "test123"
+git push
+```
+
+mcd 的執行結果如下
+
+![alt tag](https://i.imgur.com/bN4dX41.png)
+
+基本上功能很強:smile:
