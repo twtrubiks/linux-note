@@ -245,13 +245,28 @@ sudo usermod -g <groupname> <username>
 查看所有 user
 
 ```cmd
-cat /etc/passwd
+sudo cat /etc/passwd
 ```
 
 查看所有 group
 
 ```cmd
-cat /etc/group
+sudo cat /etc/group
+```
+
+不知道大家有沒有這個困擾, 就是每次都要打上自己的密碼很麻煩:expressionless:
+
+這邊提供一個方法給各位, 但還是要小心一點, 就是 `-S` 這個指令.
+
+```text
+The -S (stdin) option causes sudo to read the password from
+the standard input instead of the terminal device.
+```
+
+簡單說, 就是先打上你自己的密碼, 這樣就不用再打一次了, 以下舉例
+
+```cmd
+echo YourPwd | sudo -S groupadd <groupname>
 ```
 
 ## chmod
