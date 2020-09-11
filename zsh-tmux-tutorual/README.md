@@ -341,3 +341,25 @@ mcd 的執行結果如下
 ![alt tag](https://i.imgur.com/bN4dX41.png)
 
 基本上功能很強:smile:
+
+再補充一個, 很多時候我們會需要重新啟動遠端的機器, 每次都要進去重新啟動,
+
+實在非常的麻煩:sweat:
+
+所以提供遠端重啟(或執行指令)範例, 以下範例為執行 `run.sh`.
+
+`~/.zshrc`
+
+```conf
+function run-remote {
+    echo "aws"
+    printf -v __ %q "$1"
+    ssh -i key.pem ubuntu@xxx "cd work;sudo sh run.sh $__"
+}
+```
+
+`"..."` 裡面就放你需要執行的指令,
+
+建議多加上 `sudo`, 不然有時候會遇到權限不夠的問題:expressionless:
+
+可參考 [How to execute a remote command over ssh with arguments?](https://stackoverflow.com/questions/18502945/how-to-execute-a-remote-command-over-ssh-with-arguments)
