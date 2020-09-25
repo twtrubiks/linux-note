@@ -1436,6 +1436,28 @@ xrandr | grep " connected" | cut -f1 -d " "
 xrandr --output DP-1 --brightness 0.7
 ```
 
+透過 systemd-analyze 查看 Linux 啟動時間
+
+```cmd
+systemd-analyze
+```
+
+查看細節
+
+```cmd
+systemd-analyze blame
+```
+
+如何進入 tty 介面
+
+有時候開機時可能因為驅動沒裝, 導致卡在黑屏的畫面,
+
+這時候就可以進入 tty 介面安裝驅動(需要的東西),
+
+進入 tty 快捷建 `Ctrl+Alt+F2`
+
+退出 tty 快捷建 `Ctrl+Alt+F7` 或 `Ctrl+Alt+(F2/F3/F4)`
+
 ## install packages
 
 install
@@ -1577,6 +1599,8 @@ rm -rf ~/snap
 [scrcpy-tutorial-tutorial](https://github.com/twtrubiks/linux-note/tree/master/scrcpy-tutorial) - 使用電腦控制手機
 
 [linux-tlp-tutorial](https://github.com/twtrubiks/linux-note/tree/master/linux-tlp-tutorial) - Linux Advanced Power Management
+
+[variety-tutorual](https://github.com/twtrubiks/linux-note/tree/master/variety-tutorual) - variety 自動更換桌面
 
 [linux-virtualbox-ssh-tutorial](https://github.com/twtrubiks/linux-note/tree/master/linux-virtualbox-ssh-tutorial) - 在 Linux 中設定 VirtualBox 把玩 ssh
 
