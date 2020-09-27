@@ -1602,6 +1602,8 @@ rm -rf ~/snap
 
 [variety-tutorual](https://github.com/twtrubiks/linux-note/tree/master/variety-tutorual) - variety 自動更換桌面
 
+[arandr-tutorual](https://github.com/twtrubiks/linux-note/tree/master/arandr-tutorual) - arandr 設定多螢幕工具
+
 [linux-virtualbox-ssh-tutorial](https://github.com/twtrubiks/linux-note/tree/master/linux-virtualbox-ssh-tutorial) - 在 Linux 中設定 VirtualBox 把玩 ssh
 
 [Linux 桌面環境 Desktop Environment](https://github.com/twtrubiks/linux-note/tree/master/linux-de)

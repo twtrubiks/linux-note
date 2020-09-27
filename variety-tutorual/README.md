@@ -1,6 +1,6 @@
 # variety - 自動更換桌面
 
-[Youtube Tutorial -(待更新) 每日自動更換桌面 - variety](xxx)
+[Youtube Tutorial -(待更新) 自動更換桌面 - variety](xxx)
 
 [https://github.com/varietywalls/variety](https://github.com/varietywalls/variety)
 
@@ -20,6 +20,6 @@ sudo apt install variety
 
 ![alt tag](https://i.imgur.com/XfLhrlK.png)
 
-目前我在 Ubuntu (GNOME 桌面) 上是直接無痛使用,
+目前我在 Ubuntu 18.4 (GNOME 桌面) 上是直接無痛使用,
 
-但如果是上 KDE 的桌面上似乎需要做額外的設定(這個以後我有機會再來試試看:smile:)
+也測試過 Kubuntu 18.4 正常無痛使用:smile:
