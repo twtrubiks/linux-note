@@ -1606,6 +1606,8 @@ rm -rf ~/snap
 
 [linux-virtualbox-ssh-tutorial](https://github.com/twtrubiks/linux-note/tree/master/linux-virtualbox-ssh-tutorial) - 在 Linux 中設定 VirtualBox 把玩 ssh
 
+[linux-virtualbox-problem](https://github.com/twtrubiks/linux-note/tree/master/linux-virtualbox-problem) - 在 Linux 中設定 VirtualBox - 常見問題
+
 [Linux 桌面環境 Desktop Environment](https://github.com/twtrubiks/linux-note/tree/master/linux-de)
 
 [認識 Linux 發行版 distribution](https://github.com/twtrubiks/linux-note/tree/master/linux-distro)
