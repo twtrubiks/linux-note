@@ -22,4 +22,8 @@ sudo apt install variety
 
 目前我在 Ubuntu 18.4 (GNOME 桌面) 上是直接無痛使用,
 
-也測試過 Kubuntu 18.4 正常無痛使用:smile:
+使用版本 0.8.3.
+
+也測試過 Kubuntu 18.4, KDE 桌面我使用 0.8.3 會怪怪的,
+
+最後 KDE 上我裝比較舊的版本 (0.7.x).
