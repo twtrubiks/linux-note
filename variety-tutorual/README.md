@@ -1,6 +1,6 @@
 # variety - 自動更換桌面
 
-[Youtube Tutorial -(待更新) 自動更換桌面 - variety](xxx)
+[Youtube Tutorial - 自動更換桌面 - variety](https://youtu.be/Jc2gZyT1pkU)
 
 [https://github.com/varietywalls/variety](https://github.com/varietywalls/variety)
 

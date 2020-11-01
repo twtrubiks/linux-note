@@ -1,5 +1,7 @@
 # 在 Linux 中設定 VirtualBox - 常見問題
 
+[Youtube Tutorial - (等待新增)在 Linux 中設定 VirtualBox - 常見問題]()
+
 在 Linux 中玩 VirtualBox 常常會遇到一些問題, 這邊文章紀錄一下
 
 ## 常見問題
@@ -14,7 +16,7 @@
 
 ![alt tag](https://i.imgur.com/xuQ0q8E.png)
 
-為甚麼在 VirtualBox 內會找不到外接 USB 裝置:question:
+### 為甚麼在 VirtualBox 內會找不到外接 USB 裝置:question:
 
 這問題通常是 groups 的問題, 因為 groups 中沒有 vboxusers 這個 group,
 
@@ -32,6 +34,8 @@
 
 ### 為甚麼在 VirtualBox 無法 share 資料夾:question:
 
+![alt tag](https://i.imgur.com/CgOPM6Y.png)
+
 可能會出現類似的錯誤訊息
 
 ```text
@@ -39,6 +43,8 @@ You do not have the permissions necessary to view the contents of ....
 ```
 
 只需要將 shared folders 加入即可
+
+(是在 VM 中執行這行指令哦, 不是你的本機)
 
 ```cmd
 sudo adduser [username] vboxsf

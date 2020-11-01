@@ -363,3 +363,7 @@ function run-remote {
 建議多加上 `sudo`, 不然有時候會遇到權限不夠的問題:expressionless:
 
 可參考 [How to execute a remote command over ssh with arguments?](https://stackoverflow.com/questions/18502945/how-to-execute-a-remote-command-over-ssh-with-arguments)
+
+## 快捷鍵
+
+`Ctrl + u` 清空當前行

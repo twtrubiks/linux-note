@@ -1524,6 +1524,24 @@ sudo apt autoremove --purge snapd gnome-software-plugin-snap
 rm -rf ~/snap
 ```
 
+## remove ubuntu 不需要的軟體
+
+使用 ubuntu 18.04 當範例
+
+```cmd
+sudo apt purge deja-dup thunderbird rhythmbox ubuntu-web-launchers whoopsie
+```
+
+`deja-dup` ubuntu 內建備份軟體.
+
+`whoopsie` ubuntu 錯誤報告.
+
+如果不小心刪除到依賴 (把 settings 刪除), 可使用以下指令將它裝回來
+
+```cmd
+sudo apt-get install gnome-control-center
+```
+
 ## Linux 檔案系統(結構)
 
 [Linux-File-System/Structure](https://github.com/twtrubiks/linux-note/tree/master/linux-file-system-structure)
@@ -1533,6 +1551,8 @@ rm -rf ~/snap
 [zsh-tmux-tutorual](https://github.com/twtrubiks/linux-note/tree/master/zsh-tmux-tutorual) - 超好用 zsh 以及 tmux。
 
 [zsh-powerlevel10k-tutorual](https://github.com/twtrubiks/linux-note/tree/master/zsh-powerlevel10k-tutorual) - zsh 搭配 Powerlevel10k, 超漂亮 terminal。
+
+[vim-shortcuts](https://github.com/twtrubiks/linux-note/tree/master/vim-shortcuts) - 紀錄 vim 快捷鍵
 
 [imwheel-tutorual](https://github.com/twtrubiks/linux-note/tree/master/imwheel-tutorual) - 改善 linux 滑鼠滾動問題。
 

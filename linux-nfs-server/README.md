@@ -1,5 +1,7 @@
 # linux-nfs-server - 如何在 ubuntu 啟用 NFS Server
 
+[Youtube Tutorial - (等待新增)如何在 ubuntu 啟用 NFS Server]()
+
 NFS (Network File System)
 
 NFS 的優點是在 linux 上佈署簡單, 傳輸速度(相對 FTP)快.

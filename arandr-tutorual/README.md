@@ -1,6 +1,6 @@
 # arandr - 設定多螢幕工具
 
-[Youtube Tutorial -(待更新) 設定多螢幕工具 - arandr]()
+[Youtube Tutorial - 設定多螢幕工具 - arandr](https://youtu.be/PVMRLJaTNSY)
 
 很多時候在使用 linux 時, 當有使用多螢幕, 有時候可能插拔了一下,
 
