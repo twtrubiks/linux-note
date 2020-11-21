@@ -1,6 +1,6 @@
 # linux-nfs-server - 如何在 ubuntu 啟用 NFS Server
 
-[Youtube Tutorial - (等待新增)如何在 ubuntu 啟用 NFS Server]()
+[Youtube Tutorial - 如何在 ubuntu 啟用 NFS Server](https://youtu.be/CVJpYszrvXc)
 
 NFS (Network File System)
 

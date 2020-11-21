@@ -8,13 +8,27 @@ Shutter is an excellent image capture tool:smile:
 
 Execute the following command
 
+Ubuntu 18.04
+
 ```shell
 sudo apt-get update
 
 sudo apt-get install shutter
 ```
 
+Ubuntu 20.04
+
+```shell
+sudo apt-get update
+
+sudo add-apt-repository -y ppa:linuxuprising/shutter
+
+sudo apt-get install shutter
+```
+
 ## Fix Disable Edit In Shutter
+
+(Ubuntu 20.04 can be ignored, because the bug has been fixed:exclamation:)
 
 On Ubuntu 18.04, you will find that the edit option is unavailable,
 

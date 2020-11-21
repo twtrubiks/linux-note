@@ -1,6 +1,6 @@
 # 在 Linux 中設定 VirtualBox - 常見問題
 
-[Youtube Tutorial - (等待新增)在 Linux 中設定 VirtualBox - 常見問題]()
+[Youtube Tutorial - 在 Linux 中設定 VirtualBox - 常見問題](https://youtu.be/s7Pgl3kUaeY)
 
 在 Linux 中玩 VirtualBox 常常會遇到一些問題, 這邊文章紀錄一下
 

@@ -1,6 +1,6 @@
-# openvpn tutorial
+# openvpn 教學 - 建立 VPN
 
-[Youtube Tutorial - openvpn tutorial]()
+[Youtube Tutorial - openvpn 教學](https://youtu.be/E9F2kjiWDv8)
 
 ## 教學
 

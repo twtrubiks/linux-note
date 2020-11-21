@@ -80,3 +80,17 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 ![alt tag](https://i.imgur.com/8KiD5od.png)
 
 如果沒有自動跳出設定的介面, 可以手動執行 `p10k configure`.
+
+## p10k 設定 Enable Transient Prompt
+
+說明一下這個設定
+
+![alt tag](https://i.imgur.com/3irp0A6.png)
+
+如果你選 no, 就和一般的一樣
+
+![alt tag](https://i.imgur.com/A547n6g.png)
+
+如果你選 yes, 你輸入的指令永遠都會在最下方
+
+![alt tag](https://i.imgur.com/JrNqbKs.png)

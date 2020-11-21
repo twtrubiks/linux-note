@@ -1,6 +1,6 @@
-# speedtest-cli
+# speedtest-cli 教學
 
-[Youtube Tutorial - Linux speedtest-cli tutorial]()
+[Youtube Tutorial - Linux speedtest-cli 教學](https://youtu.be/qOJdGSxHj6Q)
 
 使用 command line 測試網路速度
 

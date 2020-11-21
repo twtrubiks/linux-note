@@ -1448,7 +1448,7 @@ systemd-analyze
 systemd-analyze blame
 ```
 
-如何進入 tty 介面
+###  如何進入 tty 介面
 
 有時候開機時可能因為驅動沒裝, 導致卡在黑屏的畫面,
 
@@ -1457,6 +1457,24 @@ systemd-analyze blame
 進入 tty 快捷建 `Ctrl+Alt+F2`
 
 退出 tty 快捷建 `Ctrl+Alt+F7` 或 `Ctrl+Alt+(F2/F3/F4)`
+
+### swap
+
+如果你的本機 ram 夠大, 可以考慮把它關掉,
+
+(有些 distro 預設是打開的 )
+
+關閉 swap
+
+```cmd
+sudo swapoff -a
+```
+
+打開 swap
+
+```cmd
+sudo swapon -a
+```
 
 ## install packages
 
@@ -1508,6 +1526,47 @@ sudo apt autoclean
 
 ```cmd
 sudo apt autoremove
+```
+
+## ppa add/remove
+
+add
+
+```cmd
+sudo apt-add-repository ppa:xxxx
+sudo apt update
+```
+
+remove
+
+```cmd
+sudo add-apt-repository -r ppa:xxxx
+sudo apt update
+```
+
+## 無法進入 bios
+
+```cmd
+sudo vim /etc/default/grub
+```
+
+你應該會看到類似的畫面
+
+```text
+GRUB_DEFAULT="0"
+GRUB_TIMEOUT_STYLE="hidden"
+GRUB_TIMEOUT=10   <<<<<<
+GRUB_DISTRIBUTOR="`lsb_release -i -s 2> /dev/null || echo Debian`"
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash usbcore.autosuspend=-1"
+GRUB_CMDLINE_LINUX=""
+```
+
+將 GRUB_TIMEOUT 的時間改長一點, 因為有可能是太快了, 導致來不及按:disappointed_relieved:
+
+也請記得要再執行以下的指令更新
+
+```cmd
+sudo update-grub
 ```
 
 ## remove snap
