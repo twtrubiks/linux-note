@@ -1651,6 +1651,8 @@ sudo apt-get install gnome-control-center
 
 [fix_could_not_get_lock_dpkg_ubuntu](https://github.com/twtrubiks/linux-note/tree/master/fix_could_not_get_lock_dpkg_ubuntu) - 修正 `E: Could not get lock /var/lib/dpkg/lock` Error
 
+[fix_network_manager_bug_ubuntu_18_04](https://github.com/twtrubiks/linux-note/tree/master/fix_network_manager_bug_ubuntu_18_04) - 修正 ubuntu 18.04 網路連線設定遺失問題.
+
 ## 其他
 
 [Windows -> Linux 優缺點](https://github.com/twtrubiks/linux-note/tree/master/linux-is-better-than-windows) - Windows -> Linux 優缺點

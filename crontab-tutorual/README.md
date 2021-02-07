@@ -98,7 +98,7 @@ service cron status
 每小時執行一次，
 
 ```cmd
-* */1 * * *  /usr/bin/python3  /home/twtrubiks/hello.py
+0 * * * *  /usr/bin/python3  /home/twtrubiks/hello.py
 ```
 
 每天的 1 點執行一次，
@@ -117,6 +117,12 @@ service cron status
 
 ```cmd
 */5 10-15 * * *  /usr/bin/python3  /home/twtrubiks/hello.py
+```
+
+星期一到星期五的 9 點到 14 點之間, 每 30 分鐘執行一次，
+
+```cmd
+*/30 9-14 * * Mon-FRI
 ```
 
 有時候為了要對 crontab 做確認，也可以將執行完的檔案或 log 寫出去，

@@ -153,7 +153,7 @@ sudo tlp-stat -g
 ```
 
 查看 USB 資料
-```cmd
+```cmdtlp
 sudo tlp-stat -u
 ```
 
@@ -162,3 +162,20 @@ sudo tlp-stat -u
 ```cmd
 sudo tlp-stat -w
 ```
+
+手動修改 Battery mode
+
+```cmd
+sudo tlp bat
+```
+
+手動修改 AC Mode
+
+```cmd
+sudo tlp ac
+```
+
+![alt tag](https://i.imgur.com/g7akcmA.png)
+
+注意, 手動修改會在下一次重開機的時候自動失效.
+
