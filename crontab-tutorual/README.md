@@ -150,7 +150,7 @@ minute hour dayOfMonth month dayOfWeek
 |:-------:|:-------:|:----------:|:-------:|:-----------------------------------------------------------:|
 |   分鐘  |   小時  |    日期    |   月份  |                             星期                            |
 |  minute |   hour  | dayOfMonth |  month  |                          dayOfWeek                          |
-| 0 to 59 | 0 to 59 |   1 to 31  | 1 to 12 | 0 to 7  0 and 7 means Sunday 1 means Monday 2 means Tuesday |
+| 0 to 59 | 0 to 23 |   1 to 31  | 1 to 12 | 0 to 7  0 and 7 means Sunday 1 means Monday 2 means Tuesday |
 
 可搭配 [https://crontab.guru/](https://crontab.guru/) 這個網站使用。
 
