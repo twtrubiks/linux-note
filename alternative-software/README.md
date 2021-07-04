@@ -20,3 +20,4 @@
 |    |         pavucontrol        | 控制音效卡(KDE預設) |
 |    |         ventoy        |  bootable USB drive |
 |    |         ristretto        |  看圖軟體 |
+|    |         fbreader        |  電子書閱讀器 |
