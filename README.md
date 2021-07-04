@@ -24,6 +24,12 @@ cd /
 cd ..
 ```
 
+移動路徑到上一個所在的路徑 (可以快速切換兩個路徑, 很方便:smile:)
+
+```cmd
+cd -
+```
+
 ## man
 
 線上說明手冊 ( man page )
@@ -190,10 +196,38 @@ sort
 ls -S
 ```
 
-將輸出結果寫到檔案裡
+將輸出結果 stdout 寫到文件裡, 可使用 redirect `>` (螢幕上不會顯示)
 
 ```cmd
 ls -lS > file.txt
+```
+
+## tee
+
+同時將輸出結果 stdout 寫到文件裡以及顯示在螢幕上 (直接覆寫掉 file.txt)
+
+```cmd
+ls | tee file.txt
+```
+
+同時將輸出結果 stdout 寫到文件裡以及顯示在螢幕上 (附加在 file.txt 之後)
+
+```cmd
+ls | tee -a file.txt
+```
+
+##  touch
+
+很常使用拿來建立空檔案
+
+```cmd
+touch file.py
+```
+
+也可以透過這個方式一次建立多個空檔案 ( `file1.py` ~ `file1.py`)
+
+```cmd
+touch file{1..10}.py
 ```
 
 ## su
@@ -836,6 +870,22 @@ tail README.md -n 5
 tail -f README.md
 ```
 
+## head
+
+既然有 tail, 肯定會有 head:smile:
+
+```cmd
+head text.py
+```
+
+預設顯示前 10 行資訊.
+
+可以透過 `-n` 指令指定要顯示前 `n` 行
+
+```cmd
+head -n 3 text.py
+```
+
 ## file
 
 檢查檔案類型
@@ -976,6 +1026,20 @@ history | less
 
 ```cmd
 !!
+```
+
+也可以搭配 grep,
+
+假如我想要找到歷史輸入過 `git` 的指令,  這時候可以使用以下的指令
+
+```cmd
+history | grep git
+```
+
+如果我不想一次顯示全部, 可以再搭配 less
+
+```cmd
+history | grep git | less
 ```
 
 ## echo
