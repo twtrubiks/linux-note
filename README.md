@@ -968,6 +968,64 @@ grep -i "name" README_1.md
 grep -n "name" README_1.md
 ```
 
+## sed
+
+這個指令可以達到快速搜尋, 取代, 刪除文字,
+
+sed 主要是針對**行**進行處理, 然後處理的不是原文件, 而是複製出來的文件.
+
+語法
+
+```cmd
+sed -i '/匹配字串/d' textfile
+```
+
+`-i` 加上這個才會寫入你的 textfile, 不然只會顯示在 terminal 上.
+
+刪除 empty lines
+
+```cmd
+sed -i '/^$/d' textfile
+```
+
+刪除有數字 7 的行數
+
+```cmd
+sed -i '/7/d' textfile
+```
+
+刪除第一到第五行
+
+```cmd
+sed -i '1,5d' textfile
+```
+
+刪除從 hello1 到 hello2 之間的所有行數
+
+```cmd
+sed -i '/hello1/, /hello2/d' textfile
+```
+
+替換語法
+
+```cmd
+sed -i 's/匹配字串/替代字串' textfile
+```
+
+將每行出現的第一個 a 替換成 A
+
+```cmd
+sed -i 's/a/A' textfile
+```
+
+將每行出現的全部的 a 替換成 A
+
+```cmd
+sed -i 's/a/A/g' file
+```
+
+`g` 代表替換所有匹配字串
+
 ## mkdir
 
 建立資料夾
