@@ -561,7 +561,7 @@ wget -O wget.tar.gz http://ftp.gnu.org/gnu/wget/wget-1.20.3.tar.gz
 
 全名為 Securely Copy,
 
-這個方法適用於 Linux 和 Linux 之間互傳檔案，也適用於  Linux 和 Windows 之間互傳檔案，
+這個方法適用於 Linux 和 Linux 之間互傳檔案，也適用於 Linux 和 Windows 之間互傳檔案，
 
 假設，Linux ip 為 192.168.56.101，查看 ip 指令如下，
 
@@ -1026,6 +1026,70 @@ sed -i 's/a/A/g' file
 
 `g` 代表替換所有匹配字串
 
+## awk
+
+這個指令是一個非常強大的文字分析工具
+
+假設今天我們的輸出如下
+
+![alt tag](https://i.imgur.com/GhPq6sZ.png)
+
+把第 2,3,5,9 列輸出
+
+```cmd
+ll | awk '{print $2,$3,$5,$9}'
+```
+
+![alt tag](https://i.imgur.com/o1exYCq.png)
+
+如果覺得醜, 可以用 printf 來排版
+
+```cmd
+ll | awk '{printf "%-5s %-5s %-5s %-5s\n", $2,$3,$5,$9}'
+```
+
+![alt tag](https://i.imgur.com/9RQj28o.png)
+
+接過試著來過濾資料,
+
+把 權限分數(第2列)分數是 2 以及 第3列是 twtrubiks 的取出來
+
+```cmd
+ll | awk '$2 == "2" && $3 == "twtrubiks" {print $0}'
+```
+
+`$0` 代表整行的所有內容.
+
+![alt tag](https://i.imgur.com/Il9jGFp.png)
+
+還可以進行統計,
+
+把 權限分數(第2列) 的分數進行 sum (排除 total)
+
+先排除掉第一列是 total 字串的資料,
+
+my_sum 是我們定義的變數.
+
+```cmd
+ll | awk '$1 != "total" {my_sum+=$2} END{print my_sum}'
+```
+
+![alt tag](https://i.imgur.com/o3yXZnT.png)
+
+也可以撰寫 if 邏輯,
+
+把 權限分數(第2列)的分數為 3 的過濾出來,
+
+接著印出目前行數, 以及把第9列的檔案名稱轉為大寫
+
+```cmd
+ll | awk '{if ($2 == "3") print NR, toupper($9)}'
+```
+
+NR 代表 Display Line Number.
+
+![alt tag](https://i.imgur.com/dzlbMAA.png)
+
 ## mkdir
 
 建立資料夾
@@ -1034,7 +1098,7 @@ sed -i 's/a/A/g' file
 mkdir -p dir1/dir2
 ```
 
-`-p` `--parents`  代表自動建立上層目錄，如果目錄已存在則不會發生錯誤。
+`-p` `--parents` 代表自動建立上層目錄，如果目錄已存在則不會發生錯誤。
 
 ## kill
 
@@ -1088,7 +1152,7 @@ history | less
 
 也可以搭配 grep,
 
-假如我想要找到歷史輸入過 `git` 的指令,  這時候可以使用以下的指令
+假如我想要找到歷史輸入過 `git` 的指令, 這時候可以使用以下的指令
 
 ```cmd
 history | grep git
@@ -1438,7 +1502,7 @@ sudo vim /etc/ssh/sshd_config
 
 ![alt tag](https://i.imgur.com/g3MdnKC.png)
 
-如同說明, 如果希望只使用 PAM Authentication, 也可以把  `ChallengeResponseAuthentication` 設為 `no`.
+如同說明, 如果希望只使用 PAM Authentication, 也可以把 `ChallengeResponseAuthentication` 設為 `no`.
 
 最後記得重新啟動 sshd 讓它生效 (或是重開機)
 
@@ -1597,6 +1661,14 @@ sudo swapoff -a
 ```cmd
 sudo swapon -a
 ```
+
+以下指令可以幫你找出哪些程式用了多少 swap
+
+```cmd
+(echo "COMM PID SWAP"; for file in /proc/*/status ; do awk '/^Pid|VmSwap|Name/{printf $2 " " $3}END{ print ""}' $file; done | grep kB | grep -wv "0 kB" | sort -k 3 -n -r) | column -t
+```
+
+![alt tag](https://i.imgur.com/uibxLSu.png)
 
 ## install packages
 
