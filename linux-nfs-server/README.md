@@ -51,8 +51,8 @@ sudo vim /etc/exports
 如果要設定很多 ip 就多寫幾行
 
 ```cmd
-/mnt/nfs_shared  client_IP_1 (re,sync,no_subtree_check)
-/mnt/nfs_shared  client_IP_2 (re,sync,no_subtree_check)
+/mnt/nfs_shared  client_IP_1 (rw,sync,no_subtree_check)
+/mnt/nfs_shared  client_IP_2 (rw,sync,no_subtree_check)
 ```
 
 `rw` 設定讀寫權限.
@@ -106,6 +106,21 @@ sudo mount server_IP:/mnt/nfs_shared  /mnt/nfs_client
 ```
 
 如果可以在資料夾裡面讀寫資料就是成功了哦:smile:
+
+## client 端開機自動掛載
+
+執行以下指令 `sudo vim /etc/fstab`
+
+```txt
+ # <file system>     <dir>       <type>   <options>   <dump>	<pass>
+192.168.7.123:/mnt/nfs_shared /mnt/nfs_shared  nfs      defaults    0       0
+```
+
+`192.168.7.123:/mnt/nfs_shared`  前面代表 server 的 ip, 後面為 server share 的路徑
+
+`/mnt/nfs_shared` 本機要掛載的位置
+
+如果開機還是沒有自動掛載, 請手動掛載 `sudo mount /mnt/nfs_shared`
 
 ## client 端如何刪除掛載資料夾
 
