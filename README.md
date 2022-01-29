@@ -1875,8 +1875,6 @@ sudo apt-get install gnome-control-center
 
 [scrcpy-tutorial-tutorial](https://github.com/twtrubiks/linux-note/tree/master/scrcpy-tutorial) - 使用電腦控制手機
 
-[linux-tlp-tutorial](https://github.com/twtrubiks/linux-note/tree/master/linux-tlp-tutorial) - Linux Advanced Power Management
-
 [variety-tutorual](https://github.com/twtrubiks/linux-note/tree/master/variety-tutorual) - variety 自動更換桌面
 
 [arandr-tutorual](https://github.com/twtrubiks/linux-note/tree/master/arandr-tutorual) - arandr 設定多螢幕工具
@@ -1884,6 +1882,8 @@ sudo apt-get install gnome-control-center
 [linux-virtualbox-ssh-tutorial](https://github.com/twtrubiks/linux-note/tree/master/linux-virtualbox-ssh-tutorial) - 在 Linux 中設定 VirtualBox 把玩 ssh
 
 [linux-virtualbox-problem](https://github.com/twtrubiks/linux-note/tree/master/linux-virtualbox-problem) - 在 Linux 中設定 VirtualBox - 常見問題
+
+[QEMU-KVM-tutorial](https://github.com/twtrubiks/linux-note/tree/master/QEMU-KVM-tutorial) - QEMU-KVM (效能速度比 virtualbox 更好)
 
 [Linux 桌面環境 Desktop Environment](https://github.com/twtrubiks/linux-note/tree/master/linux-de)
 
