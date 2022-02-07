@@ -106,7 +106,51 @@ sudo adduser $USER libvirt-qemu
 
 ![alt tag](https://i.imgur.com/0nfo7Ep.png)
 
-## 轉換 VirtualBox 到 QEMU IMAGE
+## QEMU-KVM 全螢幕
+
+可到 View -> Scale Display 設定
+
+![alt tag](https://i.imgur.com/YnClVIA.png)
+
+如果設定完之後還是沒有全屏, 請到 VM 中調整解析度.
+
+## QEMU-KVM ssh 設定
+
+通常在這邊就會有 ip (但不知道為甚麼這邊沒有顯示, 可能是因為 win:expressionless:)
+
+![alt tag](https://i.imgur.com/3t100CQ.png)
+
+記得 VM 中要安裝 openssh-server
+
+`sudo apt-get install openssh-server`
+
+和 VirtualBox 的概念是一樣的, 可參考 [在 Linux 中設定 VirtualBox 把玩 ssh](https://github.com/twtrubiks/linux-note/tree/master/linux-virtualbox-ssh-tutorial)
+
+## QEMU-KVM copy&paste from the host
+
+常用 VirtualBox 都知道有一個功能是本地端和虛擬機的
+
+雙向複製(文字)貼上, 有時候會方便很多:smile:
+
+如果你的虛擬機是 linux, 請執行以下指令
+
+```cmd
+sudo apt install spice-vdagent
+```
+
+請記得重新開機:smile:
+
+如果你的虛擬機是 windows, 請安裝以下軟體
+
+[https://www.spice-space.org/download/binaries/spice-guest-tools/](https://www.spice-space.org/download/binaries/spice-guest-tools/)
+
+理論上安裝完就會自動生效了, 如果沒有生效, 請重新啟動你的虛擬機.
+
+## VirtualBox Image 轉換到 QEMU Image
+
+通常如果你使用過 QEMU, 都會想轉換到這邊, 因為速度快不少:smile:
+
+這邊教大家如何轉換 Image,
 
 使用以下指令轉換
 
@@ -139,21 +183,3 @@ qemu-img convert -f raw <vdisk-name>.img -O qcow2 <vdisk-name>.qcow2
 成功轉換,
 
 ![alt tag](https://i.imgur.com/ntiE9if.png)
-
-## QEMU-KVM copy&paste from the host
-
-常用 VirtualBox 都知道有一個功能是本地端和虛擬機的
-
-雙向複製(文字)貼上, 有時候會方便很多:smile:
-
-如果你的虛擬機是 linux, 請執行以下指令
-
-```cmd
-sudo apt install spice-vdagent
-```
-
-如果你的虛擬機是 windows, 請安裝以下軟體
-
-[https://www.spice-space.org/download/binaries/spice-guest-tools/](https://www.spice-space.org/download/binaries/spice-guest-tools/)
-
-理論上安裝完就會自動生效了, 如果沒有生效, 請重新啟動你的虛擬機.
