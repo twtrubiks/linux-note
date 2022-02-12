@@ -1634,7 +1634,73 @@ systemd-analyze
 systemd-analyze blame
 ```
 
-###  如何進入 tty 介面
+### 關機重啟指令
+
+指令說明可使用以下指令查看
+
+```cmd
+shutdown --help
+```
+
+![alt tag](https://i.imgur.com/lDXENf0.png)
+
+直接關機
+
+```cmd
+shutdown -h now
+```
+
+指定時間關機
+
+```cmd
+shutdown -h 22:30
+```
+
+![alt tag](https://i.imgur.com/CE9p1gt.png)
+
+取消關機 (例如指定時間後想要取消, 如上圖)
+
+```cmd
+shutdown -c
+```
+
+模擬關機 (可以用來確認是否設定正確)
+
+```cmd
+shutdown -k 9:30
+```
+
+重開機
+
+```cmd
+reboot
+```
+
+查看關機紀錄
+
+```cmd
+last -x shutdown
+```
+
+查看重開機紀錄
+
+```cmd
+last -x reboot
+```
+
+系統開機時間
+
+```cmd
+uptime -s
+```
+
+last system boot time
+
+```cmd
+who -b
+```
+
+### 如何進入 tty 介面
 
 有時候開機時可能因為驅動沒裝, 導致卡在黑屏的畫面,
 
