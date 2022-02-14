@@ -140,3 +140,28 @@ ip addr
 ```cmd
 ifconfig
 ```
+
+## docker NFS Volumes
+
+docker 也可以建立 NFS Volumes, 方法如下,
+
+```yml
+version: '3.5'
+services:
+  nginx:
+    image: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - "nfs-data:/data"
+
+volumes:
+    nfs-data:
+      driver: local
+      driver_opts:
+        type: nfs
+        o: nfsvers=4,addr=ip,rw
+        device: ":/path/to/dir"
+```
+
+docker 相關文章可參考 [Docker 基本教學 - 從無到有 Docker-Beginners-Guide](https://github.com/twtrubiks/docker-tutorial)
