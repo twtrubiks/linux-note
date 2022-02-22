@@ -1,5 +1,7 @@
 # QEMU-KVM 教學
 
+[Youtube Tutorial - Linux QEMU-KVM 教學](https://youtu.be/702H2gkJzCE)
+
 直接說重點, 理論上, 相比 VirtualBox,
 
 使用 KVM (Kernel-based Virtual Machine) 速度是比較快的:smile:
