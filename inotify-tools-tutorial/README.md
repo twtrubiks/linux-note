@@ -1,5 +1,7 @@
 # linux inotify-tools 監控檔案變動 inotifywait
 
+* [Youtube Tutorial - Linux 教學 - inotify-tools 監控檔案變動 inotifywait](https://youtu.be/BsQqH40eOKY)
+
 inotifywait 是 inotify-tools 底下的一個工具,
 
 主要可以用來監控檔案或資料夾的任何變動(新增刪除修改等等),

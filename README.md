@@ -202,6 +202,12 @@ ls -S
 ls -lS > file.txt
 ```
 
+計算路徑底下有多少個檔案
+
+```cmd
+ls | wc -l
+```
+
 ## tee
 
 同時將輸出結果 stdout 寫到文件裡以及顯示在螢幕上 (直接覆寫掉 file.txt)
@@ -1952,6 +1958,12 @@ sudo apt-get install gnome-control-center
 [linux-virtualbox-problem](https://github.com/twtrubiks/linux-note/tree/master/linux-virtualbox-problem) - 在 Linux 中設定 VirtualBox - 常見問題
 
 [QEMU-KVM-tutorial](https://github.com/twtrubiks/linux-note/tree/master/QEMU-KVM-tutorial) - QEMU-KVM (效能速度比 virtualbox 更好)
+
+[smartmontools-tutorial](https://github.com/twtrubiks/linux-note/tree/master/smartmontools-tutorial) - smartmontools 教學
+
+[hdparm-tutorial](https://github.com/twtrubiks/linux-note/tree/master/hdparm-tutorial) - hdparm 教學
+
+[fstrim-ssd-tutorial](https://github.com/twtrubiks/linux-note/tree/master/fstrim-ssd-tutorial) - fstrim ssd 教學
 
 [Linux 桌面環境 Desktop Environment](https://github.com/twtrubiks/linux-note/tree/master/linux-de)
 

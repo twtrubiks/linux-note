@@ -21,3 +21,6 @@
 |    |         ventoy        |  bootable USB drive |
 |    |         ristretto        |  看圖軟體 |
 |    |         fbreader        |  電子書閱讀器 |
+|    |         smartmontools        | 硬碟健康度 |  [smartmontools-tutorial](https://github.com/twtrubiks/linux-note/tree/master/smartmontools-tutorial)
+|    |         hdparm        | 硬碟讀寫速度 |  [hdparm-tutorial](https://github.com/twtrubiks/linux-note/tree/master/hdparm-tutorial)
+|    |         fstrim        | Trim SSD |  [fstrim-ssd-tutorial](https://github.com/twtrubiks/linux-note/tree/master/fstrim-ssd-tutorial)
