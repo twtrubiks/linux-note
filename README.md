@@ -208,6 +208,104 @@ ls -lS > file.txt
 ls | wc -l
 ```
 
+## sort
+
+顧名思義就是排序.
+
+假設有一個 `test.txt` 如下,
+
+```txt
+c 2
+a 4
+y 33
+b 111
+e 44
+j 3
+k 12
+```
+
+預設是看最前面排序.
+
+```cmd
+❯ sort test.txt
+a 4
+b 111
+c 2
+e 44
+j 3
+k 12
+y 33
+```
+
+反向可以加上 `-r`, `--reverse` reverse the result of comparisons
+
+```cmd
+❯ sort -r test.txt
+y 33
+k 12
+j 3
+e 44
+c 2
+b 111
+a 4
+```
+
+也可以搭配其他指令使用, 像是
+
+```cmd
+cat test.txt | sort
+```
+
+指定欄位下去排序.
+
+```cmd
+❯ sort -n -k 2 test.txt
+c 2
+j 3
+a 4
+k 12
+y 33
+e 44
+b 111
+```
+
+`-n`, `--numeric-sort` 代表使用數字下去排序.
+
+`-k`, `--key=KEYDEF` 代表指定欄位排序. 這邊指定第二個欄位.
+
+這邊多補充一下, 如果是像上面空格格開, 不用特別設定(因為預設),
+
+如果今天你的文件如下, 是用逗點隔開的,
+
+需要多加上 `-t` 設定你的分隔符號.
+
+`-t`, `--field-separator=SEP` use SEP instead of non-blank to blank transition.
+
+`test2.txt` 如下,
+
+```txt
+c,2
+a,4
+y,33
+b,111
+e,44
+j,3
+k,12
+```
+
+```cmd
+❯ sort -n -t , -k 2 test2.txt
+c,2
+j,3
+a,4
+k,12
+y,33
+e,44
+b,111
+```
+
+透過 `-t` 設定使用 `,` 當作分隔符號.
+
 ## tee
 
 同時將輸出結果 stdout 寫到文件裡以及顯示在螢幕上 (直接覆寫掉 file.txt)
@@ -1031,6 +1129,16 @@ sed -i 's/a/A/g' file
 ```
 
 `g` 代表替換所有匹配字串
+
+只印出有 `test` 的行
+
+```cmd
+sed -n '/test/p' test.txt
+```
+
+`-n`, `--quiet`, `--silent` suppress automatic printing of pattern space.
+
+`p` Print the current pattern space.
 
 ## awk
 
