@@ -306,6 +306,139 @@ b,111
 
 透過 `-t` 設定使用 `,` 當作分隔符號.
 
+## uniq
+
+用來找出(刪除)重複的行.
+
+```cmd
+❯ uniq --help
+......
+Filter adjacent matching lines from INPUT (or standard input),
+writing to OUTPUT (or standard output).
+......
+Note: 'uniq' does not detect repeated lines unless they are adjacent.
+You may want to sort the input first, or use 'sort -u' without 'uniq'.
+......
+```
+
+請注意, 使用 `uniq` 的時候, 請先執行 `sort`.
+
+因為 `uniq` 是去找鄰近的行做比較而已, 所以你必須先 `sort` 再進行 `uniq`.
+
+( 上面說明中也有說 `uniq` 不偵測重複的行, 除非他們是鄰近的 )
+
+範例 `test.txt` 如下,
+
+```txt
+11
+33
+66
+44
+55
+66
+55
+11
+66
+33
+```
+
+如果你沒有先執行 `sort`, 直接執行 `uniq`, 你會發現是無效的,
+
+```cmd
+❯ uniq test.txt
+11
+33
+66
+44
+55
+66
+55
+11
+66
+33
+```
+
+將檔案內重複的行去掉,
+
+```cmd
+❯ sort test.txt | uniq
+11
+33
+44
+55
+66
+```
+
+也可以使用 `sort -u` 代替,
+
+```cmd
+❯ sort -u test.txt
+11
+33
+44
+55
+66
+```
+
+`-u`, `--unique` with -c, check for strict ordering.
+
+計算重複行出現的次數,
+
+```cmd
+❯ sort test.txt | uniq -c
+      2 11
+      2 33
+      1 44
+      2 55
+      3 66
+```
+
+`-c`, `--count` prefix lines by the number of occurrences.
+
+如果你有空白行, 可以加上 sed 指令去掉空白行(如下範例)
+
+```cmd
+sort test.txt | sed '/^$/d' | uniq -c
+```
+
+輸出全部重複的行,
+
+```cmd
+❯ sort test.txt | uniq -D
+11
+11
+33
+33
+55
+55
+66
+66
+66
+```
+
+`-D` print all duplicate lines
+
+只輸出重複的行 (只顯示一次),
+
+```cmd
+❯ sort test.txt | uniq -d
+11
+33
+55
+66
+```
+
+`-d`, `--repeated` only print duplicate lines, one for each group
+
+只輸出沒有重複的行,
+
+```cmd
+❯ sort test.txt | uniq -u
+44
+```
+
+`-u`, `--unique` only print unique lines
+
 ## tee
 
 同時將輸出結果 stdout 寫到文件裡以及顯示在螢幕上 (直接覆寫掉 file.txt)
