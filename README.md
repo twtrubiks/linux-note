@@ -1392,9 +1392,39 @@ ll | awk '$1 != "total" {my_sum+=$2} END{print my_sum}'
 ll | awk '{if ($2 == "3") print NR, toupper($9)}'
 ```
 
-NR 代表 Display Line Number.
+`NR` current record number in the total input stream.
 
 ![alt tag](https://i.imgur.com/dzlbMAA.png)
+
+`NF` number of fields in the current record.
+
+範例 `test.txt`
+
+```cmd
+❯ cat test.txt
+-rw-rw-r-- 1 twtrubiks twtrubiks 5  4月  2 20:08 a.py
+```
+
+目前的 field 數量,
+
+```cmd
+❯ cat test.txt | awk '{print NF}'
+9
+```
+
+最後一個 field,
+
+```cmd
+❯ cat test.txt | awk '{print $NF}'
+a.py
+```
+
+顯示第一個 field,
+
+```cmd
+❯ cat test.txt | awk '{print $1F}'
+-rw-rw-r--
+```
 
 ## mkdir
 
