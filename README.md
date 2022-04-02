@@ -439,6 +439,65 @@ sort test.txt | sed '/^$/d' | uniq -c
 
 `-u`, `--unique` only print unique lines
 
+## cut
+
+用來擷取部份字元.
+
+範例 `test.txt`
+
+```text
+123
+234
+567
+890
+```
+
+擷取第2個到第3個字元
+
+```cmd
+❯ cut -c 2-3 test.txt
+23
+34
+67
+90
+```
+
+`-c`, `--characters=LIST`  select only these characters
+
+擷取第2個到最後一個字元
+
+```cmd
+❯ cut -c 2- test.txt
+23
+34
+67
+90
+```
+
+擷取第1個和第3個字元
+
+```cmd
+❯ cut -c 1,3 test.txt
+13
+24
+57
+80
+```
+
+排除第2個字元
+
+```cmd
+❯ cut -c 2 test.txt --complement
+13
+24
+57
+80
+```
+
+`--complement` complement the set of selected bytes, characters or fields.
+
+(補足其他字元, 意思就是排除指定的字元)
+
 ## tee
 
 同時將輸出結果 stdout 寫到文件裡以及顯示在螢幕上 (直接覆寫掉 file.txt)
