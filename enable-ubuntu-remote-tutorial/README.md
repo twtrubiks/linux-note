@@ -1,6 +1,8 @@
 # 如何在 ubuntu 啟用遠端桌面
 
-[Youtube Tutorial - 如何在 ubuntu 啟用遠端桌面](https://youtu.be/-01unOIk9mI)
+* [Youtube Tutorial - 如何在 ubuntu 啟用遠端桌面](https://youtu.be/-01unOIk9mI)
+
+* [Youtube Tutorial - 修正 Ubuntu 遠端桌面黑頻 (沒接螢幕)](https://youtu.be/3j4wUMX95zA)
 
 ## 安裝教學
 
@@ -52,11 +54,93 @@ User password 輸入你剛剛的密碼
 
 ## 其他注意事項
 
+* [Youtube Tutorial - 修正 Ubuntu 遠端桌面黑頻 (沒接螢幕)](https://youtu.be/3j4wUMX95zA)
+
 linux 在遠端桌面的時候, server (被遠端的機器) 一定要接上螢幕,
 
-不然你會發現雖然連過去了, 可是畫面動不了, 這個不知道和 grub 有沒有關係,
+不然你會發現雖然連過去了, 可是畫面動不了(或是黑屏):sweat:
 
-如果有解法我再教大家:sweat:
+這邊提供解決方法,
+
+安裝 `xserver-xorg-video-dummy`
+
+```cmd
+sudo apt-get install xserver-xorg-video-dummy
+```
+
+Ubuntu 18.04 已測試過(請安裝這個)
+
+```cmd
+sudo apt-get install xserver-xorg-video-dummy-hwe-18.04
+```
+
+也可以透過以下指令去尋找對應的版本
+
+```cmd
+sudo apt-cache search video-dummy
+```
+
+安裝後請到路徑下建立 `xorg.conf`
+
+```cmd
+sudo vim /usr/share/X11/xorg.conf.d/xorg.conf
+```
+
+如果你找不到這個路徑, 也可能在 `/etc/X11/xorg.conf`,
+
+[xorg.conf](https://github.com/twtrubiks/linux-note/blob/master/enable-ubuntu-remote-tutorial/xorg.conf) 內容如下,
+
+```conf
+Section "Device"
+    Identifier  "Configured Video Device"
+    Driver      "dummy"
+EndSection
+Section "Monitor"
+    Identifier  "Configured Monitor"
+    HorizSync 31.5-48.5
+    VertRefresh 50-70
+EndSection
+Section "Screen"
+    Identifier  "Default Screen"
+    Monitor     "Configured Monitor"
+    Device      "Configured Video Device"
+    DefaultDepth 24
+    SubSection "Display"
+    Depth 24
+    Modes "1920x1080"
+    EndSubSection
+EndSection
+```
+
+接著重開機, 之後 server (被遠端的機器) 沒接螢幕遠端進去也不會再黑屏了:satisfied:
+
+但如果這時候 server (被遠端的機器) 接螢幕開機, 你會發現他螢幕不會顯示
+
+(這是正常的, 因為現在是 dummy 的螢幕:smile:)
+
+你只要刪除 `xorg.conf`, 再重開機就會正常了.
+
+(需要這個功能的時候, 再把 `xorg.conf` 加回去即可:smile:)
+
+如果想透過 command 查看 vino 的設定,
+
+```cmd
+gsettings list-recursively org.gnome.Vino
+```
+
+如果想透過 command 改設定中的參數,
+
+```cmd
+gsettings set org.gnome.Vino require-encryption false
+```
+
+如果想透過 command 啟動指令
+
+```cmd
+export DISPLAY=:0 && /usr/lib/vino/vino-server
+```
+
+## 結論
 
 以上是使用 GNOME 桌面, 但我愈來愈喜歡 KDE 的桌面,
 
