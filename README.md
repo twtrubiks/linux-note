@@ -1698,6 +1698,54 @@ truncate 這個指令就非常適合去清除 log, 將 log 大小歸 0, 其餘�
 sudo truncate -s 0 /var/log/**/*.log
 ```
 
+## ps
+
+ps 為 Process Status 的縮寫.
+
+列出目前 shell 底下正在執行的 processes
+
+```cmd
+ps
+```
+
+列出全部的 processes
+
+```cmd
+ps -A
+```
+
+`-A`, `-e` all processes
+
+使用 BSD format 列出全部的 processes
+
+```cmd
+ps aux
+```
+
+`a` all with tty, including other users
+`x` processes without controlling ttys
+`u` user-oriented format
+
+搭配 grep 找出對應的 PS
+
+```cmd
+ps aux | grep "postgres -c"
+```
+
+使用 PID 找出對應的 PS
+
+```cmd
+ps -o pid,rss,vsz,sz,comm -p PID
+```
+
+`RSS` 這個值和 `top` command 中的 `RES` 是相同的,
+
+都可以當成是實體上到底佔用了多少記憶體.
+
+`-o`, `o`, `--format <format>` user-defined format.
+
+`-p`, `p`, `--pid <PID>` process id
+
 ## 不用密碼遠端登入 Linux
 
 ### 方法一
@@ -1906,25 +1954,25 @@ cat /etc/fstab
 
 ![alt tag](https://i.imgur.com/79WxI5w.png)
 
-查看所有 pci，
+查看所有 pci
 
 ```cmd
 lspci
 ```
 
-查看所有 usb，
+查看所有 usb
 
 ```cmd
 lsusb
 ```
 
-也可以搭配 grep 搜尋，只搜尋包含 VirtualBox 的內容，
+也可以搭配 grep 搜尋，只搜尋包含 VirtualBox 的內容
 
 ```cmd
 lsusb | grep VirtualBox
 ```
 
-查看 ip，
+查看 ip
 
 ```cmd
 ip a
@@ -1946,13 +1994,13 @@ top
 
 透過 xrandr 修改螢幕的亮度，
 
-先查看螢幕的 name，
+先查看螢幕的 name
 
 ```cmd
 xrandr | grep " connected" | cut -f1 -d " "
 ```
 
-設定亮度 ( 0 - 1 )，
+設定亮度 ( 0 - 1 )
 
 ```cmd
 xrandr --output DP-1 --brightness 0.7

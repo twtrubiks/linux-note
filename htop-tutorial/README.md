@@ -50,6 +50,10 @@ htop
 
 `RES` Resident memory usage，常駐記憶體
 
+(這個可以看做是實體上到底佔用了多少記憶體)
+
+(`RES` 和 ps command 中的 `RSS` 是相同的)
+
 `SHR` Shared memory usage，共享記憶體
 
 `S` Process state
