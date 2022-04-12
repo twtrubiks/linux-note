@@ -1246,6 +1246,15 @@ grep "name" README_1.md README_2.md
 grep "print" *.py
 ```
 
+排除某個字元
+
+```cmd
+grep -v "match_pattern" README.md
+
+```
+
+`-v`, `--invert-match` select non-matching lines
+
 搜尋當下目錄資料夾內容
 
 ```cmd
@@ -1263,6 +1272,14 @@ grep -i "name" README_1.md
 ```cmd
 grep -n "name" README_1.md
 ```
+
+要完全符合 `:80` 才會被撈出來
+
+```cmd
+grep -w ':80' README_1.md
+```
+
+`-w`, `--word-regexp` 僅比較整個單字.
 
 ## sed
 
