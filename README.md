@@ -210,6 +210,8 @@ ls | wc -l
 
 ## sort
 
+* [Youtube Tutorial - Linux 指令教學 - sort , uniq](https://youtu.be/5G9gRLPBW_U)
+
 顧名思義就是排序.
 
 假設有一個 `test.txt` 如下,
@@ -307,6 +309,8 @@ b,111
 透過 `-t` 設定使用 `,` 當作分隔符號.
 
 ## uniq
+
+* [Youtube Tutorial - Linux 指令教學 - sort , uniq](https://youtu.be/5G9gRLPBW_U)
 
 用來找出(刪除)重複的行.
 
@@ -1348,6 +1352,56 @@ sed -n '/test/p' test.txt
 `-n`, `--quiet`, `--silent` suppress automatic printing of pattern space.
 
 `p` Print the current pattern space.
+
+sed 也可以印出文件指定行數,
+
+```cmd
+❯ cat test.txt
+1
+2
+3
+4
+5
+6
+```
+
+顯示特定行數, 顯示第 5 行
+
+```cmd
+❯ sed -n 5p test.txt
+5
+```
+
+顯示第 3 行以及第 5 行
+
+```cmd
+❯ sed -n -e 3p -e 5p test.txt
+3
+5
+```
+
+`-e` script, `--expression=script`
+
+add the script to the commands to be executed
+
+顯示第 3 行到第 5 行
+
+```cmd
+❯ sed -n 3,5p test.txt
+3
+4
+5
+```
+
+顯示第 1 行到第 3 行, 以及第 5行
+
+```cmd
+❯ sed -n -e 1,3p -e 5p test.txt
+1
+2
+3
+5
+```
 
 ## awk
 
