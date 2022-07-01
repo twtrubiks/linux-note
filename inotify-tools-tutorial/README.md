@@ -220,4 +220,52 @@ sudo inotifywait -m -e modify /var/spool/cron/crontabs \
 
 所以可以把上面的指令設定為開機自動執行或是設定 systemctl.
 
-systemctl 可參考之前的文章 [systemctl](https://github.com/twtrubiks/linux-note/tree/master/systemctl-tutorial):smile:
+systemctl 可參考之前的文章 [systemctl](https://github.com/twtrubiks/linux-note/tree/master/systemctl-tutorial) 或 [在 Linux 中自動啟動 docker](https://github.com/twtrubiks/docker-tutorial/tree/master/docker-auto-run-linux) :smile:
+
+建立 `watch.service`
+
+```cmd
+sudo vim /etc/systemd/system/watch.service
+```
+
+`watch.service` 裡面填入,
+
+```sh
+[Unit]
+Description=my watch
+Requires=watch.service
+After=watch.service
+
+[Service]
+Type=simple
+RemainAfterExit=yes
+WorkingDirectory=<YOUR PATH>
+ExecStart=/usr/bin/sh watch.sh
+TimeoutStartSec=10
+
+[Install]
+WantedBy=multi-user.target
+```
+
+`watch.sh` 如下 (就是剛剛介紹的 code)
+
+```cmd
+sudo inotifywait -m -e modify /var/spool/cron/crontabs \
+-d -o /home/logs.txt |
+  while read events; do
+    sudo service cron reload
+  done
+```
+
+重新載入設定檔
+
+```cmd
+sudo systemctl daemon-reload
+```
+
+啟動 `watch.service`
+
+```cmd
+sudo systemctl start watch
+sudo systemctl enable watch
+```
