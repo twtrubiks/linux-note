@@ -1817,6 +1817,34 @@ ps -o pid,rss,vsz,sz,comm -p PID
 
 `-p`, `p`, `--pid <PID>` process id
 
+## tree
+
+```cmd
+sudo apt install tree
+```
+
+```cmd
+❯ tree
+.
+├── Git-Flow
+│   └── README.md
+├── git_submodule_turorial.md
+├── git_subtree_turorial.md
+```
+
+只顯示一層文件
+
+`-L` level 代表 Descend only level directories deep.
+
+```cmd
+❯ tree -L 1
+.
+├── auto_crawler_ptt_beauty_image
+├── BBBB
+├── django-celery-tutorial
+├── django-docker-redis-tutorial
+```
+
 ## 不用密碼遠端登入 Linux
 
 ### 方法一
@@ -2210,6 +2238,8 @@ update list ( 更新 packages 的最新資訊及列表 )
 ```cmd
 sudo apt-get update
 ```
+
+軟體來源會被放在 `/etc/apt/sources.list.d` 這個路徑底下.
 
 upgrade ( 更新軟體到最新的版本 )
 
