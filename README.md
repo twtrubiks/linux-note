@@ -2233,6 +2233,12 @@ sudo apt-get install xxx
 sudo apt install ./xxx.deb
 ```
 
+選擇可安裝的版本
+
+```cmd
+sudo apt-cache policy xxx
+```
+
 update list ( 更新 packages 的最新資訊及列表 )
 
 ```cmd
@@ -2391,6 +2397,8 @@ sudo apt-get install gnome-control-center
 [enable-ubuntu-remote-tutorial](https://github.com/twtrubiks/linux-note/tree/master/enable-ubuntu-remote-tutorial) - 如何在 ubuntu 啟用遠端桌面
 
 [linux-nfs-server](https://github.com/twtrubiks/linux-note/tree/master/linux-nfs-server) - 如何在 ubuntu 啟用 NFS Server
+
+[apache-bench-tutorial](https://github.com/twtrubiks/linux-note/tree/master/apache-bench-tutorial) - Apache Bench (ab) 教學, 測試 server 效能工具.
 
 ## 狀況排除
 
