@@ -2376,6 +2376,8 @@ sudo apt-get install gnome-control-center
 
 [chinese-input-methods-on-ubuntu](https://github.com/twtrubiks/linux-note/tree/master/chinese-input-methods-on-ubuntu) - ubuntu 如何安裝中文輸入法
 
+[linux-install-locale](https://github.com/twtrubiks/linux-note/tree/master/linux-install-locale) - Linux 安裝中文介面(locale)
+
 [hime-tutorial](https://github.com/twtrubiks/linux-note/tree/master/hime-tutorial) - Linux 中更像微軟更好用的中文輸入法 hime
 
 [gnome-tweaks](https://github.com/twtrubiks/linux-note/tree/master/gnome-tweaks) - Ubuntu 安裝 GNOME Tweak tool
