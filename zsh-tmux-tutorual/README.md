@@ -163,6 +163,34 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 ![alt tag](https://i.imgur.com/3yu19BT.png)
 
+### 安装 autojump
+
+安裝指令
+
+```cmd
+sudo apt-get install autojump
+```
+
+需要手動設定啟動, 執行以下指令(這邊是用 zsh),
+
+```cmd
+echo '. /usr/share/autojump/autojump.sh' >> ~/.zshrc
+```
+
+安裝文件也可參考
+
+```cmd
+cat /usr/share/doc/autojump/README.Debian
+```
+
+當你曾經進過某個資料夾, 例如 `github` 資料夾,
+
+`j github` 就會幫你自動進入這個資料夾.
+
+`jo github` 會幫你用預設的檔案瀏覽器開啟.
+
+官方文件參考 [https://github.com/wting/autojump](https://github.com/wting/autojump)
+
 ## 安裝 tmux
 
 [Youtube Tutorial - Ubuntu 如何安裝 tmux](https://youtu.be/sKKUgMEOOh0)
