@@ -2388,6 +2388,8 @@ sudo apt-get install gnome-control-center
 
 [copyq-tutorial](https://github.com/twtrubiks/linux-note/tree/master/copyq-tutorial) - 剪貼簿:thumbsup:
 
+[tldr-tutorial](https://github.com/twtrubiks/linux-note/tree/master/tldr-tutorial) - 更好用更簡單的 man pages
+
 [krusader-tutorial](https://github.com/twtrubiks/linux-note/tree/master/krusader-tutorial) - file manager
 
 [fail2ban-tutorial](https://github.com/twtrubiks/linux-note/tree/master/fail2ban-tutorial) - 讓 server 更安全:smile:
