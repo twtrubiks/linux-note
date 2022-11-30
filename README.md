@@ -1617,6 +1617,34 @@ line 2" >> hello_2.txt
 } >> hello_3.txt
 ```
 
+## cal
+
+顯示日曆
+
+```cmd
+cal
+```
+
+顯示上個月, 前個月, 下個月
+
+```cmd
+cal -3
+```
+
+顯示特定的年月
+
+格式
+
+```cmd
+cal 月份 年份
+```
+
+範例
+
+```cmd
+cal 12 2022
+```
+
 ## du
 
 [Youtube Tutorial - Linux 指令教學 - du(Disk Usage)](https://youtu.be/JZZoJnasnHE)
