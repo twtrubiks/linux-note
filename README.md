@@ -1769,6 +1769,38 @@ truncate 這個指令就非常適合去清除 log, 將 log 大小歸 0, 其餘�
 sudo truncate -s 0 /var/log/**/*.log
 ```
 
+## shred
+
+銷毀重要的檔案, 防止救援軟體還原,
+
+Overwrite files to securely delete data.
+
+使用方法很簡單,
+
+對 `demo.txt` 進行 shred
+
+```cmd
+shred demo.txt
+```
+
+對 `demo.txt` 進行 shred, 並且留下 zeroes
+
+```cmd
+shred --zero demo.txt
+```
+
+覆蓋檔案 25 次(預設是 3 次)
+
+```cmd
+shred -n25 demo.txt
+```
+
+shred 並且刪除它
+
+```cmd
+shred --remove demo.txt
+```
+
 ## ps
 
 ps 為 Process Status 的縮寫.
