@@ -16,7 +16,7 @@
 
 有一種完全的掌握系統的感覺, 想幹嘛就幹嘛, 自由度極高。
 
-延伸閱讀 [Linux 桌面環境 Desktop Environment](https://github.com/twtrubiks/Linux-note/tree/master/Linux-de)
+延伸閱讀 [Linux 桌面環境 Desktop Environment](https://github.com/twtrubiks/linux-note/tree/master/linux-de)
 
 2. Linux 使用資源相對 Windows 少很多, 尤其是在 8GB Ram (又無法擴充的環境下),
 
@@ -24,7 +24,7 @@
 
 如果你有比較舊的電腦（筆電）, 都可以考慮安裝 Linux (安裝比較輕量的 distro)。
 
-延伸閱讀 [認識 Linux 發行版](https://github.com/twtrubiks/Linux-note/tree/master/Linux-distro)
+延伸閱讀 [認識 Linux 發行版](https://github.com/twtrubiks/linux-note/tree/master/linux-distro)
 
 3. Linux 穩定又可靠, 且不會強迫你要更新系統, 尤其是 Windows 都強迫自動更新, 然後 Linux 更新
 

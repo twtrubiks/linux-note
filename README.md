@@ -1829,6 +1829,34 @@ shred 並且刪除它
 shred --remove demo.txt
 ```
 
+## sleep
+
+可以延遲特定的時間, 再執行對應的指令
+
+sleep 0.5秒
+
+```cmd
+sleep 0.5
+```
+
+sleep 1分鐘
+
+```cmd
+sleep 1m
+```
+
+sleep 1小時
+
+```cmd
+sleep 1h
+```
+
+搭配其他的指令, sleep 秒後, 再印出 hello
+
+```cmd
+sleep 1 && echo "hello"
+```
+
 ## ps
 
 ps 為 Process Status 的縮寫.
@@ -2175,6 +2203,16 @@ systemd-analyze
 
 ```cmd
 systemd-analyze blame
+```
+
+如果今天想查看這個系統裝在這台電腦多久了,
+
+可使用以下的指令, 因為這個資料夾很少會去改動,
+
+所以可以參考這個的修改時間
+
+```cmd
+stat /lost+found/
 ```
 
 ### 關機重啟指令

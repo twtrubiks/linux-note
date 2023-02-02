@@ -218,22 +218,40 @@ tmux 的所有快捷鍵前面都需要加一個 prefix key，預設是 `<Ctrl+b>
 一些指令說明
 
 start new
->> tmux
+
+```cmd
+tmux
+```
 
 start new with session name:
->> tmux new -s myname
+
+```cmd
+tmux new -s myname
+```
 
 attach (重新開啟 session )
->> tmux a  #  (or at, or attach)
+
+```cmd
+tmux a  #  (or at, or attach)
+```
 
 attach to named (重新開啟 session )
->> tmux a -t myname
+
+```cmd
+tmux a -t myname
+```
 
 list sessions:
->> tmux ls
+
+```cmd
+tmux ls
+```
 
 kill session:
->> tmux kill-session -t myname
+
+```cmd
+tmux kill-session -t myname
+```
 
 更改其他 tmux 的設定，
 
