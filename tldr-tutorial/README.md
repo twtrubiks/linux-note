@@ -1,5 +1,7 @@
 # tldr tutorial
 
+* [Youtube Tutorial - Linux 指令教學 - tldr , shred , sleep](https://youtu.be/RqI-DF1I8R0?t=24)
+
 更好用更簡單的 man pages
 
 官網說明 [https://github.com/tldr-pages/tldr](https://github.com/tldr-pages/tldr)

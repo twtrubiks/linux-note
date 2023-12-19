@@ -58,7 +58,7 @@ pwd
 
 ## ls
 
-[Youtube Tutorial - Linux 指令教學 - ls](https://youtu.be/3Zy1AWuDUHE)
+* [Youtube Tutorial - Linux 指令教學 - ls](https://youtu.be/3Zy1AWuDUHE)
 
 列出檔案
 
@@ -605,7 +605,7 @@ echo YourPwd | sudo -S groupadd <groupname>
 
 ## chmod
 
-[Youtube Tutorial - Linux 教學 - chmod](https://youtu.be/qwk4Pzgtf2I)
+* [Youtube Tutorial - Linux 教學 - chmod](https://youtu.be/qwk4Pzgtf2I)
 
 chmod 為 change mode 的縮寫.
 
@@ -737,7 +737,7 @@ chown twtrubiks:twtrubiksgroup README.md
 
 ## ln
 
-[Youtube Tutorial - Linux 指令教學 - ln (Symbolic Link)](https://youtu.be/jdZsO2GAf2I)
+* [Youtube Tutorial - Linux 指令教學 - ln (Symbolic Link)](https://youtu.be/jdZsO2GAf2I)
 
 有兩種, 分別為 hard link 和 Symbolic link ( soft link ),
 
@@ -921,7 +921,7 @@ Linux 之間的傳送也是相同的道理:smile:
 
 ## mv
 
-[Youtube Tutorial - Linux 指令教學 - mv](https://youtu.be/VhyzaEaGnL8)
+* [Youtube Tutorial - Linux 指令教學 - mv](https://youtu.be/VhyzaEaGnL8)
 
 move ( rename ) files，**移動檔案**或是**重新命名檔案**。
 
@@ -958,7 +958,7 @@ mv -u source_file path_to_destination/
 
 ## rm
 
-[Youtube Tutorial - Linux 指令教學 - rm](https://youtu.be/JqKjBZMXn_I)
+* [Youtube Tutorial - Linux 指令教學 - rm](https://youtu.be/JqKjBZMXn_I)
 
 刪除檔案
 
@@ -998,7 +998,7 @@ rm -f *demo.zip
 
 ## cp
 
-[Youtube Tutorial - Linux 指令教學 - cp](https://youtu.be/ORl0YUGY728)
+* [Youtube Tutorial - Linux 指令教學 - cp](https://youtu.be/ORl0YUGY728)
 
 複製資料夾
 
@@ -1104,6 +1104,22 @@ sh demo.sh
 bash demo.sh
 ```
 
+客製化傳值, 底下為 `test.sh`
+
+```sh
+#!/bin/bash
+echo "$0" # 檔案名稱
+echo "$1"
+echo "$2"
+echo "$3"
+```
+
+執行結果
+
+```cmd
+sh test.sh a1 a2 a3
+```
+
 ## ./
 
 直接使用 `./` 執行, **需要**有執行權限.
@@ -1142,7 +1158,7 @@ whereis python3
 
 ## tail
 
-顯示檔案最後幾行內容
+顯示檔案最後幾行內容 (預設是最後 10 行)
 
 ```cmd
 tail README.md
@@ -1169,6 +1185,26 @@ tail README.md -n 5
 ```cmd
 tail -f README.md
 ```
+
+也可以搭配 grep 使用, 以下指令是持續追蹤某個值,
+
+```cmd
+tail -f README.md | grep -n 'test'
+```
+
+如果上面的 test 內容是在 10 行之外,
+
+你會找不到, 看你要加行數, 還是再放新的值進去,
+
+再開一個 terminal, 然後執行以下指令,
+
+將 test 加到檔案最末端,
+
+```cmd
+echo "test" >> README.md
+```
+
+這樣你就會看到訊息了.
 
 ## head
 
@@ -1218,6 +1254,18 @@ line 3
 EOT
 ```
 
+搭配 `grep` 使用, 過濾出 test
+
+```cmd
+cat README.md | grep 'test'
+```
+
+也可以暴力一點, 直接找出該目錄底下的全部結尾是 `.log` 的文件
+
+```cmd
+cat *.log | grep 'test'
+```
+
 ## clear
 
 clear the terminal screen ， 快捷鍵為 Ctrl+L
@@ -1233,9 +1281,16 @@ clear
 grep match_pattern file_name
 ```
 
+加上 `--color` 可以把關鍵字加上顏色, 顯示更清楚.
+
 ```cmd
-# 格式
-grep "search name" README.md
+grep --color "search name" README.md
+```
+
+加上 `-C`, 代表要多顯示頭尾的行數,
+
+```cmd
+grep --color -C 2 "search name" README.md
 ```
 
 也可以一次搜尋多個檔案
@@ -1254,10 +1309,17 @@ grep "print" *.py
 
 ```cmd
 grep -v "match_pattern" README.md
-
 ```
 
 `-v`, `--invert-match` select non-matching lines
+
+如果想要排除某些字元又要搜尋某些字元,
+
+可以依照需求如下使用,
+
+```cmd
+grep -v "ignore" README.md | grep --color "match_pattern"
+```
 
 搜尋當下目錄資料夾內容
 
@@ -1647,7 +1709,7 @@ cal 12 2022
 
 ## du
 
-[Youtube Tutorial - Linux 指令教學 - du(Disk Usage)](https://youtu.be/JZZoJnasnHE)
+* [Youtube Tutorial - Linux 指令教學 - du(Disk Usage)](https://youtu.be/JZZoJnasnHE)
 
 du 這個指令是 Disk Usage 的縮寫,
 
@@ -1717,7 +1779,7 @@ du -d 2 -h
 
 ## truncate
 
-[Youtube Tutorial - Linux 指令教學 - truncate](https://youtu.be/w2pwD1AOhPI)
+* [Youtube Tutorial - Linux 指令教學 - truncate](https://youtu.be/w2pwD1AOhPI)
 
 Shrink or extend the size of each FILE to the specified size.
 
@@ -1799,6 +1861,8 @@ sudo truncate -s 0 /var/log/**/*.log
 
 ## shred
 
+* [Youtube Tutorial - Linux 指令教學 - tldr , shred , sleep](https://youtu.be/RqI-DF1I8R0?t=172)
+
 銷毀重要的檔案, 防止救援軟體還原,
 
 Overwrite files to securely delete data.
@@ -1830,6 +1894,8 @@ shred --remove demo.txt
 ```
 
 ## sleep
+
+* [Youtube Tutorial - Linux 指令教學 - tldr , shred , sleep](https://youtu.be/RqI-DF1I8R0?t=358)
 
 可以延遲特定的時間, 再執行對應的指令
 
@@ -1932,6 +1998,68 @@ sudo apt install tree
 ├── django-celery-tutorial
 ├── django-docker-redis-tutorial
 ```
+
+## nslookup
+
+找到網址的 ip 以及各種資訊
+
+```cmd
+❯ nslookup google.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+Name:	google.com
+Address: 142.251.43.14
+Name:	google.com
+Address: 2404:6800:4012:3::200e
+```
+
+## SSH
+
+通常我們 ssh 的格式是, `ssh user@xx.xx.xx.xx`,
+
+但這樣做實在太麻煩了, 有時候還是會忘記,
+
+使用 ssh_config 的方法更快更方便,
+
+先進行設定
+
+```cmd
+sudo vim ~/.ssh/config
+```
+
+內容大致如下
+
+```cmd
+# example
+Host my-remote
+HostName xx.xxx.xx.xx
+Port 22
+IdentityFile ~/.ssh/id_rsa
+IdentitiesOnly yes
+User root
+```
+
+這樣你只需要在 terminal 打上 `ssh my-remote` 即可.
+
+### SSH 防止斷線
+
+另外不知道大家有沒有 ssh 到遠端的時候,
+
+一陣子沒用, 他就自己斷線, 如果你想改善這個方法,
+
+一樣到 `sudo vim ~/.ssh/config` 底下加上,
+
+```cmd
+# 防止斷線
+Host *
+    ServerAliveInterval 100
+```
+
+意思為每 100 秒送一個封包到主機上，用以保持連線.
+
+單位是秒, 這樣你就不會一下沒用就斷線了.
 
 ## 不用密碼遠端登入 Linux
 
@@ -2079,6 +2207,21 @@ sudo vim /etc/ssh/sshd_config
 
 ```cmd
 systemctl restart sshd
+```
+
+## 設定 `/etc/hosts`
+
+```cmd
+sudo vim /etc/hosts
+```
+
+以下內容代表, 在你的本機 `twtrubiks.com` 等於 `127.0.0.1`,
+
+可以依照自己的需求調整
+
+```cmd
+127.0.0.1     localhost
+127.0.1.1     twtrubiks.com
 ```
 
 ## 其他資訊
@@ -2501,6 +2644,8 @@ sudo apt-get install gnome-control-center
 [linux-nfs-server](https://github.com/twtrubiks/linux-note/tree/master/linux-nfs-server) - 如何在 ubuntu 啟用 NFS Server
 
 [apache-bench-tutorial](https://github.com/twtrubiks/linux-note/tree/master/apache-bench-tutorial) - Apache Bench (ab) 教學, 測試 server 效能工具.
+
+[subfinder-tutorial](https://github.com/twtrubiks/linux-note/tree/master/subfinder-tutorial) - subfinder 找出全部的子網域
 
 ## 狀況排除
 
