@@ -203,17 +203,23 @@ tmux 是個 terminal multiplexer，
 sudo apt-get install tmux
 ```
 
-tmux 的所有快捷鍵前面都需要加一個 prefix key，預設是 `<Ctrl+b>`。
+tmux 的所有快捷鍵前面都需要加一個 prefix key，預設是 `<Ctrl+b>`,
 
-如果無效，請多加一個 Shift，也就是 `<Ctrl+Shift+b>`。
+這邊說一下怎麼按, 因為很多人會發現按不出來,
 
-一些功能說明，
+首先, 先按 `<Ctrl+b>`, 然後放開,
 
-`<Ctrl+b>` + `"` 為 水平分割。
+接著再按
 
-`<Ctrl+b>` + `%` 為 行垂直分割。
+`<Shift>` + `"` 為 水平分割,
 
-更多的快捷鍵功能可參考 [tmux-cheatsheet](https://gist.github.com/MohamedAlaa/2961058)。
+`<Shift>` + `%` 為 垂直分割,
+
+切換視窗 為 `o`,
+
+切換上下左右視窗 為 方向鍵,
+
+更多的快捷鍵功能可參考 [tmux-cheatsheet](https://tmuxcheatsheet.com/)
 
 一些指令說明
 
@@ -268,15 +274,21 @@ set -g mouse on
 
 ![alt tag](https://i.imgur.com/U9Lfmdy.png)
 
-第一行為修改 prefix 為 `<Ctrl+Shift+x>`。
+第一行為修改 prefix 為 `<Ctrl+Shift+x>`,
 
-第二行為可能使用滑鼠控制 tmux。
+第二行為可能使用滑鼠控制 tmux,
 
-之後請記得重開機 ( 很重要 !! )，terminal 輸入 `reboot` 或 `init 6`。
+之後請記得重開機 ( 很重要 !! )，terminal 輸入 `reboot` 或 `init 6`
+
+或是執行
+
+```cmd
+tmux source-file ~/.tmux.conf
+```
 
 之後請將 tmux 加入 Oh My ZSH 的 plugins 中，
 
-可參考[oh-my-zsh/plugins/tmux](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/tmux)。
+可參考[oh-my-zsh/plugins/tmux](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/tmux)
 
 編輯 `.zshrc`
 
