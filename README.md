@@ -2635,6 +2635,8 @@ sudo apt-get install gnome-control-center
 
 [fail2ban-tutorial](https://github.com/twtrubiks/linux-note/tree/master/fail2ban-tutorial) - 讓 server 更安全:smile:
 
+[server 相關安全設定](https://github.com/twtrubiks/linux-note/tree/master/server-set-secure)
+
 [how-to-change-login-lock-background-ubuntu](https://github.com/twtrubiks/linux-note/tree/master/how-to-change-login-lock-background-ubuntu) - 修改Ubuntu 登入/鎖屏時的背景
 
 [grub-customizer-tutorial](https://github.com/twtrubiks/linux-note/tree/master/grub-customizer-tutorial) - 安裝 grub-customizer
