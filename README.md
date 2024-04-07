@@ -1655,6 +1655,17 @@ echo $EDITOR
 echo $SHELL
 ```
 
+也可以設定環境變數中的 default,
+
+```cmd
+❯ echo ${SECRET_KEY:-secrets}
+secrets
+```
+
+當你環境變數中有 `SECRET_KEY` 就會取用, 如果沒有設定,
+
+就會使用你定義的 `secrets`.
+
 echo 也可以寫入檔案，
 
 方法一
