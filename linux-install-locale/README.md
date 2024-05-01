@@ -16,7 +16,32 @@ LANGUAGE="zh_TW:zh"
 
 然後再輸入 `locale` 確認是否有安裝中文.
 
-像是出現下面訊息, 就是代表沒安裝對應的 locale
+正常會出現
+
+```cmd
+❯ locale
+LANG=en_US.UTF-8
+LANGUAGE=en_US
+LC_CTYPE="en_US.UTF-8"
+LC_NUMERIC="en_US.UTF-8"
+LC_TIME="en_US.UTF-8"
+LC_COLLATE="en_US.UTF-8"
+LC_MONETARY="en_US.UTF-8"
+LC_MESSAGES="en_US.UTF-8"
+LC_PAPER="en_US.UTF-8"
+LC_NAME="en_US.UTF-8"
+LC_ADDRESS="en_US.UTF-8"
+LC_TELEPHONE="en_US.UTF-8"
+LC_MEASUREMENT="en_US.UTF-8"
+LC_IDENTIFICATION="en_US.UTF-8"
+LC_ALL=en_US.UTF-8
+```
+
+LC_CTYPE 代表分類和大小寫的轉換.
+
+LC_MESSAGES 代表系統訊息的顯示.
+
+如果出現下面訊息, 就是代表沒安裝對應的 locale
 
 ```text
 locale: Cannot set LC_CTYPE to default locale: No such file or directory

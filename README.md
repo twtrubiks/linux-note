@@ -2026,6 +2026,22 @@ Name:	google.com
 Address: 2404:6800:4012:3::200e
 ```
 
+## NTP
+
+全名為 The Network Time Protocol
+
+主要功能為 時間校正,
+
+如果你發現 server 的時間不準, 需要裝上這個, 確保時間有自動校正,
+
+```cmd
+sudo apt install ntp
+cat /etc/ntp.conf
+sudo systemctl status ntp
+```
+
+基本上, 安裝就會自動生效.
+
 ## SSH
 
 通常我們 ssh 的格式是, `ssh user@xx.xx.xx.xx`,
@@ -2235,6 +2251,38 @@ sudo vim /etc/hosts
 127.0.1.1     twtrubiks.com
 ```
 
+## 桌面環境 wayland or x11
+
+輸入以下的指令即可查看,
+
+x11 是舊的, 但和軟體相容度比較高
+
+( Kubuntu 22.04 預設就是 x11 )
+
+```cmd
+❯ echo $XDG_SESSION_TYPE
+x11
+```
+
+wayland 是比較新的, 但和軟體相容度比較低
+
+( debian 12 KDE 預設桌面環境 )
+
+```cmd
+❯ echo $XDG_SESSION_TYPE
+wayland
+```
+
+如果你是 wayland 請再安裝 pipewire
+
+```cmd
+sudo apt install pipewire
+
+systemctl --user start pipewire
+```
+
+不然你會發現無法錄影, 以及分享螢幕.
+
 ## 其他資訊
 
 系統訊息
@@ -2334,6 +2382,10 @@ top
 推薦 `htop` ( 資訊更清楚 ), 建議參考 [htop-tutorial](https://github.com/twtrubiks/linux-note/tree/master/htop-tutorial) - htop tutorial:thumbsup:
 
 透過 xrandr 修改螢幕的亮度，
+
+💢 如果你是使用 wayland, 這個工具是無法生效的, 必須使用 x11,
+
+暫時找不到替代軟體😞
 
 先查看螢幕的 name
 
@@ -2564,7 +2616,21 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet splash usbcore.autosuspend=-1"
 GRUB_CMDLINE_LINUX=""
 ```
 
-將 GRUB_TIMEOUT 的時間改長一點, 因為有可能是太快了, 導致來不及按:disappointed_relieved:
+將 GRUB_TIMEOUT 的時間改長一點, 因為有可能是太快了, 導致來不及按🤣
+
+也請記得要再執行以下的指令更新
+
+```cmd
+sudo update-grub
+```
+
+## 跳過 grub 導引
+
+```cmd
+sudo vim /etc/default/grub
+```
+
+設定 GRUB_TIMEOUT 為 0, 就可以跳過 grub 導引.
 
 也請記得要再執行以下的指令更新
 
