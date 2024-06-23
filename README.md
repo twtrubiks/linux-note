@@ -2283,6 +2283,16 @@ systemctl --user start pipewire
 
 不然你會發現無法錄影, 以及分享螢幕.
 
+## 藍芽連線
+
+如果你無法使用藍芽 (debian12), 一直連線配對不上,
+
+請安裝以下, 重開機就可以了.
+
+```cmd
+sudo apt install pipewire-audio
+```
+
 ## 其他資訊
 
 系統訊息
