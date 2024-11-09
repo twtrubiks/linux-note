@@ -2547,10 +2547,51 @@ sudo apt-get install xxx
 sudo apt install ./xxx.deb
 ```
 
-選擇可安裝的版本
+選擇可安裝的版本(例如 firefox)
 
 ```cmd
-sudo apt-cache policy xxx
+sudo apt-cache policy firefox
+```
+
+安裝指定的版本(例如 firefox)
+
+```cmd
+sudo apt install firefox=VERSION
+```
+
+鎖定版本(關閉自動更新),
+
+可使用以下的指令(例如 firefox)
+
+```cmd
+sudo apt-mark hold firefox
+```
+
+雖然你執行 `sudo apt-get update` 還是會看到有更新的版本, 但是它會跳過更新,
+
+範例如下, 會自動跳過.
+
+```cmd
+❯ sudo apt upgrade -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+The following packages have been kept back:
+  firefox-esr
+```
+
+查詢已停用自動更新的套件
+
+```cmd
+❯ sudo apt-mark showhold
+firefox-esr
+```
+
+假設今天想還原, 可使用指下指令 (例如 firefox)
+
+```cmd
+sudo apt-mark unhold firefox-esr
 ```
 
 update list ( 更新 packages 的最新資訊及列表 )
@@ -2650,34 +2691,39 @@ sudo update-grub
 
 ## remove snap
 
-在 ubuntu 中, 預設會幫你安裝 snap, 但有些人不太喜歡,
+在 ubuntu 中, 預設會幫你安裝 snap, 我自己非常不喜歡,
 
-因為他是私人公司為維護的:smile:
+因為他是私人公司為維護的 :smile:
 
 以下附上移除 snap 指令,
 
+先使用 `snap list` 查看全部安裝的套件,
+
+然後一個一個使用 `sudo snap remove --purge firefox` 移除,
+
+全部移除完之後, 再整個移除 snap
+
 ```cmd
-sudo rm -rf /var/cache/snapd/
-sudo apt autoremove --purge snapd gnome-software-plugin-snap
-rm -rf ~/snap
+sudo apt remove --purge snapd
 ```
 
-## remove ubuntu 不需要的軟體
+也刪除相關的資料夾 `rm -rf ~/snap`,
 
-使用 ubuntu 18.04 當範例
+避免安裝其他套件 snap 又被安裝回來, 請執行以下的指令
 
 ```cmd
-sudo apt purge deja-dup thunderbird rhythmbox ubuntu-web-launchers whoopsie
+sudo cat <<EOF | sudo tee /etc/apt/preferences.d/nosnap.pref
+Package: snapd
+Pin: release a=*
+Pin-Priority: -10
+EOF
 ```
 
-`deja-dup` ubuntu 內建備份軟體.
-
-`whoopsie` ubuntu 錯誤報告.
-
-如果不小心刪除到依賴 (把 settings 刪除), 可使用以下指令將它裝回來
+加入 firefox PPA, 以及從 apt 安裝 firefox
 
 ```cmd
-sudo apt-get install gnome-control-center
+sudo add-apt-repository ppa:mozillateam/ppa
+sudo apt update && sudo apt install firefox
 ```
 
 ## Linux 檔案系統(結構)
