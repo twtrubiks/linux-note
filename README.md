@@ -2836,6 +2836,8 @@ sudo apt update && sudo apt install firefox
 
 [fstrim-ssd-tutorial](https://github.com/twtrubiks/linux-note/tree/master/fstrim-ssd-tutorial) - fstrim ssd 教學
 
+[exFAT-usb-tutorial](https://github.com/twtrubiks/linux-note/tree/master/exFAT-usb-tutorial) - 讓usb可以存放大於4GB檔案 教學
+
 [Linux 桌面環境 Desktop Environment](https://github.com/twtrubiks/linux-note/tree/master/linux-de)
 
 [認識 Linux 發行版 distribution](https://github.com/twtrubiks/linux-note/tree/master/linux-distro)
