@@ -22,7 +22,7 @@ Check `Mount at system startup` option
 
 ![alt tag](https://i.imgur.com/8vbp6du.png)
 
-Reboot, the hard disks will be mounted automatically at system startup:smile:
+Reboot, the hard disks will be mounted automatically at system startup :smile:
 
 In general, you need to mount disk to be correct in `/media`(`/mnt` is a temporary mount point).
 

@@ -21,7 +21,7 @@ E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is an
 
 又或是開機時它剛好在檢查更新, 然後你又使用 terminal 去執行更新的動作,
 
-也都很容易跳出這個錯誤:unamused:
+也都很容易跳出這個錯誤 :unamused:
 
 ## 解決方法
 
@@ -55,6 +55,6 @@ sudo rm /var/lib/dpkg/lock*
 sudo dpkg --configure -a
 ```
 
-接著再去執行你原先想要執行的指令 ( 就可以正常 work 了 ):smile:
+接著再去執行你原先想要執行的指令 ( 就可以正常 work 了 ) :smile:
 
 也可以執行執行 `sudo apt-get update`

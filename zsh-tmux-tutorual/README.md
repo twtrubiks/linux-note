@@ -344,7 +344,7 @@ vim ~/.zshrc
 
 拉到檔案最後面, 你會發現其實裡面已經有範例了
 
-舉個例子, `alias lla="ls -l -a"` (設定完後請重開 terminal:exclamation:),
+舉個例子, `alias lla="ls -l -a"` (設定完後請重開 terminal :exclamation:),
 
 直接輸入 `lla` 就等於是 `ls -l -a`
 
@@ -354,7 +354,7 @@ vim ~/.zshrc
 
 你可以把它設定成 alias, `alias mypc="ssh twtrubiks@192.168.56.101"`,
 
-這樣直接在 terminal 上輸入 `mypc` 就可以了, 非常方便:thumbsup:
+這樣直接在 terminal 上輸入 `mypc` 就可以了, 非常方便 :thumbsup:
 
 `~/.zshrc`
 
@@ -398,11 +398,11 @@ mcd 的執行結果如下
 
 ![alt tag](https://i.imgur.com/bN4dX41.png)
 
-基本上功能很強:smile:
+基本上功能很強 :smile:
 
 再補充一個, 很多時候我們會需要重新啟動遠端的機器, 每次都要進去重新啟動,
 
-實在非常的麻煩:sweat:
+實在非常的麻煩 :sweat:
 
 所以提供遠端重啟(或執行指令)範例, 以下範例為執行 `run.sh`.
 
@@ -418,7 +418,7 @@ function run-remote {
 
 `"..."` 裡面就放你需要執行的指令,
 
-建議多加上 `sudo`, 不然有時候會遇到權限不夠的問題:expressionless:
+建議多加上 `sudo`, 不然有時候會遇到權限不夠的問題 :expressionless:
 
 可參考 [How to execute a remote command over ssh with arguments?](https://stackoverflow.com/questions/18502945/how-to-execute-a-remote-command-over-ssh-with-arguments)
 

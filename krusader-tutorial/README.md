@@ -4,7 +4,7 @@
 
 krusader 是為 KDE 桌面提供的 file manager, 而 gnome-commander 是為 GNOME 桌面提供的 file manager，
 
-先說結論, 雖然我用 GNOME 桌面( 未來應該會跳 KDE), 但我還是選 krusader:smile:
+先說結論, 雖然我用 GNOME 桌面( 未來應該會跳 KDE), 但我還是選 krusader :smile:
 
 ## krusader
 

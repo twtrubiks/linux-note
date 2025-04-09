@@ -14,7 +14,7 @@
 sudo touch /etc/NetworkManager/conf.d/10-globally-managed-devices.conf
 ```
 
-建議再重開 NetworkManager, 更好的方法式重開機(可做可不做:relaxed:)
+建議再重開 NetworkManager, 更好的方法式重開機(可做可不做 :relaxed:)
 
 ```cmd
 sudo systemctl restart NetworkManager

@@ -2,7 +2,7 @@
 
 [Youtube Tutorial - Linux - CopyQ 教學 - 剪貼簿工具](https://youtu.be/vRaS5roI8AY)
 
-Linux 上好用的剪貼簿:thumbsup:
+Linux 上好用的剪貼簿 :thumbsup:
 
 (假如你是使用 KDE 的桌面環境, 預設就會幫你裝 klipper, 它也不錯用)
 
@@ -65,7 +65,7 @@ tray menu 就是這個
 
 ![alt tag](https://i.imgur.com/ZbhJAxE.png)
 
-也可以設定截圖 ( 但我覺得還是 [Ubuntu 18.04 install Shutter](https://github.com/twtrubiks/linux-note/tree/master/shutter-tutorual) 好用:thumbsup:)
+也可以設定截圖 ( 但我覺得還是 [Ubuntu 18.04 install Shutter](https://github.com/twtrubiks/linux-note/tree/master/shutter-tutorual) 好用 :thumbsup:)
 
 ![alt tag](https://i.imgur.com/7uY8D26.png)
 

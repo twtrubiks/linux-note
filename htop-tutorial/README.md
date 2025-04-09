@@ -6,9 +6,9 @@ htop repo:[htop](https://github.com/hishamhm/htop)
 
 本篇文章將會教大家使用超強的 `htop`,
 
-你可能會說, 系統原先就有 `top` 了, 為什麼還要在另外裝:question:
+你可能會說, 系統原先就有 `top` 了, 為什麼還要在另外裝 :question:
 
-我用圖片來說明這個原因:smile:
+我用圖片來說明這個原因 :smile:
 
 ## 說明
 
@@ -20,7 +20,7 @@ htop repo:[htop](https://github.com/hishamhm/htop)
 
 ![alt tag](https://i.imgur.com/knIl247.png)
 
-我想答案明顯了:flushed: 肯定選 `htop`
+我想答案明顯了 :flushed: 肯定選 `htop`
 
 先安裝 `htop`
 

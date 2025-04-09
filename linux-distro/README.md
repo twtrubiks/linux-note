@@ -8,7 +8,7 @@
 
 今天就帶大家來認識 Linux distribution
 
-先來看簡單的大方向:smile:
+先來看簡單的大方向 :smile:
 
 ![alt tag](https://i.imgur.com/vRpTRhJ.png)
 

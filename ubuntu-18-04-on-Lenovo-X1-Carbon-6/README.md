@@ -6,11 +6,11 @@ x1c6 從 windows 重灌成 linux.
 
 原因,
 
-1. windows 上的 hyperv 真的不是很喜歡:cry:
+1. windows 上的 Hyper-V 真的不是很喜歡 :cry:
 
 2. ram 只有 8g, 又被焊死, 在 windows 上跑太吃資源了
 
-3. 軟體工程師的下一個里程碑:satisfied:
+3. 軟體工程師的下一個里程碑 :satisfied:
 
 請直接參考以下的文章,
 
@@ -26,7 +26,7 @@ x1c6 從 windows 重灌成 linux.
 
 x1c 6 系列對 Linux 支援非常好, 基本上, 我驅動完全沒有問題,
 
-只剩下那個指紋解鎖我沒測試, 因為我覺的不好用也不需要他了:grin:
+只剩下那個指紋解鎖我沒測試, 因為我覺的不好用也不需要他了 :grin:
 
 唯一從 windows 改成 linux 要注意的點就是, 要進去 bios 改設定,
 
@@ -40,5 +40,5 @@ x1c 6 系列對 Linux 支援非常好, 基本上, 我驅動完全沒有問題,
 
 不少我跟著設定, 現在我的筆電有夠省電的.
 
-windows 真的太吃資源加耗電了:joy:
+windows 真的太吃資源加耗電了 :joy:
 

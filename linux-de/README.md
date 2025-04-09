@@ -2,19 +2,19 @@
 
 [Youtube Tutorial-Linux 桌面環境 Desktop Environment 介紹](https://youtu.be/1fFti7WKaHg)
 
-在 Linux 的世界中, 有非常多的桌面環境可以選擇:smile:
+在 Linux 的世界中, 有非常多的桌面環境可以選擇 :smile:
 
 桌面環境可以簡稱為 DE ( Desktop Environment ),
 
-今天我將介紹一些桌面環境給各位:satisfied:
+今天我將介紹一些桌面環境給各位 :satisfied:
 
-注意:exclamation::exclamation:
+注意 :exclamation: :exclamation:
 
 不要在一個系統上安裝兩種(包含)以上的桌面, 因為有時候會導致很多奇怪的問題,
 
-舉個例子, 假如喜歡 KDE 這個桌面,  就直接安裝 Kubuntu:exclamation::exclamation:
+舉個例子, 假如喜歡 KDE 這個桌面,  就直接安裝 Kubuntu :exclamation: :exclamation:
 
-不要安裝 Ubuntu, 然後在裡面裝 KDE 桌面, 非常不建議:exclamation::exclamation:
+不要安裝 Ubuntu, 然後在裡面裝 KDE 桌面, 非常不建議 :exclamation: :exclamation:
 
 ## Unity
 
@@ -46,9 +46,9 @@ KDE 則是目前 Linux distro 中, 客製化最強大的桌面(可搭配出自�
 
 整體速度比 GNOME 還快, 非常的 smooth, 所需要的資源也比 GNOME 還少，
 
-一開始可能比 GNOME 還難上手 (因為太多東西可以客製化了):joy:
+一開始可能比 GNOME 還難上手 (因為太多東西可以客製化了) :joy:
 
-但如果上手後，肯定比 GNOME 還順手:neutral_face:
+但如果上手後，肯定比 GNOME 還順手 :neutral_face:
 
 kubuntu-19.10
 
@@ -58,9 +58,9 @@ kubuntu-19.10
 
 輕量化為主的桌面, 主要針對硬體, CPU , RAM 要求較低的電腦, 適合使用在比較舊的電腦,
 
-速度蠻快的, 也可以客製化, 但 LXDE 幾乎沒有在維護了:angry:
+速度蠻快的, 也可以客製化, 但 LXDE 幾乎沒有在維護了 :angry:
 
-建議使用 LXQT, 算是 LXDE 的改良版, 也持續在維護中:smile:
+建議使用 LXQT, 算是 LXDE 的改良版, 也持續在維護中 :smile:
 
 如果你有比較舊的筆電，可以嘗試安裝 lubuntu.
 
@@ -100,7 +100,7 @@ ubuntu-mate-19.10
 
 ## Pantheon
 
-這個桌面輕量而且模組化, 如果你喜歡 Apple’s Mac OS, 肯定是選它:smirk:
+這個桌面輕量而且模組化, 如果你喜歡 Apple’s Mac OS, 肯定是選它 :smirk:
 
 elementaryos-5.1
 

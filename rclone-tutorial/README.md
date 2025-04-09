@@ -139,9 +139,9 @@ sudo rclone copy --drive-chunk-size=64M --transfers=2 --fast-list --stats=20s -v
 sudo rclone move remote_1:folder remote_2:folder
 ```
 
-sync, copy, move 之間詳細的差異請自行閱讀文件:smile:
+sync, copy, move 之間詳細的差異請自行閱讀文件 :smile:
 
-可以再搭配 [crontab-tutorual](https://github.com/twtrubiks/linux-note/tree/master/crontab-tutorual) 解決定時同步的問題:satisfied:
+可以再搭配 [crontab-tutorual](https://github.com/twtrubiks/linux-note/tree/master/crontab-tutorual) 解決定時同步的問題 :satisfied:
 
 ## 雲端加密
 
@@ -155,4 +155,4 @@ rclone 還有加密的功能, 舉個例子, 假設今天我對 A 的雲端空間
 
 `dropbox:Encrypt` 之類的, 總之就是要先建立一個 remote, 然後才能建立加密
 
-的. 如果有人對這部份有興趣, 我之後再拍影片教大家:smile:
+的. 如果有人對這部份有興趣, 我之後再拍影片教大家 :smile:

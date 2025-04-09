@@ -10,13 +10,13 @@
 
 [linux-virtualbox-ssh-tutorial](https://github.com/twtrubiks/linux-note/tree/master/linux-virtualbox-ssh-tutorial) - 在 Linux 中設定 VirtualBox 把玩 ssh
 
-### 為甚麼在使用 VirtualBox 會很慢:question:
+### 為甚麼在使用 VirtualBox 會很慢 :question:
 
 除了硬碟請使用 SSD 之外, 想請將 Enable 3D Acceleration 打勾
 
 ![alt tag](https://i.imgur.com/xuQ0q8E.png)
 
-### 為甚麼在 VirtualBox 內會找不到外接 USB 裝置:question:
+### 為甚麼在 VirtualBox 內會找不到外接 USB 裝置 :question:
 
 這問題通常是 groups 的問題, 因為 groups 中沒有 vboxusers 這個 group,
 
@@ -28,11 +28,11 @@
 
 建議登出再登入或重新開機,
 
-然後在 terminal 上輸入 groups, 你就可以看到 vboxusers 了:smile:
+然後在 terminal 上輸入 groups, 你就可以看到 vboxusers 了 :smile:
 
 ![alt tag](https://i.imgur.com/KIteuAV.png)
 
-### 為甚麼在 VirtualBox 無法 share 資料夾:question:
+### 為甚麼在 VirtualBox 無法 share 資料夾 :question:
 
 ![alt tag](https://i.imgur.com/CgOPM6Y.png)
 

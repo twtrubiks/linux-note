@@ -6,11 +6,11 @@ TLP - Linux Advanced Power Management
 
 TLP 是一款進階電源管理的工具, 如果沒特別需求, 你甚至可以在安裝完它之後,
 
-直接忘記他的存在, 然後你會發現你的電池續航力提昇了不少:satisfied:
+直接忘記他的存在, 然後你會發現你的電池續航力提昇了不少 :satisfied:
 
-但有幾個地方要注意:exclamation::exclamation:
+但有幾個地方要注意 :exclamation::exclamation:
 
-首先是沒有 GUI 界面可以調整, 再來是筆電比較適合使用:smile:
+首先是沒有 GUI 界面可以調整, 再來是筆電比較適合使用 :smile:
 
 安裝文件可參考 [tlp-installation](https://linrunner.de/en/tlp/docs/tlp-linux-advanced-power-management.html#installation),
 
@@ -63,7 +63,7 @@ TLP 1.3 and higher 設定檔在以下的路徑, 官方文件 [tlp-configuration]
 sudo cat /etc/tlp.conf
 ```
 
-附上我自己的設定檔 [/etc/tlp.conf](https://github.com/twtrubiks/linux-note/blob/master/linux-tlp-tutorial/tlp.conf):smile:
+附上我自己的設定檔 [/etc/tlp.conf](https://github.com/twtrubiks/linux-note/blob/master/linux-tlp-tutorial/tlp.conf) :smile:
 
 查看全部狀態指令
 

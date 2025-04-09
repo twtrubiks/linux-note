@@ -2,7 +2,7 @@
 
 主要是紀錄一些 linux 的指令📝
 
-( 本篇文章會持續更新:smile: )
+( 本篇文章會持續更新 :smile: )
 
 ## cd
 
@@ -24,7 +24,7 @@ cd /
 cd ..
 ```
 
-移動路徑到上一個所在的路徑 (可以快速切換兩個路徑, 很方便:smile:)
+移動路徑到上一個所在的路徑 (可以快速切換兩個路徑, 很方便 :smile:)
 
 ```cmd
 cd -
@@ -84,7 +84,7 @@ ll
 
 * 無權限 ( - )，用數字 0 表示。
 
-為了更清楚，我把它整理成表格:yum:
+為了更清楚，我把它整理成表格 :yum:
 
 |     字元     | 權限分數 |
 |:------------:|:--------:|
@@ -123,7 +123,7 @@ ll
 
 其他使用者只擁有讀、執行權限。
 
-為了更清楚，我把它整理成表格:yum:
+為了更清楚，我把它整理成表格 :yum:
 
 |                |        擁有者        |      所屬群組      |     其他使用者     |
 |----------------|:--------------------:|:------------------:|:------------------:|
@@ -588,7 +588,7 @@ sudo cat /etc/passwd
 sudo cat /etc/group
 ```
 
-不知道大家有沒有這個困擾, 就是每次都要打上自己的密碼很麻煩:expressionless:
+不知道大家有沒有這個困擾, 就是每次都要打上自己的密碼很麻煩 :expressionless:
 
 這邊提供一個方法給各位, 但還是要小心一點, 就是 `-S` 這個指令.
 
@@ -707,7 +707,7 @@ chmod a-x hello
 
 相信經過這一連串的練習，大家肯定了解了，
 
-如果不懂，多看幾遍:satisfied:
+如果不懂，多看幾遍 :satisfied:
 
 ## chown
 
@@ -755,7 +755,7 @@ hard link 特性為不管刪除哪一個檔案，檔案都會被保留。除非�
 
 hard link 不允許資料夾，只允許檔案。
 
-symbolic link，也稱 soft link，基本上它類似於 Windows 中的捷徑:smile:
+symbolic link，也稱 soft link，基本上它類似於 Windows 中的捷徑 :smile:
 
 ```cmd
 ln -s /home/twtrubiks/Downloads/odoo-git/ dir-link
@@ -917,7 +917,7 @@ scp -P 22 twtrubiks@192.168.56.101:/home/twtrubiks/linux_file.md .
 
 ![alt tag](https://i.imgur.com/aMnNlGI.png)
 
-Linux 之間的傳送也是相同的道理:smile:
+Linux 之間的傳送也是相同的道理 :smile:
 
 ## mv
 
@@ -1208,7 +1208,7 @@ echo "test" >> README.md
 
 ## head
 
-既然有 tail, 肯定會有 head:smile:
+既然有 tail, 肯定會有 head :smile:
 
 ```cmd
 head text.py
@@ -1732,13 +1732,13 @@ du 這個指令是 Disk Usage 的縮寫,
 
 但是如果你進到資料夾裡面, 你會發現它明明有 17GB,
 
-可是為什麼在資料夾外層看的時候卻只有 4KB:question:
+可是為什麼在資料夾外層看的時候卻只有 4KB :question:
 
 ![alt tag](https://i.imgur.com/eOTKWJj.png)
 
 原因是 `ls -l -h` 不會顯示資料夾實際的大小, 只會顯示所謂的 meta information,
 
-所以, 如果你要看實際的大小, 比較好的方法是使用接下來要介紹的 `du` 指令:smile:
+所以, 如果你要看實際的大小, 比較好的方法是使用接下來要介紹的 `du` 指令 :smile:
 
 查看 du 指令說明
 
@@ -1796,13 +1796,13 @@ Shrink or extend the size of each FILE to the specified size.
 
 truncate 指令可以將一個檔案縮小或是增加大小.
 
-開始介紹這個指令前, 先來看看適用的情境:smile:
+開始介紹這個指令前, 先來看看適用的情境 :smile:
 
 有時候我們可能會希望把一個檔案的大小歸 0, 也就是將檔案的內容全部刪除,
 
-但是要保留檔案, 這時候就很適合使用這個指令:smirk:
+但是要保留檔案, 這時候就很適合使用這個指令 :smirk:
 
-那你可能會問我, 為什麼不直接刪除檔案再建立一個一模一樣的就好:question:
+那你可能會問我, 為什麼不直接刪除檔案再建立一個一模一樣的就好 :question:
 
 原因很簡單, 在 linux 的世界中, 檔案是有權限的, 所以你還要去注意新建立
 
@@ -1850,7 +1850,7 @@ truncate -s 1M demo.txt
 
 注意 `du -ah` 是顯示 apparent sizes (不是 disk usage ), 所以大小不會改變.
 
-如果你去打開 `demo.txt`, 你會發現被塞了很多東西, 因為大小要變成 1M:smile:
+如果你去打開 `demo.txt`, 你會發現被塞了很多東西, 因為大小要變成 1M :smile:
 
 ![alt tag](https://i.imgur.com/mgQNkNn.png)
 
@@ -2101,7 +2101,7 @@ mkdir -p ~/.ssh
 chmod 700 ~/.ssh
 ```
 
-每次遠端登入 Linux 都需要密碼很麻煩，有沒有可以透過其他的方式不要輸入密碼:question:
+每次遠端登入 Linux 都需要密碼很麻煩，有沒有可以透過其他的方式不要輸入密碼 :question:
 
 有，先在本機電腦使用 `ssh-keygen` 產生金鑰
 
@@ -2125,13 +2125,13 @@ id_rsa：私密金鑰（private key）: 自己保護好，等同於你的 Linux 
 cat id_rsa.pub >> ~/.ssh/authorized_keys
 ```
 
-讓我們來測試看看吧:smile:
+讓我們來測試看看吧 :smile:
 
 `ssh twtrubiks@192.168.56.101`
 
 ![alt tag](https://i.imgur.com/97ndrP8.png)
 
-不用輸入密碼就可以登入了:thumbsup:
+不用輸入密碼就可以登入了 :thumbsup:
 
 ### 方法二
 
@@ -2145,15 +2145,15 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub twtrubiks@192.168.56.101
 
 其實不管是方法一還是方法二, 都只是把 key 加入 `/home/<user>/.ssh`
 
-裡的 `authorized_keys` 而已:smile:
+裡的 `authorized_keys` 而已 :smile:
 
 ![alt tag](https://i.imgur.com/j4BRI1J.png)
 
 ## root 使用者登入遠端 Linux
 
-注意, 通常不會這樣做:exclamation:
+注意, 通常不會這樣做 :exclamation:
 
-雖然這個方法可以比較危險，但我還是說明一下:joy:
+雖然這個方法可以比較危險，但我還是說明一下 :joy:
 
 先設定 root 密碼，執行以下指令
 
@@ -2192,7 +2192,7 @@ sudo vim /etc/ssh/sshd_config
 systemctl restart sshd
 ```
 
-成功使用 root 登入了:satisfied:
+成功使用 root 登入了 :satisfied:
 
 ![alt tag](https://i.imgur.com/Au4wt32.png)
 
@@ -2202,7 +2202,7 @@ systemctl restart sshd
 
 然後只啟用 `PubkeyAuthentication` 的方式, 但這邊要注意, 一定要把你的 key 放到
 
-server 上, 否則如果設定完不小心退出, 就很麻煩:expressionless:
+server 上, 否則如果設定完不小心退出, 就很麻煩 :expressionless:
 
 ( 因為不能用密碼登入, 又忘記將 key 放到 server 中 )
 
@@ -2389,13 +2389,13 @@ curl ifconfig.me
 top
 ```
 
-推薦 `htop` ( 資訊更清楚 ), 建議參考 [htop-tutorial](https://github.com/twtrubiks/linux-note/tree/master/htop-tutorial) - htop tutorial:thumbsup:
+推薦 `htop` ( 資訊更清楚 ), 建議參考 [htop-tutorial](https://github.com/twtrubiks/linux-note/tree/master/htop-tutorial) - htop tutorial :thumbsup:
 
 透過 xrandr 修改螢幕的亮度，
 
 💢 如果你是使用 wayland, 這個工具是無法生效的, 必須使用 x11,
 
-暫時找不到替代軟體😞
+暫時找不到替代軟體 😞
 
 先查看螢幕的 name
 
@@ -2756,17 +2756,17 @@ sudo apt update && sudo apt install firefox
 
 [gnome-tweaks](https://github.com/twtrubiks/linux-note/tree/master/gnome-tweaks) - Ubuntu 安裝 GNOME Tweak tool
 
-[htop-tutorial](https://github.com/twtrubiks/linux-note/tree/master/htop-tutorial) - htop tutorial:thumbsup:
+[htop-tutorial](https://github.com/twtrubiks/linux-note/tree/master/htop-tutorial) - htop tutorial :thumbsup:
 
-[neofetch-tutorial](https://github.com/twtrubiks/linux-note/tree/master/neofetch-tutorial) - command-line system information tool:thumbsup:
+[neofetch-tutorial](https://github.com/twtrubiks/linux-note/tree/master/neofetch-tutorial) - command-line system information tool :thumbsup:
 
-[copyq-tutorial](https://github.com/twtrubiks/linux-note/tree/master/copyq-tutorial) - 剪貼簿:thumbsup:
+[copyq-tutorial](https://github.com/twtrubiks/linux-note/tree/master/copyq-tutorial) - 剪貼簿 :thumbsup:
 
 [tldr-tutorial](https://github.com/twtrubiks/linux-note/tree/master/tldr-tutorial) - 更好用更簡單的 man pages
 
 [krusader-tutorial](https://github.com/twtrubiks/linux-note/tree/master/krusader-tutorial) - file manager
 
-[fail2ban-tutorial](https://github.com/twtrubiks/linux-note/tree/master/fail2ban-tutorial) - 讓 server 更安全:smile:
+[fail2ban-tutorial](https://github.com/twtrubiks/linux-note/tree/master/fail2ban-tutorial) - 讓 server 更安全 :smile:
 
 [server 相關安全設定](https://github.com/twtrubiks/linux-note/tree/master/server-set-secure)
 
@@ -2850,7 +2850,7 @@ sudo apt update && sudo apt install firefox
 
 ## Donation
 
-文章都是我自己研究內化後原創，如果有幫助到您，也想鼓勵我的話，歡迎請我喝一杯咖啡:laughing:
+文章都是我自己研究內化後原創，如果有幫助到您，也想鼓勵我的話，歡迎請我喝一杯咖啡 :laughing:
 
 綠界科技ECPAY ( 不需註冊會員 )
 

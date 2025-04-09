@@ -154,7 +154,7 @@ sudo visudo
 Defaults  env_keep += "SYSTEMD_EDITOR"
 ```
 
-這樣預設就是用 vim 打開了:smile:
+這樣預設就是用 vim 打開了 :smile:
 
 重新載入 systemd
 

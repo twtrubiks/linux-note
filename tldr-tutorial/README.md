@@ -28,4 +28,4 @@ tldr tar
 
 ![alt tag](https://i.imgur.com/Grm5xpC.png)
 
-這樣是不是更清楚了:smile:
+這樣是不是更清楚了 :smile:

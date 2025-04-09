@@ -15,7 +15,7 @@
 
 ## 教學
 
-在開始安裝之前, 強烈建議先安裝字體 (不然有些圖可能會顯示不出來:sweat:)
+在開始安裝之前, 強烈建議先安裝字體 (不然有些圖可能會顯示不出來 :sweat:)
 
 安裝流程 [https://github.com/romkatv/powerlevel10k#get-started](https://github.com/romkatv/powerlevel10k#get-started)
 
@@ -25,7 +25,7 @@
 
 [how-was-the-recommended-font-created](https://github.com/romkatv/powerlevel10k#how-was-the-recommended-font-created)
 
-自己 build 出字體 ( 使用 docker build, 我自己 clone 加上 build 是還蠻久的:sweat_smile:)
+自己 build 出字體 ( 使用 docker build, 我自己 clone 加上 build 是還蠻久的 :sweat_smile:)
 
 或是直接下載現成的 [Manual font installation](https://github.com/romkatv/powerlevel10k#manual-font-installation)
 

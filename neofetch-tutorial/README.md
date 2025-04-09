@@ -59,4 +59,4 @@ vim ~/.zshrc
 
 ![alt tag](https://i.imgur.com/7pbqz1P.png)
 
-這樣每次打開 terminal 時就會自動執行 `neofetch` 了:smile:
+這樣每次打開 terminal 時就會自動執行 `neofetch` 了 :smile:

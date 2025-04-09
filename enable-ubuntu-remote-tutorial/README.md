@@ -58,7 +58,7 @@ User password 輸入你剛剛的密碼
 
 linux 在遠端桌面的時候, server (被遠端的機器) 一定要接上螢幕,
 
-不然你會發現雖然連過去了, 可是畫面動不了(或是黑屏):sweat:
+不然你會發現雖然連過去了, 可是畫面動不了(或是黑屏) :sweat:
 
 這邊提供解決方法,
 
@@ -112,15 +112,15 @@ Section "Screen"
 EndSection
 ```
 
-接著重開機, 之後 server (被遠端的機器) 沒接螢幕遠端進去也不會再黑屏了:satisfied:
+接著重開機, 之後 server (被遠端的機器) 沒接螢幕遠端進去也不會再黑屏了 :satisfied:
 
 但如果這時候 server (被遠端的機器) 接螢幕開機, 你會發現他螢幕不會顯示
 
-(這是正常的, 因為現在是 dummy 的螢幕:smile:)
+(這是正常的, 因為現在是 dummy 的螢幕 :smile:)
 
 你只要刪除 `xorg.conf`, 再重開機就會正常了.
 
-(需要這個功能的時候, 再把 `xorg.conf` 加回去即可:smile:)
+(需要這個功能的時候, 再把 `xorg.conf` 加回去即可 :smile:)
 
 如果想透過 command 查看 vino 的設定,
 
@@ -148,4 +148,4 @@ export DISPLAY=:0 && /usr/lib/vino/vino-server
 
 這是專門給 KDE 用戶使用的, 但是如果你 client 端比較喜歡 Remmina,
 
-在 KDE 上也是可以正常使用的:smile:
+在 KDE 上也是可以正常使用的 :smile:

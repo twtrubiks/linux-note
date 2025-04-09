@@ -57,7 +57,7 @@ settings
 
 ![alt tag](https://i.imgur.com/RtloG5v.png)
 
-修改任何東西都要記得點選 ok 才會生效:exclamation::exclamation:
+修改任何東西都要記得點選 ok 才會生效 :exclamation: :exclamation:
 
 如果還是沒有生效, 重開機就對了(或登出再登入)XD
 

@@ -2,7 +2,7 @@
 
 [Youtube Tutorial - fail2ban tutorial](https://youtu.be/5tzPamIzo4o)
 
-透過 fail2ban 讓 server 更安全:smile:
+透過 fail2ban 讓 server 更安全 :smile:
 
 Linux 中, 如果要查看最近 ssh 登入是否有異常
 
@@ -14,9 +14,9 @@ cat /var/log/auth.log
 
 如果你是使用雲端, 像是 azure 或是 aws 之類的雲，應該是不需要再使用 Fail2ban, 因為現在大多的雲端都可以
 
-設定特定的 ip 才可以 ssh (其餘全部封鎖), 但還是有些雲端沒辦法, 像是 Linode 就沒有這個功能:unamused:
+設定特定的 ip 才可以 ssh (其餘全部封鎖), 但還是有些雲端沒辦法, 像是 Linode 就沒有這個功能 :unamused:
 
-所以 Fail2ban 適用在像是 Linode 或是自架的實體機器, 目的是讓機器更安全:smirk:
+所以 Fail2ban 適用在像是 Linode 或是自架的實體機器, 目的是讓機器更安全 :smirk:
 
 官方文件, [Fail2ban](https://docs.fusionpbx.com/en/latest/firewall/fail2ban.html#)
 
@@ -116,4 +116,4 @@ fail2ban-client set sshd unbanip your-ip
 
 然後執行 `fail2ban-client set sshd unbanip A-ip` 解鎖 :blush:
 
-如果你發現 fail2ban 一直沒有效果, 請重開機解百病:smile:
+如果你發現 fail2ban 一直沒有效果, 請重開機解百病 :smile:

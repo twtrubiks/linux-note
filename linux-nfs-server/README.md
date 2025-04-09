@@ -8,7 +8,7 @@ NFS 的優點是在 linux 上佈署簡單, 傳輸速度(相對 FTP)快.
 
 NFS 的缺點就是加密的部份, 因為單純只是使用 IP 而已, 相對 FTP 來說比較不安全.
 
-(但如果搭配內網以及防火牆應該會安全很多:relaxed:)
+(但如果搭配內網以及防火牆應該會安全很多 :relaxed:)
 
 ## server 端
 
@@ -105,7 +105,7 @@ sudo mkdir -p /mnt/nfs_client
 sudo mount server_IP:/mnt/nfs_shared  /mnt/nfs_client
 ```
 
-如果可以在資料夾裡面讀寫資料就是成功了哦:smile:
+如果可以在資料夾裡面讀寫資料就是成功了哦 :smile:
 
 ## client 端開機自動掛載
 

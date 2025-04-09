@@ -2,11 +2,11 @@
 
 [Youtube Tutorial - 超酷又超沒用的 cmatrix](https://youtu.be/Db0Lz909LNE)
 
-還記得有一部電影叫做駭客任務 (The Matrix) 嗎:question:
+還記得有一部電影叫做駭客任務 (The Matrix) 嗎 :question:
 
 這個軟體就是以他為命名的,
 
-這個軟體沒什麼用, 就裝酷而已:smile:
+這個軟體沒什麼用, 就裝酷而已 :smile:
 
 安装 cmatrix
 

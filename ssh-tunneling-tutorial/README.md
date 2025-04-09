@@ -53,7 +53,7 @@ ssh -N -L 3000:localhost:5601 root@123.123.123.123
 
 公司內網電腦 ip 為 `192.168.7.104`.
 
-如何透過 remote server A 在家(外面)能成功訪問公司內網電腦呢:question:
+如何透過 remote server A 在家(外面)能成功訪問公司內網電腦呢 :question:
 
 跳板, 在公司電腦執行,
 
@@ -81,7 +81,7 @@ ssh admin@localhost -p 8007
 
 在家(外面)能成功訪問公司內網電腦.
 
-但這邊注意, 還是有可能會有安全上的問題:exclamation::exclamation:
+但這邊注意, 還是有可能會有安全上的問題 :exclamation: :exclamation:
 
 ### 情境二
 
