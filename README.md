@@ -2844,6 +2844,9 @@ sudo apt update && sudo apt install firefox
 
 [KDE setting](https://github.com/twtrubiks/linux-note/tree/master/kde-settings)
 
+[Whisper 本地 YouTube 字幕生成指南](whisper-tutorial)
+
+
 ## Reference
 
 * [Linux Command 命令列指令與基本操作入門教學](https://blog.techbridge.cc/2017/12/23/linux-commnd-line-tutorial/)
