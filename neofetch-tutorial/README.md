@@ -2,25 +2,25 @@
 
 [Youtube Tutorial - Linux 指令教學-NeoFetch](https://youtu.be/nuobFAxCaw8)
 
-Neofetch is a command-line system information tool written in bash 3.2+. Neofetch displays information about your operating system, software and hardware in an aesthetic and visually pleasing way.
+Fastfetch is a neofetch-like tool for fetching system information and displaying it in a visually appealing way. It is written mainly in C, with a focus on performance and customizability. Currently, it supports Linux, macOS, Windows 7+, Android, FreeBSD, OpenBSD, NetBSD, DragonFly, Haiku, and SunOS.
+
+因為 [neofetch](https://github.com/dylanaraps/neofetch) 不維護了, 改使用 [fastfetch](https://github.com/fastfetch-cli/fastfetch) 使用方式基本上都是一樣的.
 
 ## 教學
 
-github:[neofetch](https://github.com/dylanaraps/neofetch),
-
-在 ubuntu 18.04 下安裝使用以下指令即可, [ubuntu-1704-and-up](https://github.com/dylanaraps/neofetch/wiki/Installation#ubuntu-1704-and-up)
+安裝指令
 
 ```cmd
 sudo apt update
-sudo apt install neofetch
+sudo apt install fastfetch
 ```
 
-如果是其他 distro, 請參考 [https://github.com/dylanaraps/neofetch/wiki/Installation](https://github.com/dylanaraps/neofetch/wiki/Installation)
+如果是其他 distro, 請直接到 Releases 下載 `.deb` 安裝.
 
 使用方法很簡單,
 
 ```cmd
-neofetch
+fastfetch
 ```
 
 ![alt tag](https://i.imgur.com/UaIoTuV.png)
@@ -28,21 +28,15 @@ neofetch
 查看板本
 
 ```cmd
-neofetch -v
+fastfetch -v
 ```
 
 ![alt tag](https://i.imgur.com/syS0jpk.png)
 
-截圖指令
-
-```cmd
-neofetch --scrot
-```
-
 查看指令說明
 
 ```cmd
-neofetch --help
+fastfetch --help
 ```
 
 ![alt tag](https://i.imgur.com/4fnJwHj.png)
@@ -55,8 +49,8 @@ neofetch --help
 vim ~/.zshrc
 ```
 
-在裡面加入 neofetch (最前面或最後面都可以)
+在裡面加入 fastfetch (最前面或最後面都可以)
 
 ![alt tag](https://i.imgur.com/7pbqz1P.png)
 
-這樣每次打開 terminal 時就會自動執行 `neofetch` 了 :smile:
+這樣每次打開 terminal 時就會自動執行 `fastfetch` 了 :smile:

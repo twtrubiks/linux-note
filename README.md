@@ -2758,7 +2758,7 @@ sudo apt update && sudo apt install firefox
 
 [htop-tutorial](https://github.com/twtrubiks/linux-note/tree/master/htop-tutorial) - htop tutorial :thumbsup:
 
-[neofetch-tutorial](https://github.com/twtrubiks/linux-note/tree/master/neofetch-tutorial) - command-line system information tool :thumbsup:
+[fastfetch-tutorial](https://github.com/twtrubiks/linux-note/tree/master/neofetch-tutorial) - command-line system information tool :thumbsup:
 
 [copyq-tutorial](https://github.com/twtrubiks/linux-note/tree/master/copyq-tutorial) - 剪貼簿 :thumbsup:
 
