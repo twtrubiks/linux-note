@@ -1,3 +1,5 @@
+[English Version](README_en.md)
+
 # 如何在 ubuntu 啟用遠端桌面
 
 * [Youtube Tutorial - 如何在 ubuntu 啟用遠端桌面](https://youtu.be/-01unOIk9mI)

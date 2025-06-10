@@ -1,3 +1,5 @@
+[English Version](README_en.md)
+
 # ubuntu 18 04 on Lenovo X1 Carbon 6
 
 [Youtube Tutorial - Lenovo X1 Carbon 6 (從 win10 到 ubuntu18.04 ) 心得&注意事項](https://youtu.be/okyAzo-urcw)
@@ -41,4 +43,3 @@ x1c 6 系列對 Linux 支援非常好, 基本上, 我驅動完全沒有問題,
 不少我跟著設定, 現在我的筆電有夠省電的.
 
 windows 真的太吃資源加耗電了 :joy:
-

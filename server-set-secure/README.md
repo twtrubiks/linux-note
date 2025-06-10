@@ -1,5 +1,7 @@
 # server 相關安全設定
 
+[English Version](README_en.md)
+
 這邊參考 linode 的 [Guides - Setting Up and Securing a Compute Instance](https://www.linode.com/docs/products/compute/compute-instances/guides/set-up-and-secure/)
 
 ## 設定

@@ -1,3 +1,5 @@
+[English Version](README_en.md)
+
 ## zsh 搭配 powerlevel10k
 
 [Youtube Tutorial - zsh-powerlevel10k 教學 - 漂亮的 terminal](https://youtu.be/5f8w7gYnnfU)
