@@ -1,5 +1,7 @@
 # QEMU-KVM 教學
 
+[English Version](README_en.md)
+
 [Youtube Tutorial - Linux QEMU-KVM 教學](https://youtu.be/702H2gkJzCE)
 
 直接說重點, 理論上, 相比 VirtualBox,

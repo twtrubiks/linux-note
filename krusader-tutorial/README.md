@@ -1,3 +1,5 @@
+[English Version](README_en.md)
+
 # krusader tutorial
 
 [Youtube Tutorial - krusader tutorial](https://youtu.be/u6fVA7ziTjU)

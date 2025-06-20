@@ -1,22 +1,22 @@
-[English Version](README_en.md)
+[中文版](README.md)
 
 # Grub Customizer tutorial
 
-## 安裝
+## Installation
 
-加入 official PPA
+Add the official PPA
 
 ```cmd
 sudo add-apt-repository ppa:danielrichter2007/grub-customizer
 ```
 
-更新
+Update
 
 ```cmd
 sudo apt-get update
 ```
 
-安裝 grub-customizer
+Install grub-customizer
 
 ```cmd
 sudo apt-get install grub-customizer
@@ -26,6 +26,5 @@ sudo apt-get install grub-customizer
 
 ```cmd
 usbcore.autosuspend=-1
-```
 
 ![alt tag](https://i.imgur.com/BbIJwt4.png)

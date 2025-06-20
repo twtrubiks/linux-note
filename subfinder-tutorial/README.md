@@ -1,3 +1,5 @@
+[English Version](README_en.md)
+
 # subfinder 教學
 
 透過 subfinder 找出全部的子網域,
@@ -33,4 +35,3 @@ docker run projectdiscovery/subfinder:latest -d google.com -nW
 ```cmd
 nslookup www.google.com
 ```
-

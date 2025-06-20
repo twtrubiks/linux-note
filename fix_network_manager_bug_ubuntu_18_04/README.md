@@ -1,3 +1,5 @@
+[English Version](README_en.md)
+
 # 修正 ubuntu 18.04 網路連線設定遺失問題
 
 一般來說, 下圖紅色的地方是可以設定網路線連接的狀態,

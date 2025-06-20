@@ -1,3 +1,5 @@
+[English Version](README_en.md)
+
 # speedtest-cli 教學
 
 [Youtube Tutorial - Linux speedtest-cli 教學](https://youtu.be/qOJdGSxHj6Q)

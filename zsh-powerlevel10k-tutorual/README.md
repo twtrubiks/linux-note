@@ -1,3 +1,5 @@
+[English Version](README_en.md)
+
 ## zsh 搭配 powerlevel10k
 
 [Youtube Tutorial - zsh-powerlevel10k 教學 - 漂亮的 terminal](https://youtu.be/5f8w7gYnnfU)
@@ -11,7 +13,6 @@
 這邊範例使用 Oh My Zsh, 如果你還沒安裝, 請參考之前的文章
 
 [如何安裝 Oh My ZSH](https://github.com/twtrubiks/linux-note/tree/master/zsh-tmux-tutorual)
-
 
 ## 教學
 

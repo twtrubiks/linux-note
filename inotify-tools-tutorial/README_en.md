@@ -1,42 +1,42 @@
-[English Version](README_en.md)
+[中文版](README.md)
 
-# linux inotify-tools 監控檔案變動 inotifywait
+# Linux inotify-tools: Monitor File Changes with inotifywait
 
-* [Youtube Tutorial - Linux 教學 - inotify-tools 監控檔案變動 inotifywait](https://youtu.be/BsQqH40eOKY)
+* [Youtube Tutorial - Linux Tutorial - inotify-tools: Monitor File Changes with inotifywait](https://youtu.be/BsQqH40eOKY)
 
-inotifywait 是 inotify-tools 底下的一個工具,
+`inotifywait` is a tool under `inotify-tools`.
 
-主要可以用來監控檔案或資料夾的任何變動(新增刪除修改等等),
+It is mainly used to monitor any changes (add, delete, modify, etc.) to files or directories.
 
-可以搭配它來完成自動備份上傳或是自動重新載入設定檔之類的.
+You can use it to perform tasks like automatic backup uploads or automatic reloading of configuration files.
 
-安裝指令如下
+The installation command is as follows:
 
 ```cmd
 sudo apt install inotify-tools
 ```
 
-如果你想要看 inotifywait 的文件, 可輸入以下指令
+If you want to see the documentation for `inotifywait`, you can enter the following command:
 
 ```cmd
 inotifywait --help
 ```
 
-或是
+or
 
 ```cmd
 man inotifywait
 ```
 
-## 監控特定目錄資料夾下的所有檔案變化
+## Monitor All File Changes in a Specific Directory
 
-### 監控目錄
+### Monitoring a Directory
 
 ```cmd
 inotifywait -m /home/temp
 ```
 
-`-m` `--monitor` 持續監控, 說明如下,
+`-m` `--monitor` keeps listening for events forever. The description is as follows:
 
 ```txt
 Keep listening for events forever.  Without
@@ -44,29 +44,29 @@ this option, inotifywait will exit after one
 event is received.
 ```
 
-如果資料夾底下還有子目錄, 可以加上 `-r`,
+If there are subdirectories within the folder, you can add the `-r` flag:
 
 ```cmd
 inotifywait -m -r /home/temp
 ```
 
-`-r` `--recursive`	Watch directories recursively.
+`-r` `--recursive` Watch directories recursively.
 
-### 監控檔案
+### Monitoring a File
 
-```cnd
+```cmd
 inotifywait -m /home/temp/test.py
 ```
 
-## 自訂輸出訊息格式
+## Custom Output Message Format
 
-可以自己定義想輸出的文字
+You can define the text you want to output.
 
 ```cmd
 inotifywait -m --timefmt '%Y/%m/%d %H:%M:%S' --format "%T %w %f %e" -e create  /home/temp
 ```
 
-這邊貼上 `man inotifywait` 中的 `--format` 說明,
+Here is the `--format` description from `man inotifywait`:
 
 ```txt
 %w     This will be replaced with the name of the Watched file on which
@@ -86,21 +86,21 @@ inotifywait -m --timefmt '%Y/%m/%d %H:%M:%S' --format "%T %w %f %e" -e create  /
         passing to strftime(3).
 ```
 
-## 監控檔案事件
+## Monitor File Events
 
-監控 modify 以及 delete 事件,
+Monitor `modify` and `delete` events:
 
-```cnd
+```cmd
 inotifywait -m -e modify,delete /home/temp
 ```
 
-`-e` `--event` 說明如下
+`-e` `--event` description is as follows:
 
 ```txt
 Listen for specific event(s).  If omitted, all events are listened for.
 ```
 
-事件有很多, 文件如下,
+There are many events, as documented below:
 
 ```txt
 Events:
@@ -122,13 +122,13 @@ Events:
 	unmount		file system containing file or directory unmounted
 ```
 
-## 將輸出訊息寫到檔案中
+## Write Output Messages to a File
 
-inotifywait 預設會將訊息都輸出在 stdout 上,
+By default, `inotifywait` outputs all messages to stdout.
 
-但也可以把它輸出到文件中保存下來,
+But you can also output them to a file for preservation.
 
-```cnd
+```cmd
 inotifywait -m -o logs.txt /home/temp
 ```
 
@@ -136,15 +136,15 @@ inotifywait -m -o logs.txt /home/temp
 
 `-s` `--syslog` Send errors to syslog rather than stderr.
 
-## 背景執行
+## Run in the Background
 
-inotifywait 也可以在背景執行, 只需要加上 `-d`, 這用法通常會搭配 `-o` 或 `-s` 使用.
+`inotifywait` can also run in the background by adding the `-d` flag. This is usually used with `-o` or `-s`.
 
 ```cmd
 inotifywait -m -o events.log -d /home/temp/test.py
 ```
 
-`-d` `--daemon` 說明如下
+`-d` `--daemon` description is as follows:
 
 ```txt
 Same as --monitor, except run in the background
@@ -154,24 +154,24 @@ logging events to a file specified by --outfile.
 Implies --syslog.
 ```
 
-如果執行在背景, 然後想把 inotifywait 清除, 可使用以下指令,
+If it's running in the background and you want to stop `inotifywait`, you can use the following commands:
 
-先找出 PID , 然後再 kill 它,
+First, find the PID, then kill it.
 
 ```cmd
 ps -ef | grep inotifywait
 kill PID
 ```
 
-或是直接 kill 掉 inotifywait
+Or kill `inotifywait` directly:
 
 ```cmd
 killall inotifywait
 ```
 
-## 其他應用範例
+## Other Application Examples
 
-### 觸發 bash
+### Triggering a Bash Script
 
 ```cmd
 inotifywait -m -e attrib /home/temp/ |
@@ -180,7 +180,7 @@ inotifywait -m -e attrib /home/temp/ |
   done
 ```
 
-### 執行程式
+### Executing a Program
 
 ```cmd
 inotifywait -m -e close_write /home/temp/ |
@@ -189,17 +189,17 @@ inotifywait -m -e close_write /home/temp/ |
   done
 ```
 
-### 自動重新載入設定檔
+### Automatically Reloading Configuration Files
 
-因為每次修改 crontab 後, 都要手動執行 `sudo service cron reload`,
+Every time you modify `crontab`, you have to manually run `sudo service cron reload`.
 
-現在透過 inotifywait 來完成自動執行,
+Now, you can automate this with `inotifywait`.
 
-Debian 和 Ubuntu 的檔案保存在 `/var/spool/cron/crontabs`.
+For Debian and Ubuntu, the files are stored in `/var/spool/cron/crontabs`.
 
-也就是當你修改 `crontab -e` 後, 這裡面的檔案會變動.
+This means when you modify `crontab -e`, the files in this directory will change.
 
-指令如下
+The command is as follows:
 
 ```cmd
 sudo inotifywait -m -e modify /var/spool/cron/crontabs |
@@ -208,7 +208,7 @@ sudo inotifywait -m -e modify /var/spool/cron/crontabs |
   done
 ```
 
-你也可以試著把它改成在背景運作
+You can also try running it in the background:
 
 ```cmd
 sudo inotifywait -m -e modify /var/spool/cron/crontabs \
@@ -218,19 +218,19 @@ sudo inotifywait -m -e modify /var/spool/cron/crontabs \
   done
 ```
 
-最後補充說明一下, 重開機後, `inotifywait` 會失效,
+A final note: `inotifywait` will be disabled after a reboot.
 
-所以可以把上面的指令設定為開機自動執行或是設定 systemctl.
+So, you can set the above command to run automatically on startup or configure it with `systemctl`.
 
-systemctl 可參考之前的文章 [systemctl](https://github.com/twtrubiks/linux-note/tree/master/systemctl-tutorial) 或 [在 Linux 中自動啟動 docker](https://github.com/twtrubiks/docker-tutorial/tree/master/docker-auto-run-linux) :smile:
+For `systemctl`, you can refer to the previous articles [systemctl](https://github.com/twtrubiks/linux-note/tree/master/systemctl-tutorial) or [Automatically start Docker in Linux](https://github.com/twtrubiks/docker-tutorial/tree/master/docker-auto-run-linux) :smile:
 
-建立 `watch.service`
+Create `watch.service`:
 
 ```cmd
 sudo vim /etc/systemd/system/watch.service
 ```
 
-`watch.service` 裡面填入,
+Fill `watch.service` with the following:
 
 ```sh
 [Unit]
@@ -249,7 +249,7 @@ TimeoutStartSec=10
 WantedBy=multi-user.target
 ```
 
-`watch.sh` 如下 (就是剛剛介紹的 code)
+`watch.sh` is as follows (the code introduced earlier):
 
 ```cmd
 sudo inotifywait -m -e modify /var/spool/cron/crontabs \
@@ -259,15 +259,14 @@ sudo inotifywait -m -e modify /var/spool/cron/crontabs \
   done
 ```
 
-重新載入設定檔
+Reload the configuration file:
 
 ```cmd
 sudo systemctl daemon-reload
 ```
 
-啟動 `watch.service`
+Start `watch.service`:
 
 ```cmd
 sudo systemctl start watch
 sudo systemctl enable watch
-```

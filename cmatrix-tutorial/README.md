@@ -1,3 +1,5 @@
+[English Version](README_en.md)
+
 ## cmatrix
 
 [Youtube Tutorial - 超酷又超沒用的 cmatrix](https://youtu.be/Db0Lz909LNE)
@@ -27,4 +29,3 @@ cmatrix -a
 ```cmd
 cmatrix --help
 ```
-

@@ -1,3 +1,5 @@
+[English Version](README_en.md)
+
 # Apache Bench 教學
 
 也被簡稱為 ab,

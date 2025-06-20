@@ -1,3 +1,5 @@
+[English Version](README_en.md)
+
 ## Windows -> Linux 優缺點
 
 [Youtube Tutorial - Windows -> Linux 優缺點](https://youtu.be/wCQv7rfv69Q)

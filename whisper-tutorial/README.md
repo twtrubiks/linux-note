@@ -1,5 +1,7 @@
 # Whisper 本地 YouTube 字幕生成指南 (無需Key)：從新手入門到 AI 校正
 
+[English Version](README_en.md)
+
 * [Youtube Tutorial - Whisper YouTube 中文字幕生成指南 (無需Key)：從新手入門到 AI 校正](https://youtu.be/E-X3kp8wCIg)
 
 上 youtube 中文字幕就靠它 [whisper](https://github.com/openai/whisper)

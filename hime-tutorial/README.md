@@ -1,3 +1,5 @@
+[English Version](README_en.md)
+
 # Linux 中更像微軟更好用的中文輸入法 hime
 
 [Youtube Tutorial - Linux 指令教學 - hime](https://youtu.be/LqGwt-O8Be8)

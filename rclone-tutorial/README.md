@@ -1,3 +1,5 @@
+[English Version](README_en.md)
+
 # Rclone tutorial
 
 [Youtube Tutorial - Rclone tutorial 超棒雲端同步工具](https://youtu.be/0ChhvaHIQ9Y)
