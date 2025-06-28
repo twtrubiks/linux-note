@@ -2,6 +2,8 @@
 
 [English Version](README_en.md)
 
+文章加碼介紹 [faster-whisper](#faster-whisper)
+
 * [Youtube Tutorial - Whisper YouTube 中文字幕生成指南 (無需Key)：從新手入門到 AI 校正](https://youtu.be/E-X3kp8wCIg)
 
 上 youtube 中文字幕就靠它 [whisper](https://github.com/openai/whisper)
@@ -124,3 +126,65 @@ ffmpeg -i test.mkv -ss 5 -to 8 -c copy clipped_test.mkv
 -ss 5：起始時間, 從影片第 5 秒開始（5秒 = 0:05）
 
 -to 8：結束時間, 到影片第 8 秒結束（8秒 = 0:08）
+
+## faster-whisper
+
+這邊多介紹一個 [faster-whisper](https://github.com/SYSTRAN/faster-whisper)
+
+這版本用起來不錯, 比較少幻覺, 速度也算快.
+
+安裝 `pip install faster-whisper` (也推薦在 [Google Colab](https://colab.google/) 使用哦)
+
+直接使用底下的 python 程式碼
+
+```python
+from faster_whisper import WhisperModel
+import math # 用於處理時間轉換
+
+def format_srt_time(seconds: float) -> str:
+    """將秒數轉換為 SRT 的時間格式 HH:MM:SS,ms"""
+    assert seconds >= 0, "non-negative timestamp expected"
+    milliseconds = round(seconds * 1000.0)
+
+    hours = milliseconds // 3_600_000
+    milliseconds %= 3_600_000
+
+    minutes = milliseconds // 60_000
+    milliseconds %= 60_000
+
+    seconds = milliseconds // 1_000
+    milliseconds %= 1_000
+
+    # 使用 f-string 和 zfill 確保數字位數正確 (例如 01, 007)
+    return f"{str(hours).zfill(2)}:{str(minutes).zfill(2)}:{str(seconds).zfill(2)},{str(milliseconds).zfill(3)}"
+
+model_size = "large-v2"
+
+# 載入模型
+# Run on GPU with FP16
+model = WhisperModel(model_size_or_path=model_size, device="cuda", compute_type="float16")
+
+# 進行轉錄
+segments, info = model.transcribe('/content/your.wav', beam_size=5)
+
+print("偵測到的語言是 '%s'，機率為 %f" % (info.language, info.language_probability))
+
+# --- 新增的寫入 SRT 檔案部分 ---
+srt_file_path = "output.srt"
+with open(srt_file_path, "w", encoding="utf-8") as f:
+    # enumerate 從 1 開始計數，作為 SRT 的序列編號
+    for i, segment in enumerate(segments, 1):
+        # 格式化開始與結束時間
+        start_time = format_srt_time(segment.start)
+        end_time = format_srt_time(segment.end)
+
+        # 移除文字前後多餘的空白
+        text = segment.text.strip()
+
+        # 寫入 SRT 格式的區塊
+        f.write(f"{i}\n")
+        f.write(f"{start_time} --> {end_time}\n")
+        f.write(f"{text}\n\n")
+
+print(f"SRT 檔案已成功儲存至: {srt_file_path}")
+```
