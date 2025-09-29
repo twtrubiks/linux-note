@@ -2028,6 +2028,22 @@ Name:	google.com
 Address: 2404:6800:4012:3::200e
 ```
 
+## Netcat nc
+
+測試目標 Server 特定的 port 是否有開啟
+
+```cmd
+nc -v [host] [port]
+```
+
+這類工具非常多, 像是 `nmap`
+
+```cmd
+sudo apt install nmap
+```
+
+使用方法 `nmap ip`
+
 ## NTP
 
 全名為 The Network Time Protocol
@@ -2293,6 +2309,44 @@ systemctl --user start pipewire
 
 ```cmd
 sudo apt install pipewire-audio
+```
+
+## nmcli 指令 - 連線到隱藏 Wi-Fi SSID 方法
+
+nmcli 是 NetworkManager 的命令列工具,
+
+有時候透過 GUI 界面, 就是連線不上隱藏的 SSID,
+
+這時候就透過 nmcli 來完成,
+
+建立網路設定檔
+
+```cmd
+nmcli con add type wifi con-name <您的連線名稱> ssid <實際的SSID名稱> wifi-sec.key-mgmt wpa-psk wifi-sec.psk <您的無線網路密碼>
+```
+
+`nmcli con add` 新增一個連線設定
+
+`type wifi` 指定連線類型為 Wi-Fi
+
+`con-name <您的連線名稱>` 設定一個方便辨識的名稱
+
+`ssid <實際的SSID名稱>` 非常重要, 必須輸入要連線的那個隱藏 Wi-Fi 網路的實際名稱 (SSID)
+
+`wifi-sec.key-mgmt wpa-psk` 指定安全性加密方式
+
+`wifi-sec.psk <您的無線網路密碼>` 輸入該 Wi-Fi 的連線密碼.
+
+查看連線狀態
+
+```cmd
+nmcli connection show
+```
+
+手動連線網路
+
+```cmd
+nmcli connection up <您的連線名稱>
 ```
 
 ## 其他資訊
