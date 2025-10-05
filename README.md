@@ -2088,6 +2088,48 @@ User root
 
 這樣你只需要在 terminal 打上 `ssh my-remote` 即可.
 
+### 跳板 ProxyJump
+
+跳板 只需要加這個 `ProxyJump`
+
+```cmd
+Host jump-server
+HostName xx.xxx.xx.xx
+Port 22
+IdentityFile ~/.ssh/id_rsa
+IdentitiesOnly yes
+User root
+
+Host user-remote
+HostName xx.xxx.xx.xx
+Port 22
+IdentityFile ~/.ssh/id_rsa
+IdentitiesOnly yes
+AddressFamily  inet
+User root
+ProxyJump jump-server
+```
+
+這樣設定, 當你使用 `ssh user-remote`,
+
+就是透過 jump-server 去完成跳板.
+
+但要注意流量都會變成兩倍, 然後 AddressFamily 中的 `inet`,
+
+是指告訴 ssh 連線的時候使用哪個協定.
+
+`any` (預設值), 讓作業系統自己決定優先使用哪個
+
+`inet` 只使用 IPv4
+
+`inet6` 只使用 IPv6
+
+如果對方只設定 IPv4 (只有特定 IP 可以訪問, 且只設定 IPv4),
+
+這時候可以多設定 `inet` 來確保使用 IPv4,
+
+但通常都會自己切換適合的連線.
+
 ### SSH 防止斷線
 
 另外不知道大家有沒有 ssh 到遠端的時候,
