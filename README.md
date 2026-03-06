@@ -2038,6 +2038,8 @@ nc -v [host] [port]
 
 這類工具非常多, 像是 [nmap-tutorial](nmap-tutorial) - 網路端口掃描器
 
+以及 [whatweb-tutorial](whatweb-tutorial) - Web 技術指紋識別
+
 ## NTP
 
 全名為 The Network Time Protocol
