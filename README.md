@@ -2036,11 +2036,12 @@ Address: 2404:6800:4012:3::200e
 nc -v [host] [port]
 ```
 
-這類工具非常多, 像是 [nmap-tutorial](nmap-tutorial) - 網路端口掃描器
+更多安全偵察相關工具:
 
-以及 [whatweb-tutorial](whatweb-tutorial) - Web 技術指紋識別
-
-以及 [amass-tutorial](amass-tutorial) - OWASP 子域名列舉工具
+- [nmap-tutorial](nmap-tutorial) - 網路端口掃描器
+- [whatweb-tutorial](whatweb-tutorial) - Web 技術指紋識別
+- [amass-tutorial](amass-tutorial) - OWASP 子域名列舉工具
+- [httpx-tutorial](httpx-tutorial) - 批量 Web 偵察工具
 
 ## NTP
 
@@ -2879,6 +2880,8 @@ sudo apt update && sudo apt install firefox
 [subfinder-tutorial](https://github.com/twtrubiks/linux-note/tree/master/subfinder-tutorial) - subfinder 找出全部的子網域
 
 [amass-tutorial](https://github.com/twtrubiks/linux-note/tree/master/amass-tutorial) - OWASP Amass 子域名列舉工具
+
+[httpx-tutorial](https://github.com/twtrubiks/linux-note/tree/master/httpx-tutorial) - 批量 Web 偵察工具
 
 ## 狀況排除
 

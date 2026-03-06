@@ -8,10 +8,16 @@
 
 github 連結 [https://github.com/projectdiscovery/subfinder](https://github.com/projectdiscovery/subfinder)
 
-這邊使用 docker 的安裝方法
+### Docker 安裝
 
 ```cmd
 docker pull projectdiscovery/subfinder:latest
+```
+
+### Go 安裝
+
+```cmd
+go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 ```
 
 接著就可以使用, 以下指令,
