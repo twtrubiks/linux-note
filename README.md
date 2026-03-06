@@ -2036,13 +2036,7 @@ Address: 2404:6800:4012:3::200e
 nc -v [host] [port]
 ```
 
-這類工具非常多, 像是 `nmap`
-
-```cmd
-sudo apt install nmap
-```
-
-使用方法 `nmap ip`
+這類工具非常多, 像是 [nmap-tutorial](nmap-tutorial) - 網路端口掃描器
 
 ## NTP
 
