@@ -2040,6 +2040,8 @@ nc -v [host] [port]
 
 以及 [whatweb-tutorial](whatweb-tutorial) - Web 技術指紋識別
 
+以及 [amass-tutorial](amass-tutorial) - OWASP 子域名列舉工具
+
 ## NTP
 
 全名為 The Network Time Protocol
@@ -2875,6 +2877,8 @@ sudo apt update && sudo apt install firefox
 [apache-bench-tutorial](https://github.com/twtrubiks/linux-note/tree/master/apache-bench-tutorial) - Apache Bench (ab) 教學, 測試 server 效能工具.
 
 [subfinder-tutorial](https://github.com/twtrubiks/linux-note/tree/master/subfinder-tutorial) - subfinder 找出全部的子網域
+
+[amass-tutorial](https://github.com/twtrubiks/linux-note/tree/master/amass-tutorial) - OWASP Amass 子域名列舉工具
 
 ## 狀況排除
 
