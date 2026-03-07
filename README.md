@@ -2042,6 +2042,7 @@ nc -v [host] [port]
 - [whatweb-tutorial](whatweb-tutorial) - Web 技術指紋識別
 - [amass-tutorial](amass-tutorial) - OWASP 子域名列舉工具
 - [httpx-tutorial](httpx-tutorial) - 批量 Web 偵察工具
+- [gobuster-tutorial](gobuster-tutorial) - Web 目錄與子域名暴力列舉工具
 
 ## NTP
 
@@ -2882,6 +2883,8 @@ sudo apt update && sudo apt install firefox
 [amass-tutorial](https://github.com/twtrubiks/linux-note/tree/master/amass-tutorial) - OWASP Amass 子域名列舉工具
 
 [httpx-tutorial](https://github.com/twtrubiks/linux-note/tree/master/httpx-tutorial) - 批量 Web 偵察工具
+
+[gobuster-tutorial](https://github.com/twtrubiks/linux-note/tree/master/gobuster-tutorial) - Web 目錄與子域名暴力列舉工具
 
 ## 狀況排除
 
