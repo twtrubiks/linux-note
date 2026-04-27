@@ -2209,6 +2209,22 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub twtrubiks@192.168.56.101
 
 ![alt tag](https://i.imgur.com/j4BRI1J.png)
 
+### 確認 authorized_keys 格式
+
+`authorized_keys` 裡的每一把 key 必須是**單行**, 中間不能有換行或多餘空格,
+
+否則 ssh 會視為格式不正確而忽略它, 登入時就會一直要求輸入密碼.
+
+可以使用 `ssh-keygen -lf` 來確認目前 `authorized_keys` 中的 key 狀態,
+
+```cmd
+ssh-keygen -lf ~/.ssh/authorized_keys
+```
+
+如果格式正確, 會列出每一把 key 的 fingerprint ( 指紋 ) 與註解;
+
+如果有 key 被分行或格式錯誤, 該行就不會被列出來 ( 等於沒有生效 ) :exclamation:
+
 ## root 使用者登入遠端 Linux
 
 注意, 通常不會這樣做 :exclamation:
