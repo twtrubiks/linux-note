@@ -1,3 +1,5 @@
+[English Version](README_en.md)
+
 # whatweb — Web 技術指紋識別
 
 目的：識別網站用了什麼技術（框架、語言、CMS、伺服器）

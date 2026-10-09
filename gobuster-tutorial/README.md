@@ -1,3 +1,5 @@
+[English Version](README_en.md)
+
 # gobuster — Web 目錄與子域名暴力列舉工具
 
 gobuster 是以 Go 語言編寫的暴力列舉工具，可用來發現 Web 伺服器上的隱藏目錄/檔案、子域名、虛擬主機等。它透過字典檔（wordlist）逐一嘗試，找出目標上未被公開連結的資源。

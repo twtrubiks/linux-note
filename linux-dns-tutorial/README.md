@@ -1,3 +1,5 @@
+[English Version](README_en.md)
+
 # Linux DNS 設定 — 用 NetworkManager (nmcli) 修改 DNS server
 
 想把 DNS 換成 `1.1.1.1` 或 `8.8.8.8`，很多人第一個想到的是直接改 `/etc/resolv.conf`，

@@ -2,6 +2,8 @@
 
 [中文版](README.md)
 
+This article also introduces [faster-whisper](#faster-whisper)
+
 * [Youtube Tutorial - Whisper YouTube Chinese Subtitle Generation Guide (No Key Required): From Beginner to AI Correction](https://youtu.be/E-X3kp8wCIg)
 
 Rely on [whisper](https://github.com/openai/whisper) for your YouTube Chinese subtitles.
@@ -121,3 +123,65 @@ ffmpeg -i test.mkv -ss 5 -to 8 -c copy clipped_test.mkv
 -ss 5: Start time, from the 5th second of the video (5s = 0:05)
 
 -to 8: End time, until the 8th second of the video (8s = 0:08)
+
+## faster-whisper
+
+Here's one more to introduce: [faster-whisper](https://github.com/SYSTRAN/faster-whisper)
+
+This version works quite well, with fewer hallucinations, and it's reasonably fast.
+
+Install it with `pip install faster-whisper` (also recommended to use it on [Google Colab](https://colab.google/))
+
+Just use the Python code below
+
+```python
+from faster_whisper import WhisperModel
+import math # used for time conversion
+
+def format_srt_time(seconds: float) -> str:
+    """Convert seconds to the SRT time format HH:MM:SS,ms"""
+    assert seconds >= 0, "non-negative timestamp expected"
+    milliseconds = round(seconds * 1000.0)
+
+    hours = milliseconds // 3_600_000
+    milliseconds %= 3_600_000
+
+    minutes = milliseconds // 60_000
+    milliseconds %= 60_000
+
+    seconds = milliseconds // 1_000
+    milliseconds %= 1_000
+
+    # Use f-string and zfill to make sure the digits are correct (e.g. 01, 007)
+    return f"{str(hours).zfill(2)}:{str(minutes).zfill(2)}:{str(seconds).zfill(2)},{str(milliseconds).zfill(3)}"
+
+model_size = "large-v2"
+
+# Load the model
+# Run on GPU with FP16
+model = WhisperModel(model_size_or_path=model_size, device="cuda", compute_type="float16")
+
+# Transcribe
+segments, info = model.transcribe('/content/your.wav', beam_size=5)
+
+print("Detected language '%s' with probability %f" % (info.language, info.language_probability))
+
+# --- Newly added part: write to an SRT file ---
+srt_file_path = "output.srt"
+with open(srt_file_path, "w", encoding="utf-8") as f:
+    # enumerate starts counting from 1, used as the SRT sequence number
+    for i, segment in enumerate(segments, 1):
+        # Format the start and end times
+        start_time = format_srt_time(segment.start)
+        end_time = format_srt_time(segment.end)
+
+        # Remove extra whitespace around the text
+        text = segment.text.strip()
+
+        # Write an SRT-formatted block
+        f.write(f"{i}\n")
+        f.write(f"{start_time} --> {end_time}\n")
+        f.write(f"{text}\n\n")
+
+print(f"SRT file saved successfully to: {srt_file_path}")
+```

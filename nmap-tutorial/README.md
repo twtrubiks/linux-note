@@ -1,3 +1,5 @@
+[English Version](README_en.md)
+
 # nmap — 網路端口掃描器
 
 目的：掃描目標主機開了哪些端口、跑了什麼服務

@@ -2015,6 +2015,26 @@ Name:	google.com
 Address: 2404:6800:4012:3::200e
 ```
 
+`Server` is the DNS currently in use. The `127.0.0.53` above is the local DNS stub of systemd-resolved (e.g. Ubuntu), not the real DNS server.
+
+For how to check and change DNS, see [linux-dns-tutorial](https://github.com/twtrubiks/linux-note/tree/master/linux-dns-tutorial)
+
+## Netcat nc
+
+Test whether a specific port on the target server is open
+
+```cmd
+nc -v [host] [port]
+```
+
+More security reconnaissance tools:
+
+- [nmap-tutorial](nmap-tutorial) - Network port scanner
+- [whatweb-tutorial](whatweb-tutorial) - Web technology fingerprinting
+- [amass-tutorial](amass-tutorial) - OWASP subdomain enumeration tool
+- [httpx-tutorial](httpx-tutorial) - Bulk web reconnaissance tool
+- [gobuster-tutorial](gobuster-tutorial) - Web directory and subdomain brute-force enumeration tool
+
 ## NTP
 
 Full name is The Network Time Protocol.
@@ -2058,6 +2078,48 @@ User root
 ```
 
 Then you only need to type `ssh my-remote` in the terminal.
+
+### Jump host ProxyJump
+
+For a jump host, you only need to add `ProxyJump`
+
+```cmd
+Host jump-server
+HostName xx.xxx.xx.xx
+Port 22
+IdentityFile ~/.ssh/id_rsa
+IdentitiesOnly yes
+User root
+
+Host user-remote
+HostName xx.xxx.xx.xx
+Port 22
+IdentityFile ~/.ssh/id_rsa
+IdentitiesOnly yes
+AddressFamily  inet
+User root
+ProxyJump jump-server
+```
+
+With this setup, when you run `ssh user-remote`,
+
+it connects through jump-server as the jump host.
+
+But note that the traffic will be doubled. As for `inet` in AddressFamily,
+
+it tells ssh which protocol to use when connecting.
+
+`any` (default) lets the operating system decide which one to prefer
+
+`inet` uses IPv4 only
+
+`inet6` uses IPv6 only
+
+If the remote side only allows IPv4 (only specific IPs can access it, and only IPv4 is configured),
+
+you can add `inet` to make sure IPv4 is used,
+
+but usually it will switch to the suitable connection by itself.
 
 ### SSH Prevent Disconnection
 
@@ -2137,6 +2199,22 @@ In fact, whether it's method one or method two, it's just adding the key to `aut
 in `/home/<user>/.ssh` :smile:
 
 ![alt tag](https://i.imgur.com/j4BRI1J.png)
+
+### Check the authorized_keys format
+
+Each key in `authorized_keys` must be on a **single line**, with no line breaks or extra spaces in between,
+
+otherwise ssh treats it as malformed and ignores it, and you'll keep being asked for a password when logging in.
+
+You can use `ssh-keygen -lf` to check the keys currently in `authorized_keys`,
+
+```cmd
+ssh-keygen -lf ~/.ssh/authorized_keys
+```
+
+If the format is correct, it lists the fingerprint and comment of each key;
+
+if a key is split across lines or malformed, that line won't be listed (meaning it isn't in effect) :exclamation:
 
 ## Log in to a remote Linux as the root user
 
@@ -2241,6 +2319,8 @@ You can adjust it according to your needs.
 127.0.1.1     twtrubiks.com
 ```
 
+`/etc/hosts` is checked before DNS, see [linux-dns-tutorial](https://github.com/twtrubiks/linux-note/blob/master/linux-dns-tutorial/README_en.md#etchosts-is-checked-before-dns)
+
 ## Desktop environment wayland or x11
 
 Enter the following command to check.
@@ -2280,6 +2360,46 @@ please install the following and reboot.
 ```cmd
 sudo apt install pipewire-audio
 ```
+
+## nmcli command - Connect to a hidden Wi-Fi SSID
+
+nmcli is the command-line tool for NetworkManager.
+
+Sometimes you just can't connect to a hidden SSID through the GUI,
+
+in that case, use nmcli instead.
+
+Create a connection profile
+
+```cmd
+nmcli con add type wifi con-name <your connection name> ssid <actual SSID name> wifi-sec.key-mgmt wpa-psk wifi-sec.psk <your Wi-Fi password>
+```
+
+`nmcli con add` adds a new connection profile
+
+`type wifi` sets the connection type to Wi-Fi
+
+`con-name <your connection name>` sets a name that's easy to recognize
+
+`ssid <actual SSID name>` is very important, you must enter the actual name (SSID) of the hidden Wi-Fi network you want to connect to
+
+`wifi-sec.key-mgmt wpa-psk` sets the security / encryption method
+
+`wifi-sec.psk <your Wi-Fi password>` enters the password of that Wi-Fi.
+
+Check the connection status
+
+```cmd
+nmcli connection show
+```
+
+Connect manually
+
+```cmd
+nmcli connection up <your connection name>
+```
+
+For changing DNS with nmcli, see [linux-dns-tutorial](https://github.com/twtrubiks/linux-note/tree/master/linux-dns-tutorial)
 
 ## Other information
 
@@ -2720,6 +2840,8 @@ sudo apt update && sudo apt install firefox
 
 [zsh-tmux-tutorual](https://github.com/twtrubiks/linux-note/tree/master/zsh-tmux-tutorual) - Super useful zsh and tmux.
 
+[screen-tutorial](https://github.com/twtrubiks/linux-note/tree/master/screen-tutorial) - Use GNU screen to keep programs running in the background after exiting SSH
+
 [zsh-powerlevel10k-tutorual](https://github.com/twtrubiks/linux-note/tree/master/zsh-powerlevel10k-tutorual) - zsh with Powerlevel10k, super beautiful terminal.
 
 [vim-shortcuts](https://github.com/twtrubiks/linux-note/tree/master/vim-shortcuts) - Record vim shortcuts
@@ -2767,6 +2889,14 @@ sudo apt update && sudo apt install firefox
 [apache-bench-tutorial](https://github.com/twtrubiks/linux-note/tree/master/apache-bench-tutorial) - Apache Bench (ab) tutorial, a tool for testing server performance.
 
 [subfinder-tutorial](https://github.com/twtrubiks/linux-note/tree/master/subfinder-tutorial) - subfinder finds all subdomains
+
+[amass-tutorial](https://github.com/twtrubiks/linux-note/tree/master/amass-tutorial) - OWASP Amass subdomain enumeration tool
+
+[httpx-tutorial](https://github.com/twtrubiks/linux-note/tree/master/httpx-tutorial) - Bulk web reconnaissance tool
+
+[gobuster-tutorial](https://github.com/twtrubiks/linux-note/tree/master/gobuster-tutorial) - Web directory and subdomain brute-force enumeration tool
+
+[linux-dns-tutorial](https://github.com/twtrubiks/linux-note/tree/master/linux-dns-tutorial) - How Linux DNS settings work, change the DNS server with nmcli
 
 ## Troubleshooting
 
@@ -2830,7 +2960,7 @@ sudo apt update && sudo apt install firefox
 
 [KDE setting](https://github.com/twtrubiks/linux-note/tree/master/kde-settings)
 
-[Whisper Local YouTube Subtitle Generation Guide](whisper-tutorial)
+[Whisper Local YouTube Subtitle Generation Guide](whisper-tutorial) - also introduces [faster-whisper](whisper-tutorial/README_en.md#faster-whisper)
 
 ## Reference
 
