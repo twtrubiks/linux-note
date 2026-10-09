@@ -2848,6 +2848,8 @@ sudo apt update && sudo apt install firefox
 
 [zsh-tmux-tutorual](https://github.com/twtrubiks/linux-note/tree/master/zsh-tmux-tutorual) - 超好用 zsh 以及 tmux。
 
+[screen-tutorial](https://github.com/twtrubiks/linux-note/tree/master/screen-tutorial) - GNU screen 退出 SSH 後讓程式繼續在背景執行
+
 [zsh-powerlevel10k-tutorual](https://github.com/twtrubiks/linux-note/tree/master/zsh-powerlevel10k-tutorual) - zsh 搭配 Powerlevel10k, 超漂亮 terminal。
 
 [vim-shortcuts](https://github.com/twtrubiks/linux-note/tree/master/vim-shortcuts) - 紀錄 vim 快捷鍵
