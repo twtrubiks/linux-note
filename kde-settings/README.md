@@ -51,6 +51,8 @@ fcitx-autostart
 
 ![alt tag](https://i.imgur.com/t4Mc8p6.png)
 
+使用指令 (nmcli) 修改以及原理說明可參考 [linux-dns-tutorial](https://github.com/twtrubiks/linux-note/tree/master/linux-dns-tutorial)
+
 ### KDE 設定開機自動啟動
 
 ![alt tag](https://i.imgur.com/O8CiLtD.png)

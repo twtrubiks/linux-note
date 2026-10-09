@@ -2028,6 +2028,10 @@ Name:	google.com
 Address: 2404:6800:4012:3::200e
 ```
 
+`Server` 是目前使用的 DNS, 上面的 `127.0.0.53` 是 systemd-resolved (例如 Ubuntu) 的本機 DNS 中繼, 不是真正的 DNS server,
+
+如何查看以及修改 DNS 可參考 [linux-dns-tutorial](https://github.com/twtrubiks/linux-note/tree/master/linux-dns-tutorial)
+
 ## Netcat nc
 
 測試目標 Server 特定的 port 是否有開啟
@@ -2327,6 +2331,8 @@ sudo vim /etc/hosts
 127.0.1.1     twtrubiks.com
 ```
 
+`/etc/hosts` 會比 DNS 先查詢, 可參考 [linux-dns-tutorial](https://github.com/twtrubiks/linux-note/tree/master/linux-dns-tutorial#etchosts-會比-dns-先查)
+
 ## 桌面環境 wayland or x11
 
 輸入以下的指令即可查看,
@@ -2406,6 +2412,8 @@ nmcli connection show
 ```cmd
 nmcli connection up <您的連線名稱>
 ```
+
+使用 nmcli 修改 DNS 可參考 [linux-dns-tutorial](https://github.com/twtrubiks/linux-note/tree/master/linux-dns-tutorial)
 
 ## 其他資訊
 
@@ -2903,6 +2911,8 @@ sudo apt update && sudo apt install firefox
 [httpx-tutorial](https://github.com/twtrubiks/linux-note/tree/master/httpx-tutorial) - 批量 Web 偵察工具
 
 [gobuster-tutorial](https://github.com/twtrubiks/linux-note/tree/master/gobuster-tutorial) - Web 目錄與子域名暴力列舉工具
+
+[linux-dns-tutorial](https://github.com/twtrubiks/linux-note/tree/master/linux-dns-tutorial) - Linux DNS 設定原理, 使用 nmcli 修改 DNS server
 
 ## 狀況排除
 
