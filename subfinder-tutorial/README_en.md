@@ -8,10 +8,16 @@ Find all subdomains using subfinder.
 
 GitHub link: [https://github.com/projectdiscovery/subfinder](https://github.com/projectdiscovery/subfinder)
 
-This tutorial uses the Docker installation method.
+### Docker Installation
 
 ```cmd
 docker pull projectdiscovery/subfinder:latest
+```
+
+### Go Installation
+
+```cmd
+go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 ```
 
 Then you can use the following command.

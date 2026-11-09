@@ -1,3 +1,5 @@
+[English Version](README_en.md)
+
 # httpx — 批量 Web 偵察工具
 
 httpx 是 ProjectDiscovery 開發的高速 Web 偵察工具（Go 語言編寫），能批量探測大量 URL，快速取得狀態碼、頁面標題、技術棧、伺服器版本等資訊，幫助在滲透測試中篩選出值得深入調查的目標。

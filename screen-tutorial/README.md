@@ -1,3 +1,5 @@
+[English Version](README_en.md)
+
 # GNU screen — 退出 SSH 後讓程式繼續在背景執行
 
 `screen` 是一個終端機多工工具（terminal multiplexer），最常見的用途是：

@@ -1,3 +1,5 @@
+[English Version](README_en.md)
+
 # Amass — OWASP 子域名列舉工具
 
 Amass 是 OWASP 維護的開源工具，用於深度子域名列舉與資產盤點。
